@@ -1,41 +1,109 @@
 current_day = int(input("Please input the DAY you want to enquire (DD):\n"))
 while current_day < 1 or current_day > 31:
-    print(current_day, "is not existing date. Please check your date again.")
+    print("!", current_day, "is not existing date. Please check your date again.")
     current_day = int(input("Please input again for the DAY you want to enquire:\n"))
-print(f"{current_day}. confirmed")
+print(f"Date: {current_day}. Confirmed")
 
 
-current_month = int(input("Please input the MONTH you want to enquire (MM)\n"))
+current_month = int(input("Please input the MONTH you want to enquire (MM):\n"))
 while current_month < 1 or current_month > 12:
-    print(current_month, "is not existing month. Please check your month again.")
+    print("!", current_month, "is not existing month. Please check your month again.")
     current_month = int(
-        input("Please input again for the MONTH you want to enquire:\n")
+        input("Please input again for the MONTH you want to enquire (MM):\n")
     )
-print(f"{current_month}. confirmed")
 
-while (current_day == 31) and (current_month in (2, 4, 6, 9, 11)):
-    print ("date" f"{current_day}" in "month" {current_month} "is not exist. Please try again.")
+while ((current_day == 31) and (current_month in (2, 4, 6, 9, 11))) or (
+    (current_day == 30) and (current_month == 2)
+):
+    print(
+        "! The date "
+        f"{current_day} in the month {current_month} is not exist. Please try again."
+    )
+    current_day = int(input("Please input the DAY you want to enquire (DD):\n"))
     while current_day < 1 or current_day > 31:
-        print(current_day, "is not existing date. Please check your date again.")
-        current_day = int(input("Please input again for the DAY you want to enquire:\n"))
-    print(f"{current_day}. confirmed")
-    while current_month < 1 or current_month > 12:
-        print(current_month, "is not existing month. Please check your month again.")
-        current_month = int(input("Please input again for the MONTH you want to enquire:\n"))
-print(f"{current_month}. confirmed")
+        print("!", current_day, "is not existing date. Please check your date again.")
+        current_day = int(
+            input("Please input again for the DAY you want to enquire (DD):\n")
+        )
+    print(f"Date: {current_day}. Confirmed")
 
-if current_month not in range(1, 13):
-    print(current_month, "is incorrect information. Please check your input again.")
-if current_day == 31 and current_month in (2, 4, 6, 9, 11):
-    print("Sorry,", current_day, "th day is not exist on ")
-current_year = input("Please input the YEAR you want to enquire ")
-birth_day = input("Please input your DAY of birth ")
-if birth_day not in range(1, 32):
-    print(birth_day, "is not existing date. Please check your date again.")
-birth_month = input("Please input your MONTH of birth ")
-if birth_month not in range(1, 13):
-    print(birth_month, " is incorrect information. Please check your input again.")
-birth_year = input("Please input your YEAR of birth ")
+    current_month = int(input("Please input the MONTH you want to enquire (MM):\n"))
+    while (current_month < 1) or (current_month > 12):
+        print(
+            f"! {current_month} is not existing month. Please check your month again."
+        )
+        current_month = int(
+            input("Please input again for the MONTH you want to enquire (MM):\n")
+        )
+print(f"Date: {current_day}\nMonth: {current_month}. Confirmed")
+
+current_year = int(input("Please input the YEAR you want to enquire: \n"))
+while current_year < 0 or current_year > 9999:
+    print("! Please input valid year. (from 0 ~ 9999)!")
+    current_year = int(input("Please input the YEAR you want to enquire: \n"))
+while (
+    (current_day == 29)
+    and (current_month == 2)
+    and (
+        ((current_year % 4) == (1 or 2 or 3))
+        or ((current_year % 4) and (current_year % 100) == 0)
+        or (((current_year % 4) and (current_year % 100) and (current_year % 400)) > 0)
+    )
+):
+    print(f"! {current_year} does not have 29th day in February.")
+    current_year = int(input("Please input the YEAR you want to enquire again: \n"))
+print(f"Year {current_year}. Confirmed.")
+print(f"Enquiring Date is: {current_day}. {current_month}. {current_year}.")
+
+
+birth_day = int(input("Please input your birth DAY (DD):\n"))
+while birth_day < 1 or birth_day > 31:
+    print("!", birth_day, "is not existing date. Please check your date again.")
+    birth_day = int(input("Please input your birth DAY again:\n"))
+print(f"Date of birth: {birth_day}. Confirmed")
+
+
+birth_month = int(input("Please input your birth MONTH (MM):\n"))
+while birth_month < 1 or birth_month > 12:
+    print("!", birth_month, "is not existing month. Please check your month again.")
+    birth_month = int(input("Please input your birth MONTH again (MM):\n"))
+
+while ((birth_day == 31) and (birth_month in (2, 4, 6, 9, 11))) or (
+    (birth_day == 30) and (birth_month == 2)
+):
+    print(
+        "! The date "
+        f"{birth_day} in the month {birth_month} is not exist. Please try again."
+    )
+    birth_day = int(input("Please input your birth DAY (DD):\n"))
+    while birth_day < 1 or birth_day > 31:
+        print("!", birth_day, "is not existing date. Please check your date again.")
+        birth_day = int(input("Please input your birth DAY again (DD):\n"))
+    print(f"Date: {birth_day}. Confirmed")
+
+    birth_month = int(input("Please your birth MONTH (MM)\n"))
+    while (birth_month < 1) or (birth_month > 12):
+        print(f"! {birth_month} is not existing month. Please check your month again.")
+        birth_month = int(input("Please input your birth MONTH again (MM)\n"))
+print(f"Date: {birth_day}\nMonth: {birth_month}. Confirmed")
+
+birth_year = int(input("Please input your birth YEAR: \n"))
+while birth_year < 0 or birth_year > 9999:
+    print("! Please input valid year. (from 0 ~ 9999")
+    birth_year = int(input("Please input your birth YEAR agian:\n"))
+while (
+    (birth_day == 29)
+    and (birth_month == 2)
+    and (
+        ((birth_year % 4) == (1 or 2 or 3))
+        or ((birth_year % 4) and (birth_year % 100) == 0)
+        or (((birth_year % 4) and (birth_year % 100) and (birth_year % 400)) > 0)
+    )
+):
+    print(f"! {birth_year} does not have 29th day in February.")
+    birth_year = int(input("Please input your birth YEAR again: \n"))
+print(f"Year {birth_year}. Confirmed.")
+print(f"Birth Date is: {birth_day}. {birth_month}. {birth_year}.")
 
 result = (
     int(current_year)
