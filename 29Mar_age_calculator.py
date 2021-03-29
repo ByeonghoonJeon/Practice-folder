@@ -143,4 +143,4 @@ if (
     and (birth_month == current_month)
     and (birth_day == current_day)
 ):
-    print("It is the day your or someone borned !")
+    print("It is the day you or someone borned !")
