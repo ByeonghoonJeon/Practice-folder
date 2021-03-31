@@ -12,42 +12,16 @@ agreement = str(
 )
 
 # Possible input including both positive and negative answers.
-while (
-    agreement != "Y"
-    and agreement != "y"
-    and agreement != "YES"
-    and agreement != "Yes"
-    and agreement != "yes"
-    and agreement != "Agree"
-    and agreement != "AGREE"
-    and agreement != "agree"
-    and agreement != "N"
-    and agreement != "n"
-    and agreement != "NO"
-    and agreement != "No"
-    and agreement != "no"
-    and agreement != "Disagree"
-    and agreement != "DISAGREE"
-    and agreement != "disagree"
-):
+while not agreement.lower() in ("y", "yes", "agree", "n", "no", "disagree"):
     agreement = input("Please input valid code (Y/N)\n")
 
 # Predictable positive responses.
-if (
-    agreement == "Y"
-    or agreement == "y"
-    or agreement == "YES"
-    or agreement == "Yes"
-    or agreement == "yes"
-    or agreement == "Agree"
-    or agreement == "AGREE"
-    or agreement == "agree"
-):
+if agreement.lower() in ("y", "yes", "agree"):
     # Program runs only under agreement response.
     print(f"[You agreed to provide your bio information at {current}]")
     # Asking which measure system prefers.
     system_preference = input(
-        "If you prefer yard-pound system, please type 'Y'.\nFor metric system, please type 'M'\n"
+        "If you prefer yard-pound system, please type 'Y'.\nFor metric system, please type 'M'.\n"
     )
     while (
         system_preference != "Y"
@@ -82,17 +56,65 @@ if (
         print(feet, "feet, confirmed.")
 
         # Checking if inch is a float.
-        # if not, while loop on input until inch is a float
+        # if not, while loop on input until inch is a float.
         inch = input("Please input your height. (Inch)\n")
-        while inch > 11:
-            inch = input("Please input your inch value minimum 1 and maximum 11.\n")
-        while not inch.isdigit():
+        while (
+            not inch.replace(".", "", 1).isdigit()
+            or float(inch) >= 12
+            or float(inch) < 1
+        ):
             inch = input("Please input your inch value with only numbers.\n")
         print(feet, "feet", inch, "inch. Confirmed.")
-        height = feet * 12 + inch
 
+        # Converting feet to inch.
+        height = float(feet) * 12 + float(inch)
+        # BMI index calculation and printing the value.
+        BMI = (float(weight) / float((height ** 2))) * 703
+        print("Your BMI index is", round(BMI, 1))
+
+        # Providing additional information based on BMI index.
+        if BMI < 18.5:
+            print("Your are underweight")
+        elif BMI >= 18.5 or BMI < 25.0:
+            print("Your weight is normal")
+        elif BMI >= 25.0 or BMI < 30.0:
+            print("You are overweight")
+        elif BMI >= 30.0:
+            print("You are obese")
+
+    # When the metric system is prefered.
     elif system_preference == "M" or system_preference == "m":
         print("Metric system confirmed")
+        weight = input("Please input your body weight. (Kg)\n")
+
+        # Checking if weight is a float.
+        # if not, while loop on input until weight is a float.
+        while not weight.replace(".", "", 1).isdigit() or float(weight) < 1:
+            weight = input(
+                "Please input your body weight with numbers and decimal point.(Kg)\n"
+            )
+        print(f"Weight: {weight} Kg, confirmed")
+
+        # Checking if height is a float.
+        # if not, while loop on input until feet is a float.
+        print("Notice: Please input your height with centi-meter (cm).")
+        height = input("Please input your height. (cm)\n")
+        while not height.replace(".", "", 1).isdigit() or float(height) < 1:
+            height = input("Please input your cm value with only positive numbers.\n")
+        print(height, "cm, confirmed.")
+        height = float(height) / 100
+        BMI = float(weight) / (height ** 2)
+        print("Your BMI index is", round(BMI, 1))
+
+        # Providing additional information based on BMI index.
+        if BMI < 18.5:
+            print("Your are underweight")
+        elif BMI >= 18.5 or BMI < 25.0:
+            print("Your weight is normal")
+        elif BMI >= 25.0 or BMI < 30.0:
+            print("You are overweight")
+        elif BMI >= 30.0:
+            print("You are obese")
 
 elif agreement.lower() in ("n", "no", "disagree"):
     print("You didn't agree to provide your bio information. Unable to continue.")
