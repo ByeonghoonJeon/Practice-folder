@@ -1,4 +1,4 @@
-print("Welcome to Byeonghoon's Age Calculator")
+print("Welcome to Byeonghoon's Age Calculator. This program provide your or someone's age at the specific date you are enquiring.")
 current_day = int(input("Please input the DAY you want to enquire (DD):\n"))
 while current_day < 1 or current_day > 31:
     print("!", current_day, "is not existing date. Please check your date again.")
