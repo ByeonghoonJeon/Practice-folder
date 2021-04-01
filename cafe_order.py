@@ -37,7 +37,6 @@ while not order_menu.lower() in (
     order_menu = input(
         "Sorry, I don't understand. Please pick a menu from the menu :)\n"
     )
-
 if order_menu.lower() in ("long", "black"):
     menu_check = input("Long black right?(Y/N)\n")
     if menu_check.lower() in ("yes", "y"):
