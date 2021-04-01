@@ -4,11 +4,7 @@ order_menu = input(
 )
 
 bill_count = 0
-
-# When a customer makes typo or uses abbreviation.
-# Long black
-
-while not order_menu.lower() in (
+menu = (
     "long black",
     "long",
     "black",
@@ -33,17 +29,23 @@ while not order_menu.lower() in (
     "cake",
     "strawberry cake",
     "strawberry",
-):
+)
+
+# When a customer makes typo or uses abbreviation.
+# Long black
+
+while not order_menu.lower() in menu:
     order_menu = input(
         "Sorry, I don't understand. Please pick a menu from the menu :)\n"
     )
-if order_menu.lower() in ("long", "black"):
-    menu_check = input("Long black right?(Y/N)\n")
-    if menu_check.lower() in ("yes", "y"):
-        order_menu = "Long black"
-        print(f"{order_menu}, okay!")
-    else:
-        order_menu = input("Please order from the menu.\n")
+
+    if order_menu.lower() in ("long", "black"):
+        menu_check = input("Long black right?(Y/N)\n")
+        while menu_check.lower() in ("yes", "y"):
+            order_menu = "Long black"
+            print(f"{order_menu}, okay!")
+        while (menu_check.lower() in menu) or (menu_check.lower() in ("no", "n")):
+            menu_check = input("Please order from the menu.\n")
 
     # Caffe latte? or Thai tea latte?
 if order_menu.lower() == "latte":
@@ -115,35 +117,5 @@ elif order_menu.lower() in ("chocolate", "choco"):
 elif order_menu.lower() in ("strawberry", "straw"):
     order_menu = "Strawberry cake"
     print(f"{order_menu}, got it!")
-
-else:
-    while not order_menu.lower() in (
-        "long black",
-        "long",
-        "black",
-        "espresso shot",
-        "espresso",
-        "esp",
-        "caffe latte",
-        "caffe",
-        "latte",
-        "caffe mocha",
-        "mocha" "caramel macchiato",
-        "caramel",
-        "macchiato",
-        "thai tea latte",
-        "thai",
-        "camomile tea",
-        "camomile",
-        "milk tea",
-        "milk",
-        "chocolate cake",
-        "chocolate",
-        "cake",
-        "strawberry cake",
-        "strawberry",
-    ):
-        order_menu = input("Please let me know what you want :)\n")
-
 
 print(f"One {order_menu}, anything else?")
