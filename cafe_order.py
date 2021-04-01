@@ -31,23 +31,50 @@ menu = (
     "strawberry",
 )
 
-# When a customer makes typo or uses abbreviation.
-# Long black
-
 while not order_menu.lower() in menu:
     order_menu = input(
         "Sorry, I don't understand. Please pick a menu from the menu :)\n"
     )
 
-    if order_menu.lower() in ("long", "black"):
-        menu_check = input("Long black right?(Y/N)\n")
-        while menu_check.lower() in ("yes", "y"):
+if order_menu.replace(" ", "", 1) in menu:
+    if order_menu.replace(" ", "", 1).lower() == "longblack":
+        order_menu = "Long black"
+    while order_menu.lower() in (
+        "long",
+        "black",
+    ):
+        check_menu = input("Do you mean Long black? (Y/N)\n")
+        if check_menu.lower() in ("y", "yes"):
             order_menu = "Long black"
             print(f"{order_menu}, okay!")
-        while (menu_check.lower() in menu) or (menu_check.lower() in ("no", "n")):
-            menu_check = input("Please order from the menu.\n")
+        elif check_menu.lower() in ("n", "no"):
+            order_menu = input("Please select your menu from above :)\n")
+        else:
+            order_menu = input(
+                "I am so sorry, I don't understand. Please check the menu above :(\n"
+            )
+    if order_menu.replace(" ", "", 1).lower() == "espressoshot":
+        order_menu = "Espresso shot"
+    while order_menu.lower() in ("espresso", "esp"):
+        check_menu = input("Do you mean Espresso shot? (Y/N)\n")
+        if check_menu.lower() in ("y", "yes"):
+            order_menu = "Espresso shot"
+        elif check_menu.lower() in ("no", "n"):
+            order_menu = input("Please select your menu from above :)\n")
+        else:
+            order_menu = input(
+                "I am so sorry, I don't understand. Please check the menu above :(\n"
+            )
 
-    # Caffe latte? or Thai tea latte?
+            # When a customer makes typo or uses abbreviation.
+# Long black
+while not order_menu.lower() in menu:
+    order_menu = input(
+        "Sorry, I don't understand. Please pick a menu from the menu :)\n"
+    )
+print(f"One {order_menu}, anything else?")
+
+# Caffe latte? or Thai tea latte?
 if order_menu.lower() == "latte":
     menu_check = input("Caffe latte? or thai tea latte? (caffe/thai)\n")
     if menu_check.lower() in ("caffe", "caffe latte"):
