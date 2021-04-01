@@ -45,5 +45,6 @@ count = 0
 while count < lines_of_sanity:
     for i in range(0, lines_of_sanity):
         for j in lyrics:
+            count += 1
             print(j)
 print("MAKE IT STOP")
