@@ -1,3 +1,3 @@
 # python-practice
 
-# Practice for learning python.
+# My practice for learning python.
