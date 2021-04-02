@@ -32,3 +32,11 @@ print("The love level between you and him/her is ", end="")
 print(lovelevel)
 
 # Print additional comment.
+if lovelevel >= 50:
+    print("Wow, what a perfect couple!")
+elif lovelevel in range(30, 50):
+    print("Well matching couple!")
+elif lovelevel in range(20, 30):
+    print("Well, not bad!")
+else:
+    print("Good Luck!")
