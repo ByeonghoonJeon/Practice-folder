@@ -15,3 +15,9 @@ for student in student_heights:
 print("Total number of students is", number_of_students)
 average_height = total_height / number_of_students
 print("The average is", round(average_height, 1))
+
+highest_value = 0
+for height in student_heights:
+    if height > highest_value:
+        highest_value = height
+print("The highest value is", highest_value)
