@@ -1,5 +1,17 @@
-# Before start, I practice for loop and while loop again.
+# Before start, I practice for loop and while loop again with Udemy course.
 
-fruits = ["Apple", "Peach", "Strawberry"]
-for fruit in fruits:
-    print(fruit)
+student_heights = input("Please input student heights.\n").split()
+for i in range(0, len(student_heights)):
+    student_heights[i] = int(student_heights[i])
+
+total_height = 0
+for height in student_heights:
+    total_height += height
+print("Total height is", total_height)
+
+number_of_students = 0
+for student in student_heights:
+    number_of_students += 1
+print("Total number of students is", number_of_students)
+average_height = total_height / number_of_students
+print("The average is", round(average_height, 1))
