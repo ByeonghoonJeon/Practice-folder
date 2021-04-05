@@ -1,3 +1,33 @@
+# [1] Greeting.
+# [2] Ask for menu choice, exhibit the menu.
+#   [2-1] If input is in menu,
+#       [2-1-1] Accept order.
+#       [2-1-2] Count bill.
+#       [2-1-3] Ask quantity.
+#           [2-1-3-1] Check if quantity is digit.
+#               [2-1-3-1-1] If quantity is digit,
+#                   [2-1-3-1-1-1] Accept order.
+#                   [2-1-3-1-1-2] Count bill.
+#                   [2-1-3-1-1-3] Ask size with informing extra fee for the tall size. (Regular and tall size(+ $ 0.5))
+#                       [2-1-3-1-1-3-1] If input properly, count bill.
+#                       [2-1-3-1-1-3-2] If input is invalid code, go to [2-1-3-1-1-3].
+#                    [2-1-3-1-1-4] Ask if a customer wants other menu as well. (Y/N)
+#                        [2-1-3-1-1-4-1] If Y, go to [2]
+#                        [2-1-3-1-1-4-2] If N, go to [Final]
+#                        [2-1-3-1-1-4-3] If invalid code, go to [2-1-3-1-1-4] requesting valid code.
+#                    [2-1-3-1-2] If quantity is not digit, go to [2-1-3-1] requesting valid code.
+
+#   [2-2] If input is partially match to the menu,
+#       [2-2-1] Request confirmation. (Y/N)
+#           [2-2-1-1] Check if valid answer.
+#               [2-2-1-1-1] If valid, go to [2-1-1]
+#               [2-2-1-1-2] If invalid, go to [2-2-1] requesting valid code.
+
+#   [2-3] If input does not exist in the menu, go to [2] requesting valid menu.
+
+# [Final] Print total bill and say goodbye.
+
+
 # Variations for total bill
 
 bev_bill = 0
@@ -51,6 +81,8 @@ while True:
         # Check if quantity is digit. If not, recommend to input number only.
         while not order_quantity.isdigit():
             order_quantity = input("Please input valid numbers only.\n")
+
+        # If quantity is digit, add to a bill and print order acceptance ment.
         if order_quantity.isdigit():
             print(order_quantity, order_menu, "got it!")
         bev_bill *= int(order_quantity)
