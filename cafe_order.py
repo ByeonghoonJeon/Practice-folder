@@ -42,20 +42,18 @@ while True:
     order_menu = input(
         "Which Beverage do you want?\n--MENU--\n[COFEE]\nLong black:        $ 2.5\nEspresso shot:     $ 2.0\nCaffe latte:       $ 3.0\nCaffe mocha:       $ 4.0\nCaramel macchiato: $ 4.5\n\n[NON-COFEE]\nThai tea latte:    $ 4.5\nCamomile tea:      $ 2.5\nMilk tea:          $ 3.5\n\n[CAKES]\nChocolate cake:    $ 3.0\nStrawberry cake:   $ 3.5\nI would like to have: "
     )
-    # If customer input "long black with the full name, count bill and ask quantity"
+    # If a customer orders "long black with the full name, count bill and ask quantity"
     if order_menu.replace(" ", "", 1).lower() == "longblack":
         order_menu = "Long black"
         bev_bill += 2.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
 
         # Check if quantity is digit. If not, recommend to input number only.
-        while not order_quantity.isdigit:
-            if int(order_quantity) in range(1, 101):
-                bev_bill *= int(order_quantity)
-            order_quantity = input("Please input numbers only.\n")
-            break
-        bev_bill = bev_bill * int(order_quantity)
-        print(order_quantity, order_menu, "got it!")
+        while not order_quantity.isdigit():
+            order_quantity = input("Please input valid numbers only.\n")
+        if order_quantity.isdigit():
+            print(order_quantity, order_menu, "got it!")
+        bev_bill *= int(order_quantity)
         break
 
     elif order_menu.lower() == ("long") or order_menu.lower() == ("black"):
