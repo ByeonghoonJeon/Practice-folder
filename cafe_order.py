@@ -1,4 +1,10 @@
-bill = 0
+# Variations for total bill
+
+bev_bill = 0
+exta_bill = 0
+
+# Expected input for orders from customers.
+
 menu = [
     "long black",
     "long",
@@ -25,30 +31,59 @@ menu = [
     "strawberry cake",
     "strawberry",
 ]
+
+# Greeting
+
 print("Welcome to Jeon's cafe. Please let me know what you want!")
+
+# The first menu exhibition and the menu will be repeated until customer input a valid code(expected order, above).
 
 while True:
     order_menu = input(
         "Which Beverage do you want?\n--MENU--\n[COFEE]\nLong black:        $ 2.5\nEspresso shot:     $ 2.0\nCaffe latte:       $ 3.0\nCaffe mocha:       $ 4.0\nCaramel macchiato: $ 4.5\n\n[NON-COFEE]\nThai tea latte:    $ 4.5\nCamomile tea:      $ 2.5\nMilk tea:          $ 3.5\n\n[CAKES]\nChocolate cake:    $ 3.0\nStrawberry cake:   $ 3.5\nI would like to have: "
     )
+    # If customer input "long black with the full name, count bill and ask quantity"
     if order_menu.replace(" ", "", 1).lower() == "longblack":
         order_menu = "Long black"
-        bill += 2.5
-        print(f"One {order_menu}, anything else?")
+        bev_bill += 2.5
+        order_quantity = input(f"How many {order_menu} do you want?\n")
+
+        # Check if quantity is digit. If not, recommend to input number only.
+        while not order_quantity.isdigit:
+            if int(order_quantity) in range(1, 101):
+                bev_bill *= int(order_quantity)
+            order_quantity = input("Please input numbers only.\n")
+            break
+        bev_bill = bev_bill * int(order_quantity)
+        print(order_quantity, order_menu, "got it!")
         break
 
     elif order_menu.lower() == ("long") or order_menu.lower() == ("black"):
         check_menu = input("Do you mean Long black? (Y/N)\n")
+        while not check_menu.lower() in ("y", "yes"):
+            check_menu = input("Please type Y/N only.\n")
         if check_menu.lower() in ("y", "yes"):
             order_menu = "Long black"
-            bill += 2.5
-            print(f"One {order_menu}, anything else?")
+            bev_bill += 2.5
+        order_quantity = input(f"How many {order_menu} do you want?\n")
+
+        while not order_quantity.isdigit:
+            order_quantity = input("Please input numbers only.")
             break
+        bev_bill = bev_bill * int(order_quantity)
+        print(order_quantity, order_menu, "got it!")
+        break
 
     else:
         print("Sorry, I don't understand. Please refer to the menu again.")
         continue
-print(bill)
+
+
+def total_bill():
+    return bev_bill + exta_bill
+
+
+print("Total bill is USD", total_bill())
 
 # if order_menu.replace(" ", "", 1) in menu:
 #     if order_menu.replace(" ", "", 1).lower() == "longblack":
