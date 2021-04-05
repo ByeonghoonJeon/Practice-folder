@@ -21,3 +21,9 @@ for height in student_heights:
     if height > highest_value:
         highest_value = height
 print("The highest value is", highest_value)
+
+total = 0
+for number in range(1, 101):
+    total += number
+
+print(total)
