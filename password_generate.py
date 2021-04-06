@@ -135,4 +135,4 @@ while True:
     while total_digit > 0:
         print("Still", total_digit, "digits are not assigned. Please start from first.")
         continue
-Print("None")
+print("None")
