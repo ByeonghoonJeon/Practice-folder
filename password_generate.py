@@ -94,6 +94,7 @@ symbols = [
 
 # Greeting and ask how many digit they want for their password.
 total_digit = 0
+password = ""
 print("Welcome to password generator!")
 total_digit = input("How many digits would you like to have in your password?\n")
 while True:
