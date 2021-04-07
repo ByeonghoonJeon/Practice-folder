@@ -96,12 +96,12 @@ symbols = [
 total_digit = 0
 password = ""
 print("Welcome to password generator!")
-total_digit = input("How many digits would you like to have in your password?\n")
+total_digit = int(input("How many digits would you like to have in your password?\n"))
 while True:
     # Check if input is digit and valid number (valid: total_digit > 0).
-    if total_digit.isdigit() or int(total_digit) == 0
-
-    except:
+    try:
+        total_digit == 0
+    except ValueError:
         total_digit = input("Please input valid number only.(Greater than zero)\n")
     else:
         print("Total", total_digit, "digits, okay!")
