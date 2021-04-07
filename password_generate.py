@@ -96,13 +96,15 @@ symbols = [
 total_digit = 0
 password = ""
 print("Welcome to password generator!")
-total_digit = int(input("How many digits would you like to have in your password?\n"))
 while True:
+    total_digit = input("How many digits would you like to have in your password?\n")
     # Check if input is digit and valid number (valid: total_digit > 0).
     try:
-        total_digit == 0
-    except ValueError:
-        total_digit = input("Please input valid number only.(Greater than zero)\n")
+        1 / int(total_digit)
+    except (ValueError, ZeroDivisionError):
+        while not total_digit.isdigit():
+            total_digit = input("Please input valid number only.(Greater than zero)\n")
+
     else:
         print("Total", total_digit, "digits, okay!")
 
@@ -118,8 +120,8 @@ while True:
     # Count remaining digits and inform them how many digits are needed to be assigned.
     total_digit = int(total_digit) - int(number_of_letters)
     if total_digit == 0:
-        break
-    print("You can assign maximum", total_digit, "digits more.")
+
+        print("You can assign maximum", total_digit, "digits more.")
 
     number_of_numbers = input(
         "How many numbers would you like to have in your password?\n"
@@ -138,5 +140,5 @@ while True:
 
     while total_digit > 0:
         print("Still", total_digit, "digits are not assigned. Please start from first.")
-        continue
-print("None")
+
+    print("None")
