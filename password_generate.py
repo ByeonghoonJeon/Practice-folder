@@ -99,11 +99,14 @@ print("Welcome to password generator!")
 total_digit = input("How many digits would you like to have in your password?\n")
 while True:
     # Check if input is digit and valid number (valid: total_digit > 0).
-    while not total_digit.isdigit() or int(total_digit) == 0:
+    if total_digit.isdigit() or int(total_digit) == 0
+
+    except:
         total_digit = input("Please input valid number only.(Greater than zero)\n")
+    else:
+        print("Total", total_digit, "digits, okay!")
 
     # Print input
-    print("Total", total_digit, "digits, okay!")
 
     # Ask how many letters do they want for their password.
     number_of_letters = input(
