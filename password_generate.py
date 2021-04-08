@@ -98,13 +98,14 @@ print("Welcome to password generator!")
 
 # Check if input is digit and valid number (valid: total_digit > 0).
 total_digit = input("How many digits would you like to have in your password?\n")
-try:
-    int(total_digit)
-    1 / total_digit
 
-except (ValueError):
-    while not (total_digit.isdigit()) and int(total_digit) not in range(1, 9999):
-        input("Please input valid number only.(Greater than zero)\n")
+try:
+    1 / int(total_digit)
+
+except (ValueError, ZeroDivisionError):
+    while total_digit == "0" or (not total_digit.isdigit()):
+        total_digit = input("Please input valid number only.(Greater than zero)\n")
+    print("Total", total_digit, "digits, okay!")
 
 else:
     print("Total", total_digit, "digits, okay!")
