@@ -101,15 +101,12 @@ total_digit = input("How many digits would you like to have in your password?\n"
 while True:
     try:
         1 / int(total_digit)
-
+        print(f"Total [{total_digit}] digits, okay!")
     # Exceptions for strings and zero inputs.
     except (ValueError, ZeroDivisionError):
         while total_digit == "0" or (not total_digit.isdigit()):
             total_digit = input("Please input valid number only.(Greater than zero)\n")
-        print("Total [", total_digit, "] digits, okay!")
-    # Print input.
-    else:
-        print("Total [", total_digit, "] digits, okay!")
+        print(f"Total [{total_digit}] digits, okay!")
 
     # Ask how many letters do they want for their password.
     number_of_letters = input(
@@ -119,43 +116,60 @@ while True:
     # Check if input is digit and valid number (valid: total_digit >= 0)
     # Check if number of letters exceed total digit.
     try:
-        int(number_of_letters)
+        while int(total_digit) < int(number_of_letters):
+            number_of_letters = input("Please input valid numbers only.\n")
     except (ValueError):
         while not number_of_letters.isdigit():
             number_of_letters = input("Please input valid numbers only.\n")
-    else:
-        while not number_of_letters.isdigit() and (
-            int(total_digit) < int(number_of_letters)
-        ):
-            number_of_letters = input("Please input valid numbers only.\n")
-    print("Total [", number_of_letters, "] letters, okay")
 
-    # If all the digits are assigned, break
-    if int(total_digit) == int(number_of_letters):
+    print(f"Total [{number_of_letters}] letters, okay")
+
+    # Count left total digits and,
+    # if all the digits are assigned, break.
+    total_digit = int(total_digit) - int(number_of_letters)
+    if int(total_digit) == 0:
+        break
+    # Inform user how many digits can be assigned.
+    else:
+        print(f"! You can assign maximum [{total_digit}] digits more.")
+
+    # Ask how many numbers want to include in the password.
+    number_of_numbers = input(
+        f"How many numbers would you like to have in your password? (Not more than [{total_digit}] digits.)\n"
+    )
+    # Check if the input is digit and exceeds total digit.
+    try:
+        while int(total_digit) < int(number_of_numbers):
+            number_of_numbers = input("Please input valid numbers only.\n")
+    except (ValueError):
+        while not number_of_numbers.isdigit():
+            number_of_numbers = input("Please input valid numbers only.\n")
+
+    print(f"Total [{number_of_numbers}] letters, okay")
+
+    # Count left total digit and,
+    # if all the digits are assigned, break.
+    total_digit = int(total_digit) - int(number_of_numbers)
+    if int(total_digit) == 0:
+        break
+    # If there is still remaining digits, assign it as number of symbol and kindly inform to user.
+    else:
+        print(
+            f"! The rest of [{total_digit}] digits will be automatically assigned as number of symbols."
+        )
         break
 
-    # Count remaining digits and inform them how many digits are needed to be assigned.
-    total_digit = int(total_digit) - int(number_of_letters)
-    if total_digit == 0:
+password_list = []
+for i in range(1, int(number_of_letters) + 1):
+    password_list += random.choice(letters)
+for i in range(1, int(number_of_numbers) + 1):
+    password_list += random.choice(numbers)
+for i in range(1, int(total_digit) + 1):
+    password_list += random.choice(symbols)
 
-        print("You can assign maximum", total_digit, "digits more.")
+random.shuffle(password_list)
 
-    number_of_numbers = input(
-        "How many numbers would you like to have in your password?\n"
-    )
-    while not number_of_numbers.isdigit():
-        number_of_numbers = input("Please input valid number only.\n")
-    total_digit -= number_of_numbers
-    print("You can assign maximum", total_digit, "digits.")
-
-    number_of_symbals = input(
-        "How many symbols would you like to have in your password?\n"
-    )
-    while not number_of_symbals.isdigit():
-        number_of_symbals = input("Pleases input valid number only.\n")
-    total_digit -= number_of_symbals
-
-    while total_digit > 0:
-        print("Still", total_digit, "digits are not assigned. Please start from first.")
-
-print("Your password is,")
+password = ""
+for i in password_list:
+    password += i
+print(f"Your password is same as following below.'\n{password}")
