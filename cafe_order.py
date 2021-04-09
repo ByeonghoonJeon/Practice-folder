@@ -31,7 +31,8 @@
 ###########################################################################################################################
 
 # Variations for total bill
-bev_bill = 0
+bev_bill = 0  # Total bill.
+menu_bill = 0  # Each menu price including quantity.
 
 # Expected input for orders from customers.
 
@@ -75,10 +76,11 @@ while True:
     # If a customer orders "long black with the full name, count bill and ask quantity"
     if order_menu.replace(" ", "", 1).lower() == "longblack":
         order_menu = "Long black"
-        bev_bill += 2.5
+        menu_bill += 2.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
 
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
+
         try:
             1 / int(order_quantity)
         except (ValueError, ZeroDivisionError):
@@ -88,7 +90,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.lower() in ("long", "black"):
@@ -101,7 +103,7 @@ while True:
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Long black"
-            bev_bill += 2.5
+            menu_bill += 2.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -112,12 +114,12 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.replace(" ", "", 1).lower() == "espressoshot":
         order_menu = "Espresso shot"
-        bev_bill += 2.0
+        menu_bill += 2.0
         order_quantity = input(f"How many {order_menu} do you want?\n")
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
         try:
@@ -129,7 +131,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.lower() in ("espresso", "shot"):
@@ -142,7 +144,7 @@ while True:
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Espresso shot"
-            bev_bill += 2.0
+            menu_bill += 2.0
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -153,12 +155,12 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.replace(" ", "", 1).lower() == "caffelatte":
         order_menu = "Caffe latte"
-        bev_bill += 3.0
+        menu_bill += 3.0
         order_quantity = input(f"How many {order_menu} do you want?\n")
 
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -171,7 +173,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.lower() == ("cafe"):
@@ -189,7 +191,7 @@ while True:
 
             elif check_menu.lower() in ("y", "yes"):
                 order_menu = "Caffe mocha"
-                bev_bill += 4.0
+                menu_bill += 4.0
                 order_quantity = input(f"How many {order_menu} do you want?\n")
 
             # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -202,12 +204,12 @@ while True:
                     )
             # If quantity is digit, add to a bill and print order acceptance ment.
             print(order_quantity, order_menu, "got it!")
-            bev_bill *= int(order_quantity)
+            bev_bill += int(order_quantity) * menu_bill
             break
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Caffe latte"
-            bev_bill += 3.0
+            menu_bill += 3.0
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -218,7 +220,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.lower() == ("latte"):
@@ -236,7 +238,7 @@ while True:
 
             elif check_menu.lower() in ("y", "yes"):
                 order_menu = "Thai tea latte"
-                bev_bill += 4.5
+                menu_bill += 4.5
                 order_quantity = input(f"How many {order_menu} do you want?\n")
 
             # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -247,14 +249,21 @@ while True:
                     order_quantity = input(
                         "Please input valid numbers only.(Greater than zero)\n"
                     )
-            # If quantity is digit, add to a bill and print order acceptance ment.
             print(order_quantity, order_menu, "got it!")
-            bev_bill *= int(order_quantity)
-            break
+            bev_bill += int(order_quantity) * menu_bill
+            anything_else = input("Do you need anything else?(Y/N)\n")
+            while not anything_else.lower() in ("y", "yes", "n", "no"):
+                anything_else = input("Please type Y/N only.\n")
+            if anything_else.lower() in ("y", "yes"):
+                continue
+            elif anything_else.lower() in ("n", "no"):
+                print(f"Total bill is USD {bev_bill}")
+                break
+            # If quantity is digit, add to a bill and print order acceptance ment.
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Caffe latte"
-            bev_bill += 3.0
+            menu_bill += 3.0
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -265,12 +274,12 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.replace(" ", "", 1).lower() == "caramelmacchiato":
         order_menu = "Charamel macchiato"
-        bev_bill += 4.5
+        menu_bill += 4.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
 
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -283,7 +292,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.lower() in ("caramel", "macchiato"):
@@ -296,7 +305,7 @@ while True:
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Charamel macchiato"
-            bev_bill += 4.5
+            menu_bill += 4.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -307,12 +316,12 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.replace(" ", "", 1).lower() == "thaitealatte":
         order_menu = "Thai tea latte"
-        bev_bill += 4.5
+        menu_bill += 4.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
 
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -325,7 +334,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.lower() == ("tea"):
@@ -339,7 +348,7 @@ while True:
                 check_menu = input("Please type Y/N only.\n")
             if check_menu.lower() in ("y", "yes"):
                 order_menu = "Camomile tea"
-                bev_bill += 2.5
+                menu_bill += 2.5
                 order_quantity = input(f"How many {order_menu} do you want?\n")
 
                 # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -352,7 +361,7 @@ while True:
                         )
                 # If quantity is digit, add to a bill and print order acceptance ment.
                 print(order_quantity, order_menu, "got it!")
-                bev_bill *= int(order_quantity)
+                bev_bill += int(order_quantity) * menu_bill
                 break
 
             elif check_menu.lower() in ("n", "no"):
@@ -365,7 +374,7 @@ while True:
 
                 elif check_menu.lower() in ("y", "yes"):
                     order_menu = "Milk tea"
-                    bev_bill += 3.5
+                    menu_bill += 3.5
                     order_quantity = input(f"How many {order_menu} do you want?\n")
 
                     # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
@@ -378,12 +387,12 @@ while True:
                             )
                     # If quantity is digit, add to a bill and print order acceptance ment.
                     print(order_quantity, order_menu, "got it!")
-                    bev_bill *= int(order_quantity)
+                    bev_bill += int(order_quantity) * menu_bill
                     break
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Thai tea latte"
-            bev_bill += 4.5
+            menu_bill += 4.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -394,59 +403,12 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
-        break
-
-    elif order_menu.lower() == ("latte"):
-        check_menu = input("Do you mean Caffe latte? (Y/N)\n")
-        while not check_menu.lower() in ("y", "yes", "n", "no"):
-            check_menu = input("Please type Y/N only.\n")
-
-        if check_menu.lower() in ("n", "no"):
-            check_menu = input("Do you mean Thai tea latte? (Y/N)\n")
-            while not check_menu.lower() in ("y", "yes", "n", "no"):
-                check_menu = input("Please type Y/N only.\n")
-
-            if check_menu.lower() in ("n", "no"):
-                continue
-
-            elif check_menu.lower() in ("y", "yes"):
-                order_menu = "Thai tea latte"
-                bev_bill += 4.5
-                order_quantity = input(f"How many {order_menu} do you want?\n")
-
-            # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
-            try:
-                1 / int(order_quantity)
-            except (ValueError, ZeroDivisionError):
-                while order_quantity == "0" or not order_quantity.isdigit():
-                    order_quantity = input(
-                        "Please input valid numbers only.(Greater than zero)\n"
-                    )
-            # If quantity is digit, add to a bill and print order acceptance ment.
-            print(order_quantity, order_menu, "got it!")
-            bev_bill *= int(order_quantity)
-            break
-
-        elif check_menu.lower() in ("y", "yes"):
-            order_menu = "Caffe latte"
-            bev_bill += 3.0
-        order_quantity = input(f"How many {order_menu} do you want?\n")
-        try:
-            1 / int(order_quantity)
-        except (ValueError, ZeroDivisionError):
-            while order_quantity == "0" or not order_quantity.isdigit():
-                order_quantity = input(
-                    "Please input valid numbers only.(Greater than zero)\n"
-                )
-        # If quantity is digit, add to a bill and print order acceptance ment.
-        print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
+        bev_bill += int(order_quantity) * menu_bill
         break
 
     elif order_menu.replace(" ", "", 1).lower() == "camomiletea":
         order_menu = "Camomile tea"
-        bev_bill += 2.5
+        menu_bill += 2.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
         try:
@@ -458,8 +420,7 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
-        break
+        bev_bill += int(order_quantity) * menu_bill
 
     elif order_menu.lower() == ("camomile"):
         check_menu = input("Do you mean Camomile tea? (Y/N)\n")
@@ -471,7 +432,7 @@ while True:
 
         elif check_menu.lower() in ("y", "yes"):
             order_menu = "Camomile tea"
-            bev_bill += 2.5
+            menu_bill += 2.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
         try:
             1 / int(order_quantity)
@@ -482,12 +443,11 @@ while True:
                 )
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
-        bev_bill *= int(order_quantity)
-        break
+        bev_bill += int(order_quantity) * menu_bill
 
     elif order_menu.replace(" ", "", 1).lower() == "milktea":
         order_menu = "Milk tea"
-        bev_bill += 3.5
+        menu_bill += 3.5
         order_quantity = input(f"How many {order_menu} do you want?\n")
         # Check if quantity is digit or greater than zero. If not, recommend to input valid number only.
         try:
@@ -500,7 +460,6 @@ while True:
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
         bev_bill *= int(order_quantity)
-        break
 
     elif order_menu.lower() == ("milk"):
         check_menu = input("Do you mean Milk tea? (Y/N)\n")
@@ -524,19 +483,20 @@ while True:
         # If quantity is digit, add to a bill and print order acceptance ment.
         print(order_quantity, order_menu, "got it!")
         bev_bill *= int(order_quantity)
-        break
 
     else:
         print("Sorry, I don't understand. Please refer to the menu again.")
         continue
+    anything_else = input("Do you need anything else?(Y/N)\n")
+    while not anything_else.lower() in ("y", "yes", "n", "no"):
+        anything_else = input("Please type Y/N only.\n")
+    if check_menu.lower() in ("y", "yes"):
+        continue
+    elif check_menu.lower() in ("n", "no"):
+        print(f"Total bill is USD {bev_bill}")
+        break
+print("Thank you for visiting! See you again!")
 
-
-def total_bill():
-    print(bev_bill)
-
-
-print("Total bill is USD ", end="")
-total_bill()
 
 # if order_menu.replace(" ", "", 1) in menu:
 #     if order_menu.replace(" ", "", 1).lower() == "longblack":
