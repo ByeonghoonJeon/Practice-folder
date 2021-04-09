@@ -15,6 +15,7 @@
 # Print "Please input only single letter."
 # And go to line 5 again.
 import random
+import string
 
 print("Welcome to Jeon's Hangman program.")
 word_list = [
@@ -65,7 +66,23 @@ word_list = [
 random_word = random.choice(word_list)
 len_word = int(len(random_word))
 print(" _" * len_word)
-guess_word = input(f"Guess the {len_word} lettered word!")
+guess_word = input(f"Guess the {len_word} lettered word!\n")
+while len(guess_word) > 1:
+    guess_word = input("Please input single Alphabet only. \n")
 
 
-print(random_word)
+try:
+    int(guess_word) + 2
+except TypeError:
+    for guess_word in random_word:
+        if guess_word == random_word:
+            print("Matching!")
+        else:
+            print("Hmm, try again!")
+except ValueError:
+    while guess_word in list(string.punctuation):
+        guess_word = input("No symbols are used. Please input an Alphabet only!\n")
+
+else:
+    while guess_word.isdigit():
+        guess_word = input("Please input an Alphabet only!\n")
