@@ -78,7 +78,7 @@ while True:
 
     for letter in random_word.lower():
         if letter == guess_word:
-            print(guess_word, end=(""))
+            print(f" {guess_word} ", end=(""))
             continue
         else:
             print(" _ ", end=(""))
