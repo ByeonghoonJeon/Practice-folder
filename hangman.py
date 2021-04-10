@@ -65,20 +65,25 @@ word_list = [
 
 random_word = random.choice(word_list)
 len_word = int(len(random_word))
+guessed_letters = set()
 print(" _ " * len_word)
 while True:
-    guess_word = input(f"Guess the {len_word} lettered word!\n")
+    guess_letter = input(f"Guess the {len_word} lettered word!\n").lower()
 
     while (
-        len(guess_word) != 1
-        or guess_word in list(string.punctuation)
-        or guess_word in list(string.digits)
+        len(guess_letter) != 1
+        or guess_letter in list(string.punctuation)
+        or guess_letter in list(string.digits)
     ):
-        guess_word = input(f"Please input single Alphabet only.\n").lower()
+
+        guess_letter = input(f"Please input single Alphabet only.\n").lower()
+
+    if guess_letter in random_word.lower() and guess_letter not in guessed_letters:
+        guessed_letters.add(guess_letter)
 
     for letter in random_word.lower():
-        if letter == guess_word:
-            print(f" {guess_word} ", end=(""))
+        if letter in guessed_letters:
+            print(f" {letter} ", end=(""))
             continue
         else:
             print(" _ ", end=(""))
