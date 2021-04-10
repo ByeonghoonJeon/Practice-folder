@@ -65,7 +65,7 @@ word_list = [
 
 random_word = random.choice(word_list)
 len_word = int(len(random_word))
-print(" _" * len_word)
+print(" _ " * len_word)
 while True:
     guess_word = input(f"Guess the {len_word} lettered word!\n")
 
@@ -74,11 +74,12 @@ while True:
         or guess_word in list(string.punctuation)
         or guess_word in list(string.digits)
     ):
-        guess_word = input(f"Please input single Alphabet only.\n")
+        guess_word = input(f"Please input single Alphabet only.\n").lower()
 
-    for guess_word in random_word:
-        if guess_word == random_word and (guess_word) == 1:
-            print("Matching!")
+    for letter in random_word.lower():
+        if letter == guess_word:
+            print(guess_word, end=(""))
             continue
         else:
+            print(" _ ", end=(""))
             continue
