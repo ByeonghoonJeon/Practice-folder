@@ -67,8 +67,11 @@ random_word = random.choice(word_list)
 len_word = int(len(random_word))
 guessed_letters = set()
 print(" _ " * len_word)
-while True:
+count1 = 10
+while count1 > 0:
     current_guess = input(f"Guess the {len_word} lettered word!\n").lower()
+    count1 -= 1
+    print(f"You have {count1} chances more!")
 
     while (
         len(current_guess) != 1
@@ -88,7 +91,11 @@ while True:
         for letter in random_word.lower():
             if letter in guessed_letters:
                 print(f" {letter} ", end=(""))
+
                 continue
             else:
                 print(" _ ", end=(""))
+
                 continue
+if count1 == 0:
+    print("Failed")
