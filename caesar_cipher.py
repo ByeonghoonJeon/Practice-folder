@@ -23,8 +23,18 @@ while True:
         message = input("Please type your message.\n")
         print("Message received.")
 
-        shift_number = input("Please type the shift number\n")
+        shift_number = input("Please type the shift number.\n")
         # Check whether the input is valid number.
+        acceptable_number_range = []
+        for a_number in range(1, 101):
+            acceptable_number_range.append(a_number)
+
+        acceptable_number_range = str(acceptable_number_range)
+        while (shift_number) not in acceptable_number_range:
+            shift_number = input("Please type the shift number. (1 ~ 100)\n")
+
+        print("Encoding...")
+        print("0")
 
     else:
         message = input("Please type your encoded message.")
