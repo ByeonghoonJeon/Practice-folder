@@ -34,6 +34,8 @@ while True:
             shift_number = input("Please type the shift number. (1 ~ 100)\n")
 
         print("Encoding...")
+
+        # Encode starts from here.
         print("0")
 
     else:
