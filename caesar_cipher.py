@@ -36,7 +36,6 @@ while True:
         print("Encoding...")
 
         # Encode starts from here.
-        print("0")
 
     else:
         message = input("Please type your encoded message.")
@@ -52,4 +51,14 @@ while True:
             shift_number = input("Please type the shift number. (1 ~ 100)\n")
 
         print("Decoding...")
-        print("0")
+
+    repeat = input("Please type 'yes' if you want to go again. Otherwise, type 'no'.\n")
+    while repeat.lower() not in ("yes", "no"):
+        repeat = input(
+            "Please type 'yes' if you want to go again. Otherwise, type 'no'.\n"
+        )
+    if repeat.lower() == "yes":
+        continue
+    else:
+        break
+print("Good bye!")
