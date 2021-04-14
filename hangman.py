@@ -80,6 +80,7 @@ while count1 > 0:
     ):
 
         current_guess = input(f"Please input single Alphabet only.\n").lower()
+
     while current_guess in guessed_letters:
         current_guess = input(
             f"You already tried with '{current_guess}' guess again!\n"
