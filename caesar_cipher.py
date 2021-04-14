@@ -14,7 +14,10 @@ letters = list(string.ascii_letters)
 numbers = list(string.digits)
 letters += numbers
 
-
+count = 0
+for i in letters:
+    count += 1
+print(count)
 print("Welcome to Jeon's encoding program.")
 while True:
     encode_or_decode = input(
@@ -35,14 +38,29 @@ while True:
         acceptable_number_range = []
         for a_number in range(1, 101):
             acceptable_number_range.append(a_number)
+        shift_number = int(shift_number)
 
         acceptable_number_range = str(acceptable_number_range)
-        while (shift_number) not in acceptable_number_range:
+        while str(shift_number) not in acceptable_number_range:
             shift_number = input("Please type the shift number. (1 ~ 100)\n")
 
         for i in range(0, 3):
             print("Encoding." + "." * i)
             sleep(0.3)
+
+        def encode_letter(message, shift_number):
+            for letter in message:
+                original_position = letters.index(letter)
+
+                if original_position + shift_number > 62:
+                    encoded_position = original_position + (shift_number - 62)
+                else:
+                    encoded_position = original_position + shift_number
+
+                encoded_letter = letters[encoded_position]
+                return print(encoded_letter)
+
+        encode_letter(message, shift_number)
 
         # Encode starts from here.
 
