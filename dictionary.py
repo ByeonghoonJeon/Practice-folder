@@ -11,14 +11,17 @@
 
 
 # Add your code here!
-def students_present(student_list):
 
-    for (key, value) in student_list.items():
-        a_list = []
-        if value == "Here":
-            a_list.append(key)
-            return a_list
-    # Below are some lines of code that will test your function.
+
+def students_present(student_list):
+    attend_list = []
+    for key, value in student_list.items():
+        if value == "Here" or value == "Present":
+            attend_list.append(key)
+    return attend_list
+
+
+# Below are some lines of code that will test your function.
 
 
 # You can change the value of the variable(s) to test your
