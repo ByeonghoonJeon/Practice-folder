@@ -18,20 +18,18 @@
 def name_lists(name_list):
     splited_name_list = []
     first_name_dictionary = {}
-    last_name_list = []
+
     for names in name_list:
         splited_name_list.append(names.split())
 
-    print(splited_name_list)
     for i in range(0, len(splited_name_list)):
         first_name = splited_name_list[i][0]
-        last_name = splited_name_list[i][1]
+
         if first_name not in first_name_dictionary:
-            last_name_list = last_name
-            first_name_dictionary[first_name] = last_name
-        elif first_name in first_name_dictionary:
-            last_name_list.append(last_name)
-            first_name_dictionary[first_name] += last_name
+            first_name_dictionary[first_name] = name_list[i]
+
+        else:
+            first_name_dictionary[first_name] += name_list[i]
 
     return first_name_dictionary
 
