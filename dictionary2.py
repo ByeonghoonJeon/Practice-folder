@@ -21,12 +21,15 @@ def name_counts(name_list):
         splited_name = names.split()
         name_list_split.append(splited_name)
 
-    for i in range(len(name_list_split)):
+    for i in range(0, len(name_list_split)):
         first_name = name_list_split[i][0]
-        if first_name not in first_name_dictionary:
-            first_name_dictionary[first_name] = 1
-        else:
+
+        if first_name in first_name_dictionary:
             first_name_dictionary[first_name] += 1
+
+        elif first_name not in first_name_dictionary:
+            first_name_dictionary[first_name] = 1
+
     return first_name_dictionary
 
 
