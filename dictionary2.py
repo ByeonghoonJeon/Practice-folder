@@ -12,11 +12,12 @@
 # HINT: Use split() to split names into first and last.
 
 
-first_name_dictionary = {}
+
 
 
 def name_counts(name_list):
     name_list_split = []
+    first_name_dictionary = {}
     for names in name_list:
         splited_name = names.split()
         name_list_split.append(splited_name)
