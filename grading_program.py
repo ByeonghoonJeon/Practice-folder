@@ -39,10 +39,13 @@ while True:
     another_student = input(
         "Do you want to input another student's information as well? (Y/N)\n"
     )
-    #   4.1 Check if the input is valid.
-    while another_student.lower() not in ("yes", "no", "y", "n"):
-        another_student = input("Please input Y or N only.\n")
-        if another_student.lower in ("yes", "y"):
-            continue
-        else:
-            break
+    while another_student.lower() not in ("yes", "y", "n", "no"):
+        #   4.1 Check if the input is valid.
+        another_student = input("Please input Y/N only.\n")
+    if another_student.lower() in ("yes", "y"):
+        print(students_score)
+        continue
+    elif another_student.lower() in ("no", "n"):
+        print(students_score)
+        break
+print("Done")
