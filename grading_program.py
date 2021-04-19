@@ -30,10 +30,10 @@ while True:
     while check_name(name) != True:
         name = input("Please input student's name. (Alphabet and period only.)\n")
 
-    # 3. Input student's score and check if input is correct. (digits only.)
-    score = input(f"Please input {name}'s score.\n")
-    while score.isdigit() == False:
-        score = input("Please input numbers only.\n")
+    # 3. Input student's score and check if input is correct. (digits only and between zero and 100)
+    score = input(f"Please input {name}'s score.(0 ~ 100)\n")
+    while score.isdigit() == False or int(score) not in range(0, 101):
+        score = input("Please input valid numbers only.(Number from zero to 100.)\n")
     students_score[name] = score
     # 4. Ask another student's information.
     another_student = input(
@@ -43,9 +43,22 @@ while True:
         #   4.1 Check if the input is valid.
         another_student = input("Please input Y/N only.\n")
     if another_student.lower() in ("yes", "y"):
-        print(students_score)
+
         continue
     elif another_student.lower() in ("no", "n"):
-        print(students_score)
+
         break
-print("Done")
+for student in students_score:
+    score = students_score[student]
+    score = int(score)
+    if score >= 90:
+        students_score[student] = "A"
+    elif score in range(70, 90):
+        students_score[student] = "B"
+    elif score in range(50, 70):
+        students_score[student] = "C"
+    elif score in range(40, 50):
+        students_score[student] = "D"
+    else:
+        students_score[student] = "F"
+print(students_score)
