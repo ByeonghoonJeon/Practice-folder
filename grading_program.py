@@ -1,7 +1,7 @@
 # 1. Create students score dictionary.
 students_score = {}
 
-# 2. Input students name and score, and check if input is correct. (Alphabet, period, and blank only.)
+# 2. Input student's name and check if input is correct. (Alphabet, period, and blank only.)
 
 #   2.1 Creat a function that evaluate the validity of name.
 def check_name(name):
@@ -22,11 +22,27 @@ def check_name(name):
     return list_to_string.isalpha()
 
 
-#   2.2 Input student's name.
-name = input("Please input student's name. \n")
-check_name(name)
-#   2.3 Check if the name is alphabet. If not, ask to input correct name again.
-while check_name(name) != True:
-    name = input("Please input student's name. (Alphabet and period only.)\n")
+while True:
+    #   2.2 Input student's name.
+    name = input("Please input student's name. \n")
+    check_name(name)
+    #   2.3 Check if the name is alphabet. If not, ask to input correct name again.
+    while check_name(name) != True:
+        name = input("Please input student's name. (Alphabet and period only.)\n")
 
-score = input(f"Please input {name}'s score.\n")
+    # 3. Input student's score and check if input is correct. (digits only.)
+    score = input(f"Please input {name}'s score.\n")
+    while score.isdigit() == False:
+        score = input("Please input numbers only.\n")
+    students_score[name] = score
+    # 4. Ask another student's information.
+    another_student = input(
+        "Do you want to input another student's information as well? (Y/N)\n"
+    )
+    #   4.1 Check if the input is valid.
+    while another_student.lower() not in ("yes", "no", "y", "n"):
+        another_student = input("Please input Y or N only.\n")
+        if another_student.lower in ("yes", "y"):
+            continue
+        else:
+            break
