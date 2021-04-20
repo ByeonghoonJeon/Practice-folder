@@ -33,10 +33,51 @@ while True:
         operation = input(
             "Please pick an operation from the right side. (/, *, +, -)\n"
         )
+    initial_number = float(initial_number)
 
-    # 4. Ask second number and check its validity.
-    second_number = input("Please input next number\n")
-    while check_number(second_number) == False:
-        second_number = input("Please input numbers only\n")
-    calc_result = initial_number, operation, second_number
-    print(calc_result)
+    #   3-1. Add the initial number to the dictionary.
+    number_dictionary["initial_number"] = initial_number
+
+    # 4. Ask next number and check its validity.
+    next_number = input("Please input next number\n")
+    while check_number(next_number) == False:
+        next_number = input("Please input numbers only\n")
+    next_number = float(next_number)
+
+    #   4-1. Add the next number to the dictionary.
+    number_dictionary["next_number"] = next_number
+
+    # 5. Make functions for operation.
+    def add(x, y):
+        return print(number_dictionary[initial_number] + number_dictionary[next_number])
+
+    def minus(x, y):
+        return print(number_dictionary[initial_number] - number_dictionary[next_number])
+
+    def multiply(x, y):
+        return print(number_dictionary[initial_number] * number_dictionary[next_number])
+
+    def division(x, y):
+        return print(number_dictionary[initial_number] / number_dictionary[next_number])
+
+    if operation == "+":
+        add(number_dictionary[initial_number], number_dictionary[next_number])
+    elif operation == "-":
+        minus(number_dictionary[initial_number], number_dictionary[next_number])
+    elif operation == "*":
+        multiply(number_dictionary[initial_number], number_dictionary[next_number])
+    elif operation == "/":
+        division(number_dictionary[initial_number], number_dictionary[next_number])
+    # 6. Ask if they want to reset the result of continue with the output.
+    reset_or_continue = input("Do you want to continue? Y/N\n")
+    #   6-1. Check if the input is valid.
+    while reset_or_continue.lower() not in ("y", "yes", "n", "no"):
+        reset_or_continue = input(
+            "Please type 'Y' if you want to continue or 'N' for reset the result."
+        )
+    if reset_or_continue.lower() in ("y", "yes"):
+        number_dictionary[initial_number] = number_dictionary[next_number]
+        print(number_dictionary)
+        continue
+    elif reset_or_continue.lower() in ("n", "no"):
+        break
