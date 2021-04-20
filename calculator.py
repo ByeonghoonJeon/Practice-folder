@@ -53,43 +53,49 @@ while True:
         return number_dictionary["initial_number"] + number_dictionary["next_number"]
 
     def minus(x, y):
-        return number_dictionary["initial_number"] + number_dictionary["next_number"]
+        return number_dictionary["initial_number"] - number_dictionary["next_number"]
 
     def multiply(x, y):
-        return number_dictionary["initial_number"] + number_dictionary["next_number"]
+        return number_dictionary["initial_number"] * number_dictionary["next_number"]
 
     def division(x, y):
-        return number_dictionary["initial_number"] + number_dictionary["next_number"]
+        return number_dictionary["initial_number"] / number_dictionary["next_number"]
 
     # 6. Calculate with inputs. (initial_number, operation, next_number.) And add result to the dictionary.
     if operation == "+":
         print(
-            add(number_dictionary["initial_number"], number_dictionary["next_number"])
+            "Result:",
+            add(number_dictionary["initial_number"], number_dictionary["next_number"]),
         )
         number_dictionary["result"] = add(
             number_dictionary["initial_number"], number_dictionary["next_number"]
         )
     elif operation == "-":
         print(
-            minus(number_dictionary["initial_number"], number_dictionary["next_number"])
+            "Result:",
+            minus(
+                number_dictionary["initial_number"], number_dictionary["next_number"]
+            ),
         )
         number_dictionary["result"] = minus(
             number_dictionary["initial_number"], number_dictionary["next_number"]
         )
     elif operation == "*":
         print(
+            "Result:",
             multiply(
                 number_dictionary["initial_number"], number_dictionary["next_number"]
-            )
+            ),
         )
         number_dictionary["result"] = multiply(
             number_dictionary["initial_number"], number_dictionary["next_number"]
         )
     elif operation == "/":
         print(
+            "Result:",
             division(
                 number_dictionary["initial_number"], number_dictionary["next_number"]
-            )
+            ),
         )
         number_dictionary["result"] = division(
             number_dictionary["initial_number"], number_dictionary["next_number"]
@@ -106,7 +112,10 @@ while True:
     #   8.1 Replace initial_number in the dictionary with output value. and remove next_number in the dictionary.
 
     if reset_or_continue.lower() in ("y", "yes"):
-        number_dictionary["initial_number"] = number_dictionary["next_number"]
+        number_dictionary["initial_number"] = number_dictionary["result"]
+        number_dictionary["next_number"] = ""
+        number_dictionary["result"] = ""
+        print(number_dictionary)
         continue
     elif reset_or_continue.lower() in ("n", "no"):
         break
