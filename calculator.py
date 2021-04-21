@@ -19,6 +19,24 @@ def check_number(initial_number):
     return list_to_string.isdigit()
 
 
+# 5. Make functions for operation.
+def add(x, y):
+
+    return number_dictionary["initial_number"] + number_dictionary["next_number"]
+
+
+def minus(x, y):
+    return number_dictionary["initial_number"] - number_dictionary["next_number"]
+
+
+def multiply(x, y):
+    return number_dictionary["initial_number"] * number_dictionary["next_number"]
+
+
+def division(x, y):
+    return number_dictionary["initial_number"] / number_dictionary["next_number"]
+
+
 while True:
 
     #   2-2. Request to input the first number.
@@ -47,28 +65,6 @@ while True:
 
         #   4-1. Add the next number to the dictionary.
         number_dictionary["next_number"] = next_number
-
-        # 5. Make functions for operation.
-        def add(x, y):
-
-            return (
-                number_dictionary["initial_number"] + number_dictionary["next_number"]
-            )
-
-        def minus(x, y):
-            return (
-                number_dictionary["initial_number"] - number_dictionary["next_number"]
-            )
-
-        def multiply(x, y):
-            return (
-                number_dictionary["initial_number"] * number_dictionary["next_number"]
-            )
-
-        def division(x, y):
-            return (
-                number_dictionary["initial_number"] / number_dictionary["next_number"]
-            )
 
         # 6. Calculate with inputs. (initial_number, operation, next_number.) And add result to the dictionary.
         if operation == "+":
@@ -148,3 +144,5 @@ while True:
         elif reset_or_continue.lower() in ("n", "no"):
             print("See you again!")
             break
+        break
+    break
