@@ -38,4 +38,3 @@ balance_record[user_id] = balance
 print(
     f"Your betting: $ {thousand_separated_betting}\nYour balance: $ {balance_record[user_id]}"
 )
-print("done")
