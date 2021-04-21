@@ -39,7 +39,6 @@ while True:
                 "Please pick an operation from the right side. (/, *, +, -)\n"
             )
 
-        print(number_dictionary)
         # 4. Ask next number and check its validity.
         next_number = input("Please input next number\n")
         while check_number(next_number) == False:
@@ -143,7 +142,7 @@ while True:
             number_dictionary["initial_number"] = number_dictionary["result"]
             number_dictionary["next_number"] = ""
             number_dictionary["result"] = ""
-            print(number_dictionary)
+
             print(f'starting number is: {number_dictionary["initial_number"]}')
             continue
         elif reset_or_continue.lower() in ("n", "no"):
