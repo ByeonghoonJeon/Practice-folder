@@ -31,7 +31,8 @@ while True:
         message = input("Please type your message.\n")
         replace_message = message.replace(" ", "")
         while not replace_message.isalnum():
-            message = input("Please type letters and numbers only.")
+            message = input("Please type letters and numbers only.\n")
+            replace_message = message.replace(" ", "")
         print("Message received.")
 
         shift_number = input("Please type the shift number. (1 ~ 62)\n")
