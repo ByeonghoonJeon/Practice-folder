@@ -1,7 +1,7 @@
 print(
     "What's my portion?\nThis program is for dutch pay. Tip and food price are considered."
 )
-bill_amount = float(input("Please input total amount on the bill:\n$ "))
+bill_amount = float(input("Please input total amount of the bill:\n$ "))
 while bill_amount < 0:
     bill_amount = float(input("{!} Please input correct bill amount:\n$ "))
 print("Bill amount $", f"{bill_amount} confirmed.")
