@@ -40,14 +40,27 @@ print(
 )
 
 # 6. Make a card dictionary.
-card_symbol_list = ["Spades","Clubs","Diamonds","Hearts"]
+card_symbol_list = ["♠","♣","♦","♥"]
 number_list = ["A","2","3","4","5","6","7","8","9","J","Q","K"]
+
+# 7. Pick player's first card.
 random_card_symbol = random.choice(card_symbol_list)
 random_number = random.choice(number_list)
-player_first_card = [random_card_symbol, random_number]
-player_second_card = [random_card_symbol, random_number]
-while player_first_card == player_second_card:
-    player_first_card = [random_card_symbol, random_number]
-    player_second_card = [random_card_symbol, random_number]
+player_first_card = {random_card_symbol: random_number}
 
-print (player_first_card)
+# 8. Pick player's second card.
+random_card_symbol = random.choice(card_symbol_list)
+random_number = random.choice(number_list)
+player_second_card = {random_card_symbol: random_number}
+
+# 9. If player's first and second cards are identical, differentiate them.
+while player_first_card == player_second_card:
+    random_card_symbol = random.choice(card_symbol_list)
+    random_number = random.choice(number_list)
+    player_first_card = {random_card_symbol: random_number}
+    player_second_card = {random_card_symbol: random_number}
+
+# 10. Exhibit player's card pair.
+player_card_pair = player_first_card, player_second_card
+print (player_card_pair)
+
