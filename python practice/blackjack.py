@@ -40,11 +40,9 @@ print(
 )
 
 # 6. Make a card dictionary.
-card_symbol_list = ["♠","♣","♦","♥"]
-number_list = ["A","2","3","4","5","6","7","8","9","J","Q","K"]
+card_dictionary = {"♠":["A","2","3","4","5","6","7","8","9","J","Q","K"],"♣":["A","2","3","4","5","6","7","8","9","J","Q","K"],"♦":["A","2","3","4","5","6","7","8","9","J","Q","K"],"♥":["A","2","3","4","5","6","7","8","9","J","Q","K"]}
 
 # 7. Pick player's first card.
-random_card_symbol = random.choice(card_symbol_list)
 random_number = random.choice(number_list)
 player_first_card = {random_card_symbol: random_number}
 
@@ -62,5 +60,31 @@ while player_first_card == player_second_card:
 
 # 10. Exhibit player's card pair.
 player_card_pair = player_first_card, player_second_card
-print (player_card_pair)
+print ("Player's cards:", (player_card_pair))
+
+# 11. Pick dealer's first card.
+random_card_symbol = random.choice(card_symbol_list)
+random_number = random.choice(number_list)
+dealer_first_card = {random_card_symbol: random_number}
+
+# 12. Pick dealer's second card.
+random_card_symbol = random.choice(card_symbol_list)
+random_number = random.choice(number_list)
+dealer_second_card = {random_card_symbol: random_number}
+
+# 13. If dealer's first and second cards are identical, differentiate them.
+while dealer_first_card == dealer_second_card:
+    random_card_symbol = random.choice(card_symbol_list)
+    random_number = random.choice(number_list)
+    dealer_first_card = {random_card_symbol: random_number}
+    dealer_second_card = {random_card_symbol: random_number}
+
+# 14. If dealer's card is identical with player, pick another card.
+
+dic1=({1:2},{2:1})
+dic2=({2:1},{1:2})
+if dic1 == dic2:
+    print ("identical")
+else:
+    print("unidentical")
 
