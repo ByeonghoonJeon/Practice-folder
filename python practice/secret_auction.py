@@ -1,4 +1,5 @@
 # 1.  Greeting
+
 print("Welcome to Jeon's blind auction program!")
 print(
     "&& Rule: In the blind auction, if there are identical bid with one item, the winner is the first person who input his/her bid!"
