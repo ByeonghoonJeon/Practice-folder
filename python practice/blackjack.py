@@ -14,7 +14,7 @@ print("Your seed money is $ 1,000. Reach to the highest balance!")
 balance = 1000
 thousand_separated_balance = thousand_separator(balance)
 
-print(f"Balance: $ {thousand_separated_balance}")
+
 
 # 3. Ask ID.
 user_id = input("Please input an ID\n")
@@ -27,6 +27,7 @@ balance_record[user_id] = balance
 
 while True:
     # 5. Ask how much user will bet.
+    print(f"Your Balance: $ {balance_record[user_id]}")
     if balance == 0:
         print ("Balance is not enough. Time to go home!")
         break
@@ -57,6 +58,9 @@ while True:
     random_symbol = random.choice(symbol_list)
     player_first_card = random_symbol, random_number
     revealed_cards[random_symbol]=random_number
+    print (f"Player's card: {player_first_card}")
+    for i in range(0, 3):
+        sleep(0.7)
 
     # 9. Pick player's second card.
     random_number = random.choice(number_list)
@@ -74,7 +78,8 @@ while True:
     # 11. Exhibit player's card pair.
     player_card_pair = player_first_card, player_second_card
     print ("Player's cards:", (player_card_pair))
-
+    for i in range(0, 3):
+        sleep(0.7)
     # 12. Pick dealer's first card.
     random_number = random.choice(number_list)
     random_symbol = random.choice(symbol_list)
@@ -98,20 +103,51 @@ while True:
         random_symbol = random.choice(symbol_list)
         dealer_second_card = random_symbol, random_number
     revealed_cards[random_symbol]=random_number
-
+    dealer_card_pair = dealer_first_card, dealer_second_card
+    dealer_first_card = "♣", "A"
+    dealer_second_card= "♣", "4"
     # 16. Show dealer's first card.
+    print (f"Dealer's cards: {dealer_first_card}")
+    for i in range(0, 3):
+        sleep(0.7)
     print (f"Dealer's cards: {dealer_first_card}, (Hidden card)")
     # 17. If dealer's first card is Ace, King, Queen, or Jack, check if dealer's card is black jack.
-    if dealer_first_card[1] in ("A", "K", "Q", "J"):
+    if dealer_first_card[1] in ("K", "Q", "J"):
         print (f"Oh! is dealer Black Jack?")
         for i in range(0, 3):
             print("Dealer is checking his cards." + "." * i)
             sleep(1.0)
-        if dealer_second_card[1] in ("A")
+        if dealer_second_card[1] == ("A"):
+            print (dealer_card_pair)
             print("Dealer is Black Jack!")
-            continue
-        else: print ("Dealer is not Black Jack.")
-
+            want_to_continue = input ("Do you want to play more? (Y/N)\n")
+            while want_to_continue.lower() not in ("y", "yes", "n", "no"):
+                want_to_continue = input("If you want to keep play, please input 'Y'. If you want to finish card playing, input 'N'\n")
+            if want_to_continue.lower() in ("y","yes"):
+                continue
+            elif want_to_continue.lower() in ("n","no"):
+                break
+        else: 
+            print ("Dealer is not Black Jack.")
+    
+    if dealer_first_card[1] == "A":
+        print (f"Oh! is dealer Black Jack?")
+        for i in range(0, 3):
+            print("Dealer is checking his cards." + "." * i)
+            sleep(1.0)
+        if dealer_second_card[1] in ("K", "Q", "J"):
+            print (dealer_card_pair)
+            print("Dealer is Black Jack!")
+            want_to_continue = input ("Do you want to play more? (Y/N)\n")
+            while want_to_continue.lower() not in ("y", "yes", "n", "no"):
+                want_to_continue = input("If you want to keep play, please input 'Y'. If you want to finish card playing, input 'N'\n")
+            if want_to_continue.lower() in ("y","yes"):
+                continue
+            elif want_to_continue.lower() in ("n","no"):
+                break
+        else: 
+            print ("Dealer is not Black Jack.")
+    print ("checking")     
 
 print ("See you later!")
 
