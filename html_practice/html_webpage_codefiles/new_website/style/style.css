@@ -1,5 +1,19 @@
-body {background-color:#99bbad; margin: 0px;}
-hr {border-style: none; height: 20px; background-color: #ebd8b7; margin: 0px;}
-h1 {color:#4a5e56;}
-h3 {color:#4a5e56;}
+body {background-color:#171D2F; margin: 0px;}
+hr {border-style: none; height: 1px; background-color: #ebd8b7; margin: 0px;}
+h1 {color:#E2E2E2;}
+h2 {color:#E2E2E2;}
+h3 {color:#E2E2E2;}
+p {color:#E2E2E2;}
+th {color:#E2E2E2;}
+td {color:#E2E2E2;}
 image {background-color: #99bbad;}
+a:link {
+    color: wheat;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: wheat;
+    background-color: transparent;
+    text-decoration: none;
+  }
