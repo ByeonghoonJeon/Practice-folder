@@ -111,12 +111,13 @@ while True:
     for i in range(0, 3):
         sleep(0.7)
     print (f"Dealer's cards: {dealer_first_card}, (Hidden card)")
-    # 17. If dealer's first card is Ace, King, Queen, or Jack, check if dealer's card is black jack.
-    if dealer_first_card[1] in ("K", "Q", "J"):
+    # 17. If dealer's first card is King, Queen, Jack, or 10, check if dealer's card is black jack.
+    if dealer_first_card[1] in ("K", "Q", "J", 10):
         print (f"Oh! is dealer Black Jack?")
         for i in range(0, 3):
             print("Dealer is checking his cards." + "." * i)
             sleep(1.0)
+    # 17-1. If dealer's card pair is blackjack, player looses and ask if the player wants to continue or quit.        
         if dealer_second_card[1] == ("A"):
             print (dealer_card_pair)
             print("Dealer is Black Jack!")
@@ -127,15 +128,18 @@ while True:
                 continue
             elif want_to_continue.lower() in ("n","no"):
                 break
+    # 17-2. If dealer is not black jack, continue game.        
         else: 
             print ("Dealer is not Black Jack.")
-    
+
+    # 18. If dealer's first card is Ace, check if dealer's card is black jack.
     if dealer_first_card[1] == "A":
         print (f"Oh! is dealer Black Jack?")
         for i in range(0, 3):
             print("Dealer is checking his cards." + "." * i)
             sleep(1.0)
-        if dealer_second_card[1] in ("K", "Q", "J"):
+    # 18-1. If dealer's card pair is black jack, ask the player whether continue or not.
+        if dealer_second_card[1] in ("K", "Q", "J", 10):
             print (dealer_card_pair)
             print("Dealer is Black Jack!")
             want_to_continue = input ("Do you want to play more? (Y/N)\n")
@@ -145,8 +149,25 @@ while True:
                 continue
             elif want_to_continue.lower() in ("n","no"):
                 break
+    # 18-2. If dealer is not black jack, continue game.
         else: 
             print ("Dealer is not Black Jack.")
+    # 19. If player's card is a pair, ask whether split or not.
+    if player_card_pair[0][1] == player_card_pair[1][1]:
+        do_you_want_to_split=input("Would you like to split? (Y/N)\n")
+        while do_you_want_to_split.lower() not in ("y", "yes", "n", "no"):
+                do_you_want_to_split = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
+        if do_you_want_to_split.lower() in ("y", "yes"):
+            first_split_card_pair_second = random_symbol, random_number
+            second_split_card_pair_second = random_symbol, random_number
+            first_split_card_pair = player_first_card, first_split_card_pair_second
+            second_split_card_pair = player_second_card, second_split_card_pair_second
+        elif do_you_want_to_split.lower() in ("n", "no"):
+            print ("No split")
+    hit_or_stay = input("Would you like to hit? (Y) or stay? (N)")
+    while hit_or_stay.lower() not in ("y", "yes", "n", "no"):
+        hit_or_stay = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
+
     print ("checking")     
 
 print ("See you later!")
