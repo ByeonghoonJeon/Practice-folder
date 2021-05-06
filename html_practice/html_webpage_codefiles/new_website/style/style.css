@@ -2,7 +2,7 @@ body {
   background-color: #171d2f;
   margin: 0px;
 }
-hr {
+.hr {
   border-style: none;
   height: 1px;
   background-color: #ebd8b7;
@@ -29,6 +29,7 @@ td {
 image {
   border: 0px;
 }
+
 a:link {
   color: wheat;
   background-color: transparent;
@@ -41,7 +42,7 @@ a:visited {
 }
 
 a:hover {
-  color: #187fdf;
+  color: #2a6954;
 }
 .contact {
   font-size: 20px;
