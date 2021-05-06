@@ -43,6 +43,8 @@ a:visited {
 
 a:hover {
   color: #2a6954;
+  background-color: transparent;
+  text-decoration: none;
 }
 .contact {
   font-size: 20px;
