@@ -1,3 +1,4 @@
-.navbar-brand {font-size: 50px;}
+.navbar-brand {font-family: "Ubuntu"; font-size: 2.5rem; font-weight: bold;}
 #title{background-color: #ff4c68;}
 h1 {font-family: 'Montserrat-black', sans-serif; font-size: 3rem; line-height: 1.5;}
+.container-fluid{padding-top: 3%; padding-bottom: 3%; padding-right: 15%!important; padding-left: 15%!important;}
