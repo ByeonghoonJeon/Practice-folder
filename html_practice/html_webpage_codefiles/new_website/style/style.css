@@ -55,3 +55,12 @@ a:hover {
 .contact {
   font-size: 20px;
 }
+
+.row1{text-align:center;
+  margin:0 auto;}
+
+.row1 .col-lg-5{
+    display:inline-block;
+    vertical-align: middle;
+    float: none;
+ }
