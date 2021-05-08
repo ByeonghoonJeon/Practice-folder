@@ -5,3 +5,4 @@ body {font-family: 'Montserrat', 'sans-serif'!important;}
 h1 {font-family: 'Montserrat', 'sans-serif'; font-size: 3rem; line-height: 1.5;}
 .container-fluid{padding-top: 3%; padding-bottom: 3%; padding-right: 10%!important; padding-left: 10%!important;}
 .nav-item {font-family: 'Ubuntu','sans-serif'; padding-right: 2.5rem;}
+.navbar-nav {margin-left: 45%!important;}
