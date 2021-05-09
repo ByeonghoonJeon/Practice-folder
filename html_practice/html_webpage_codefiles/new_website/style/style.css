@@ -56,13 +56,12 @@ a:hover {
   font-size: 20px;
 }
 
-.row1{text-align:center;
-  margin:0 auto;}
+.col-lg-6{text-align:center;}
 
-.row1 .col-lg-5{
-    display:inline-block;
-    vertical-align: middle;
-    float: none;
- }
+
  
-
+.links:hover{border: solid; border-color: #171d2f;}
+.links{text-align: center; position:relative}
+.links img{position:absolute; top: 50%;}
+.main {margin-left: 12%; margin-right: 12%; padding-bottom: 12%;}
+.menu-bar{padding-right: 12%;}
