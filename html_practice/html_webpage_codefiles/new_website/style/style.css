@@ -1,5 +1,5 @@
 body {
-  background-color: #171d2f;
+  background-color: #171d2f!important;
   margin: 0px;
 }
 .hr {
@@ -56,12 +56,30 @@ a:hover {
   font-size: 20px;
 }
 
-.col-lg-6{text-align:center;}
+.col-lg-6 {
+  text-align: center;
+}
 
+.links:hover {
+  border: solid;
+  border-color: #171d2f;
+}
 
- 
-.links:hover{border: solid; border-color: #171d2f;}
-.links{text-align: center; position:relative}
-.links img{position:absolute; top: 50%;}
-.main {margin-left: 12%; margin-right: 12%; padding-bottom: 12%;}
-.menu-bar{padding-right: 12%;}
+.links {
+  text-align: center;
+  position: relative;
+}
+
+.links img {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%); margin-bottom: 20px;
+}
+.main {
+  margin-left: 12%;
+  margin-right: 12%;
+  padding-bottom: 12%;
+}
+.menu-bar {
+  padding-right: 12%;
+}
