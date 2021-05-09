@@ -3,9 +3,9 @@ body {font-family: 'Montserrat', 'sans-serif'!important;}
 .navbar {font-size: 1.5rem!important; padding-bottom: 4.5rem!important;}
 #title{background-color: #ff4c68; color: white;}
 h1 {font-family: 'Montserrat', 'sans-serif'; font-size: 2.5em!important; line-height: 1.5;}
-.container-fluid{padding-top: 3%; padding-bottom: 3%; padding-right: 0%!important; padding-left: 10%!important;}
+.container-fluid{padding-top: 3%; padding-bottom: 3%; padding-right: 5%!important; padding-left: 5%!important;}
 .nav-item {font-family: 'Ubuntu','sans-serif'; padding-right: 2.5rem;}
-.navbar-nav {margin-left: 45%!important;}
+.navbar-nav {text-align: right;}
 .download-button {margin-top: 2.5rem; margin-bottom: 2.5rem; margin-right: 2rem;}
 .icon{color: #ef8172;}
 .icon:hover{color: #ff4c68;}
