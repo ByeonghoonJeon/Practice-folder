@@ -1,6 +1,6 @@
 body {
   background-color: #171d2f!important;
-  margin: 0px;
+  margin-right: 0; padding-right: 0; width: auto;
 }
 .hr {
   border-style: none;
@@ -80,6 +80,5 @@ a:hover {
   margin-right: 12%;
   padding-bottom: 12%;
 }
-.menu-bar {
-  padding-right: 12%;
-}
+
+.row {text-align: right;}
