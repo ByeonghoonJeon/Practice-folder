@@ -72,8 +72,8 @@ padding-left: 8% !important;
 #testimonials {
   padding-top: 3% !important;
   padding-bottom: 7% !important;
-  padding-right: 10% !important;
-  padding-left: 10% !important;
+  padding-right: 5%;
+  padding-left: 5%;
   text-align: center!important;
   background-color: #ef8172;
   color: #fff;
@@ -83,3 +83,5 @@ padding-left: 8% !important;
 
 #press {background-color: #ef8172; text-align: center; padding-bottom: 3%;}
 .press-logo {width: 15%; margin: 20px; margin-bottom: 50px;}
+
+.carousel-item {padding-right: 15%!important; padding-left: 15%!important;}
