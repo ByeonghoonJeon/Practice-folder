@@ -53,7 +53,7 @@ h2 {font-family: "Montserrat", "sans-serif"!important; font-size: 3rem!important
   color: #ff4c68;
 }
 .col-lg-4 {
-  text-align: center;
+  text-align: center!important;
   padding: 0px !important;
 }
 .row {
@@ -85,3 +85,7 @@ padding-left: 8% !important;
 .press-logo {width: 15%; margin: 20px; margin-bottom: 50px;}
 
 .carousel-item {padding-right: 15%!important; padding-left: 15%!important;}
+
+#pricing {padding-top: 2rem!important; padding-right: 8%!important; padding-left: 8%!important;}
+.price-row {margin-top: 2rem!important;}
+.card-align{margin-left: auto!important; margin-right: auto!important;}
