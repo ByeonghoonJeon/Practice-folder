@@ -158,23 +158,34 @@ while True:
     # 19. If player's card is a pair, ask whether split or not.
     print(f"Your card pair: {player_card_pair},\nDealer's card pair: ({dealer_first_card}, (Hidden card))")
     if player_card_pair[0][1] == player_card_pair[1][1]:
+    # 19-1. Check if balance is sufficent to bet more.
         if balance >= betting:
             do_you_want_to_split=input("Would you like to split? (Y/N)\n")
             while do_you_want_to_split.lower() not in ("y", "yes", "n", "no"):
                     do_you_want_to_split = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
-    # 19-1 If player wants to split, reduce player's balance.        
+    # 19-2. If player wants to split, reduce player's balance.        
             if do_you_want_to_split.lower() in ("y", "yes"):
                 balance -= betting
                 balance_record[user_id] = balance
                 print ("Your balance: $ {balance_record[user_id]}")
-    # 19-2 Give a new card to the first card.
+    # 19-3. Give a new card to the first card.
                 first_split_card_pair_second = random_symbol, random_number
-    # 19-3 Give a new card to the second card.
+                while first_split_card_pair_second in revealed_cards:
+                    random_number = random.choice(number_list)
+                    random_symbol = random.choice(symbol_list)
+                    first_split_card_pair_second = random_symbol, random_number
+                    revealed_cards[random_symbol]=random_number
+    # 19-4. Give a new card to the second card.
                 second_split_card_pair_second = random_symbol, random_number
-    # 19-4 Bind cards along with pair.
+                while first_split_card_pair_second in revealed_cards:
+                    random_number = random.choice(number_list)
+                    random_symbol = random.choice(symbol_list)
+                    first_split_card_pair_second = random_symbol, random_number
+                    revealed_cards[random_symbol]=random_number
+    # 19-5. Bind cards along with pair.
                 first_split_card_pair = player_first_card, first_split_card_pair_second
                 second_split_card_pair = player_second_card, second_split_card_pair_second
-    # 19-5 Print card pairs.
+    # 19-6. Print card pairs.
                 print (f"Player's card: {player_first_card}")
                 for i in range(0, 1):
                     sleep(1)
@@ -186,14 +197,20 @@ while True:
                     sleep(1)
                 print (f"Player's card: {second_split_card_pair}")
                 print (f"Player's card: {first_split_card_pair} {second_split_card_pair}")
+    
+    # 19-7. When player does not want to split.
             elif do_you_want_to_split.lower() in ("n", "no"):
                 print ("No split")
+    # 19-8. If player's balance is not sufficient to bet more, print that you can't.
         elif balance < betting:
             print ("Hmm, you don't have enough money to split.")
+
+    # 20. Ask hit or stay(When no split).
     hit_or_stay = input("Would you like to hit? (Y) or stay? (N)")
     while hit_or_stay.lower() not in ("y", "yes", "n", "no"):
         hit_or_stay = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
     while hit_or_stay.lower() in ("y", "yes"):
+    
        ####remove
        a=1
    
