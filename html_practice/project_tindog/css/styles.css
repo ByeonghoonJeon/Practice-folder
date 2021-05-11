@@ -86,8 +86,9 @@ padding-left: 8% !important;
 
 .carousel-item {padding-right: 15%!important; padding-left: 15%!important;}
 
-#pricing {padding-top: 2rem!important; padding-right: 8%!important; padding-left: 8%!important;}
+#pricing {padding-top: 2rem!important; padding-right: 8%!important; padding-left: 8%!important; padding-bottom: 2rem!important;}
 .price-row {margin-top: 2rem!important;}
-.card-align{margin-left: auto!important; margin-right: auto!important;}
+.card-align{margin-left: auto; height: 23rem!important;}
 .card-body{height: 250px!important;}
-.blankline{height:24px!important;}
+.color-botton{background-color: #ff4c68!important; border-color: #ff4c68!important; color: white;}
+.card-title{margin-top: 1rem;}
