@@ -31,9 +31,10 @@ h2 {font-family: "Montserrat", "sans-serif"!important; font-size: 3rem!important
 
 .container-fluid {
   padding-top: 3% !important;
-  padding-bottom: 7% !important;
+  padding-bottom: 0% !important;
   padding-right: 10% !important;
   padding-left: 10% !important;
+  height: 50rem!important;
 }
 .nav-item {
   font-family: "Ubuntu", "sans-serif";
@@ -64,6 +65,7 @@ h2 {font-family: "Montserrat", "sans-serif"!important; font-size: 3rem!important
 .row {
   padding: 0px;
   margin: 0px !important;
+
 }
 
 .title-align {
@@ -71,7 +73,7 @@ h2 {font-family: "Montserrat", "sans-serif"!important; font-size: 3rem!important
 }
 
 #features {padding-right: 8% !important;
-padding-left: 8% !important;
+padding-left: 8% !important; padding-top: 5%!important; padding-bottom: 5%!important; background-color: white; position: relative; margin: 0!important;
 }
 
 #testimonials {
@@ -97,3 +99,6 @@ padding-left: 8% !important;
 .card-body{height: 250px!important;}
 .color-botton{background-color: #ff4c68!important; border-color: #ff4c68!important; color: white;}
 .card-title{margin-top: 1rem;}
+
+
+.maindog {position: absolute;}
