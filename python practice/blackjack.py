@@ -27,7 +27,7 @@ balance_record[user_id] = balance
 
 while True:
     # 5. Ask how much user will bet.
-    print(f"Your Balance: $ {balance_record[user_id]}")
+    print(f"Hello, {user_id}. Your Balance: $ {thousand_separator(balance_record[user_id])}")
     if balance == 0:
         print ("Balance is not enough. Time to go home!")
         break
@@ -66,7 +66,9 @@ while True:
     random_number = random.choice(number_list)
     random_symbol = random.choice(symbol_list)
     player_second_card = random_symbol, random_number
-
+    ##########TestCode
+    player_first_card = "♣", "A"
+    player_second_card= "♥", "A"
 
     # 10. If player's second card is already existed in the revealed card dictionary, differentiate it.
     while player_second_card in revealed_cards:
@@ -104,6 +106,7 @@ while True:
         dealer_second_card = random_symbol, random_number
     revealed_cards[random_symbol]=random_number
     dealer_card_pair = dealer_first_card, dealer_second_card
+    ##########TestCode
     dealer_first_card = "♣", "A"
     dealer_second_card= "♣", "4"
     # 16. Show dealer's first card.
@@ -153,17 +156,25 @@ while True:
         else: 
             print ("Dealer is not Black Jack.")
     # 19. If player's card is a pair, ask whether split or not.
+    print(f"Your card pair: {player_card_pair},\nDealer's card pair: {dealer_first_card}, (Hidden card)")
     if player_card_pair[0][1] == player_card_pair[1][1]:
-        do_you_want_to_split=input("Would you like to split? (Y/N)\n")
-        while do_you_want_to_split.lower() not in ("y", "yes", "n", "no"):
-                do_you_want_to_split = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
-        if do_you_want_to_split.lower() in ("y", "yes"):
-            first_split_card_pair_second = random_symbol, random_number
-            second_split_card_pair_second = random_symbol, random_number
-            first_split_card_pair = player_first_card, first_split_card_pair_second
-            second_split_card_pair = player_second_card, second_split_card_pair_second
-        elif do_you_want_to_split.lower() in ("n", "no"):
-            print ("No split")
+        if balance >= betting:
+            do_you_want_to_split=input("Would you like to split? (Y/N)\n")
+            while do_you_want_to_split.lower() not in ("y", "yes", "n", "no"):
+                    do_you_want_to_split = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
+            if do_you_want_to_split.lower() in ("y", "yes"):
+                balance -= betting
+                balance_record[user_id] = balance
+                print ("Your balance: $ {balance_record[user_id]}")
+                first_split_card_pair_second = random_symbol, random_number
+                second_split_card_pair_second = random_symbol, random_number
+                first_split_card_pair = player_first_card, first_split_card_pair_second
+                second_split_card_pair = player_second_card, second_split_card_pair_second
+                print (first_split_card_pair, second_split_card_pair)
+            elif do_you_want_to_split.lower() in ("n", "no"):
+                print ("No split")
+        elif balance < betting:
+            print ("Hmm, you don't have enough money to split.")
     hit_or_stay = input("Would you like to hit? (Y) or stay? (N)")
     while hit_or_stay.lower() not in ("y", "yes", "n", "no"):
         hit_or_stay = input("If you want to split your card, please input 'Y'. If you want to keep go, input 'N'\n")
