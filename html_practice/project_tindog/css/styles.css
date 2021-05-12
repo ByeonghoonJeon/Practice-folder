@@ -101,10 +101,10 @@ padding-left: 8% !important; padding-top: 5%!important; padding-bottom: 5%!impor
 .card-title{margin-top: 1rem;}
 
 
-.maindog {position: absolute; right: 20%!important;}
+.maindog {position: absolute; right: 20%!important; transform:rotate(30)!important}
 
-@media (max-width:900px){
+@media (max-width:1028px){
 
-.practice {font-size: 600px!important;}
+.maindog {position: static; transform:rotate(0)!important}
 
 }
