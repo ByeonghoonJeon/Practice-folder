@@ -102,3 +102,9 @@ padding-left: 8% !important; padding-top: 5%!important; padding-bottom: 5%!impor
 
 
 .maindog {position: absolute; right: 20%!important;}
+
+@media (max-width:900px){
+
+.practice {font-size: 600px!important;}
+
+}
