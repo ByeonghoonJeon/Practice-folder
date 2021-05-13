@@ -108,3 +108,4 @@ padding-left: 8% !important; padding-top: 5%!important; padding-bottom: 5%!impor
 .maindog {position: static; transform:rotate(0)!important}
 
 }
+#cta {background-color: #ff4c68; color: white; text-align: center; padding-top: 3rem; padding-bottom: 3rem; padding-left: 35%; padding-right: 35%;}
