@@ -49,3 +49,14 @@ x+=3 // x = x+3
 var y = 5;
 y = y-1
 y --;
+
+
+// Creation of Function.
+
+function messageCounting(){
+userName = prompt("Please input your name");
+userMessage = prompt("Please type your message");
+MessageCount = userMessage.length
+alert("Your message is "+MessageCount+" letters.");}
+
+messageCounting()
