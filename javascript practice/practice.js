@@ -71,7 +71,8 @@ n=Math.floor(n)+1;
 console.log(n);
 
 // Is equal to
-a === b
+a === b // Tripile equal sign checks their data type as well. 
+a == b // Double equal sign does not check their data type.
 // Is not equal to
 a !== b
 // Is greater than
@@ -82,3 +83,23 @@ a < b
 a >= b
 // Is lesser or equal than
 a <= b
+
+
+// && means "And"
+// || means "Or"
+// ! means "Not"
+
+// The if sentence example.
+a = prompt ("input number between 0 and 100");
+if (a>80) {alert ("a is greater than 80")} else {alert ("a is lesser than 80")};
+
+
+year = prompt("Please input the year");
+if (year%4 === 0 && year%400 === 0 && year%100 !== 0) {alert("Leap year.")} else {alert("Not leap year.")};
+
+// Array example
+
+var fruit = ["apple", "pear", "Cherry", "Mango", "Watermelone", "Cantelope"]
+var myFruit = fruit[2]
+alert (myFruit);
+console.log(fruit.length);
