@@ -109,3 +109,10 @@ var userFruit = prompt("Please type your favorite fruit.");
 if (fruit.includes(userFruit)){alert("Me too!");} else{alert("Well, I am not");}
 fruit.push(userFruit)
 alert (fruit)
+
+// Selecting HTML elements with Javascript.
+document.getElementsByClassName()
+document.getElementById()
+document.getElementsByName()
+document.getElementsByTagName()
+document.getElementsByClassName("Class")[0].style.color="red"
