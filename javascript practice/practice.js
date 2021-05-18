@@ -1,3 +1,5 @@
+//Java script study note.
+
 alert("Hello");
 alert("World");
 alert(2+3);
@@ -68,3 +70,15 @@ n = n*6;
 n=Math.floor(n)+1;
 console.log(n);
 
+// Is equal to
+a === b
+// Is not equal to
+a !== b
+// Is greater than
+a > b
+// Is lesser than
+a < b
+// Is greater or equal than
+a >= b
+// Is lesser or equal than
+a <= b
