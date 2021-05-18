@@ -103,3 +103,9 @@ var fruit = ["apple", "pear", "Cherry", "Mango", "Watermelone", "Cantelope"]
 var myFruit = fruit[2]
 alert (myFruit);
 console.log(fruit.length);
+
+var fruit = ["apple", "pear", "Cherry", "Mango", "Watermelone", "Cantelope"]
+var userFruit = prompt("Please type your favorite fruit.");
+if (fruit.includes(userFruit)){alert("Me too!");} else{alert("Well, I am not");}
+fruit.push(userFruit)
+alert (fruit)
