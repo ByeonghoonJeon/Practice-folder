@@ -11,3 +11,7 @@ alert(userNumber);
 }
 
 while (countNumber <= 100){fizzbuzz()}
+
+/* for loop example.
+for (start-point; end-point; changes;) */
+for (var i = 1; i<2; i++){console.log(i);}
