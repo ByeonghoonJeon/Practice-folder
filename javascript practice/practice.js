@@ -112,7 +112,12 @@ alert (fruit)
 
 // Selecting HTML elements with Javascript.
 document.getElementsByClassName()
+// To change properties, single element need to be specified.
+document.getElementsByClassName("Class")[0].style.color="red"
+//Other examples.
 document.getElementById()
 document.getElementsByName()
 document.getElementsByTagName()
-document.getElementsByClassName("Class")[0].style.color="red"
+
+document.querySelector("button").style.backgroundColor="yellow";
+
