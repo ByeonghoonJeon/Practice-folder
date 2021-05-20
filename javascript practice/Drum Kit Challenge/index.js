@@ -1,9 +1,10 @@
-for (var n = 0; n<7; n++){
-document.querySelectorAll("button")[n].addEventListener("click",audio);}
-
 var audio = new Audio("sounds/tom-1.mp3");
+audio.play();
+for (var n = 0; n<7; n++){
+document.querySelectorAll("button")[n].addEventListener("click",function(){
+var audio = new Audio("sounds/tom-1.mp3");
+audio.play();
+})}
 
-
-function audio(){audio.play()}
 
 
