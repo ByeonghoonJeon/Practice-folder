@@ -1,0 +1,10 @@
+body {
+  background-color: #62959c;
+  text-align: center;
+}
+h1.level {font-size: 5rem;}
+.fa-square {font-size: 18rem; margin-top: 2rem; margin-left: 2rem; margin-right: 2rem;}
+.box1 {color: #c19277;}
+.box2 {color: #5b6d5b;}
+.box3 {color: #99154e}
+.box4 {color: #e1bc91;}
