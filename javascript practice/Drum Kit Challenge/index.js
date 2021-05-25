@@ -40,5 +40,9 @@ for (var n = 0; n < 7; n++) {
   });
 }
 
+document.addEventListener("keydown", function(){
+    alert("Key was pressed!");
+})
+
 //querySelector("class>children") is for direct children of class
 //uerySelector("class .children") is for all the element decendant of class(including not direct)
