@@ -1,6 +1,7 @@
 for (var n = 0; n < 7; n++) {
   document.querySelectorAll("button")[n].addEventListener("click", function () {
     var buttonInnerHTML = this.innerHTML;
+    makesound(buttonInnerHTML)
 
     switch (buttonInnerHTML) {
       case "w":
@@ -40,9 +41,11 @@ for (var n = 0; n < 7; n++) {
   });
 }
 
-document.addEventListener("keydown", function(){
+document.addEventListener("keydown", function(event){
     alert("Key was pressed!");
 })
+
+function makesound(){}
 
 //querySelector("class>children") is for direct children of class
 //uerySelector("class .children") is for all the element decendant of class(including not direct)
