@@ -8,10 +8,22 @@ body {
 #headAndNavbar {
   background-color: white !important;
 }
-#head {
+
+#bar-title {
   color: #4e89ae !important;
-  font-weight: bold !important; margin: 0!important;
+  font-weight: bold !important;
+  margin-left: 20px;
+  margin-right: 50px;
+
 }
+
+.nav-link {margin-right: 20px;}
+
+#bar-title2 {color: black; line-height: 1.8; margin-left: 25px;}
+
+#emailInput {padding-top: 40px;}
+
+
 
 .test {
   font-family: "Vesper Libre", serif !important;
