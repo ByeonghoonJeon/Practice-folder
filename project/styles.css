@@ -5,7 +5,7 @@ body {
 #bar-title {
   color: #0061a8 !important;
   font-weight: bold !important;
-  margin-left: 20px;
+  margin-left: 80px;
   margin-right: 50px;
 
 }
@@ -14,12 +14,13 @@ body {
 
 #bar-title2 {color: black; line-height: 1.8; margin-left: 25px;}
 
-#emailInput {padding-top: 80px; padding-bottom: 80px; background-color: #0061a8; text-align: center; color: white;}
+#emailInput {padding-top: 80px; padding-bottom: 80px; background-color: #0061a8; color: white;}
 /* #4e89ae */
 /* #34656d */
 /* #931a25 */
 
-.textboxAndbutton {display: inline-flex;}
+.loginInspiration {margin-left: 80px;}
+.textboxAndbutton {display: inline-flex; margin-left: 80px;}
 
 .emailtyping {width: 70%; height: 50px; text-align: center; font-size: 1.7rem;}
 #emailbutton {background-color: #a80030; border: 0; color: white; height: 50px; width: 150px; margin-left: 20px;}
