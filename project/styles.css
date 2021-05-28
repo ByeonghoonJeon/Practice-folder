@@ -2,29 +2,77 @@ body {
   margin: 0 !important;
   font-family: "Mate SC", serif !important;
 }
+
+
+
 #bar-title {
   color: #0061a8 !important;
   font-weight: bold !important;
-  margin-left: 80px;
+  margin-left: 15vw;
   margin-right: 50px;
-
+  margin-bottom: 0;
+  font-size: 3rem;
 }
 
-.nav-link {margin-right: 20px;}
+.nav-link {
+  margin-right: 20px;
+  font-size: 1.4rem;
+}
 
-#bar-title2 {color: black; line-height: 1.8; margin-left: 25px;}
+.languagebutton {margin-left: 500px; margin-top: auto; margin-bottom: auto;}
+.krbutton {margin-left: 20px;}
 
-#emailInput {padding-top: 80px; padding-bottom: 80px; background-color: #0061a8; color: white;}
+
+#bar-title2 {
+  color: black;
+  line-height: 1.8;
+  margin-left: 25px;
+}
+
+#emailInput {
+  margin: 0;
+  background-color: #0061a8;
+  color: white;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
 /* #4e89ae */
 /* #34656d */
 /* #931a25 */
 
-.loginInspiration {margin-left: 80px;}
-.textboxAndbutton {display: inline-flex; margin-left: 80px;}
+.loginInspiration {
+  margin-left: 15vw;
+  font-family: "Vesper Libre", serif !important;
+}
+.textboxAndbutton {
+  display: inline-flex;
+  margin-left: 15vw;
+}
+.loginInspiration2 {
+  margin-left: 15vw;
+  color: black;
+  font-family: "Vesper Libre", serif !important;
+}
 
-.emailtyping {width: 70%; height: 50px; text-align: center; font-size: 1.7rem;}
-#emailbutton {background-color: #a80030; border: 0; color: white; height: 50px; width: 150px; margin-left: 20px;}
-
+.emailtyping {
+  width: 70%;
+  height: 50px;
+  text-align: center;
+  font-size: 1.7rem;
+}
+#emailbutton {
+  height: 50px;
+  width: 140px !important;
+  margin-left: 20px;
+  padding: 0;
+}
+.RAbase {
+  color: white;
+  font-weight: bold;
+}
 .test {
-  font-family: "Vesper Libre", serif !important; margin-top: 20px;
+  font-family: "Vesper Libre", serif !important;
+  margin-top: 20px;
 }
