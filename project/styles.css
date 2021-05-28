@@ -1,16 +1,9 @@
 body {
-  margin-top: 20px !important;
-  margin-right: 20px !important;
-  margin-bottom: 20px !important;
-  margin-left: 20px !important;
+  margin: 0 !important;
   font-family: "Mate SC", serif !important;
 }
-#headAndNavbar {
-  background-color: white !important;
-}
-
 #bar-title {
-  color: #4e89ae !important;
+  color: #0061a8 !important;
   font-weight: bold !important;
   margin-left: 20px;
   margin-right: 50px;
@@ -21,12 +14,13 @@ body {
 
 #bar-title2 {color: black; line-height: 1.8; margin-left: 25px;}
 
-#emailInput {padding-top: 40px;}
+#emailInput {padding-top: 80px; padding-bottom: 80px; background-color: #0061a8; text-align: center; color: white;}
+/* #4e89ae */
+/* #34656d */
+/* #931a25 */
 
-
+.emailtyping {width: 45%; height: 50px; text-align: center; font-size: 1.7rem;}
 
 .test {
-  font-family: "Vesper Libre", serif !important;
+  font-family: "Vesper Libre", serif !important; margin-top: 20px; margin-left: 20px;
 }
-/* #931a25 */
-/*  */
