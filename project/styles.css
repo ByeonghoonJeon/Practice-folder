@@ -19,8 +19,11 @@ body {
 /* #34656d */
 /* #931a25 */
 
-.emailtyping {width: 45%; height: 50px; text-align: center; font-size: 1.7rem;}
+.textboxAndbutton {display: inline-flex;}
+
+.emailtyping {width: 70%; height: 50px; text-align: center; font-size: 1.7rem;}
+#emailbutton {background-color: #a80030; border: 0; color: white; height: 50px; width: 150px; margin-left: 20px;}
 
 .test {
-  font-family: "Vesper Libre", serif !important; margin-top: 20px; margin-left: 20px;
+  font-family: "Vesper Libre", serif !important; margin-top: 20px;
 }
