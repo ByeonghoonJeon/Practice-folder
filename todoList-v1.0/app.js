@@ -1,17 +1,27 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+app.set('view engine', 'ejs');
 
 
 //when a user approaches to the home = app.get("/", fu...)
+
 app.get("/", function(req, res){
     var today = new Date();
     var currentDay = today.getDay();
+    var day = "";
+
     if (currentDay === 6 || currentDay=== 0){
-        res.write("<h1>Yay it's weekend</h1>");
+        day = "weekend";
+        res.render("list", {
+            kindOfDay: day
+        });
     }
     else{
-        res.sendFile(__dirname+"/index.html");
+        day = "weekday";
+        res.render("list", {
+            kindOfDay: day
+        });
     }
 //getDay = gives number values according to the day (Sun =0 Mon=1 Tue =2...)
 });
