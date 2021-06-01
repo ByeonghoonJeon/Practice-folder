@@ -3,15 +3,13 @@ const bodyParser = require("body-parser");
 const app = express();
 app.set('view engine', 'ejs');
 
-
 //when a user approaches to the home = app.get("/", fu...)
 
 app.get("/", function(req, res){
     var today = new Date();
     var currentDay = today.getDay();
     var day = "";
-    
-    alert(currentDay);
+    console.log(currentDay);
 
     if (currentDay === 0){
         day = "Sunday";
@@ -59,10 +57,11 @@ app.get("/", function(req, res){
 });
 
 
+
 //show screen above.
 
 
 // and listen via port xxxx 
 app.listen(3000, function(){ 
-    console.log("Server started on port 1992");
+    console.log("Server started on port 3000");
 });
