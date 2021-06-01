@@ -6,11 +6,12 @@ const app = express();
 //when a user approaches to the home = app.get("/", fu...)
 app.get("/", function(req, res){
     var today = new Date();
-    if (today.getDay()=== 6 || today.getDay()===0){
-        res.send("Yay it's the weekend!");
+    var currentDay = today.getDay();
+    if (currentDay === 6 || currentDay=== 0){
+        res.write("<h1>Yay it's weekend</h1>");
     }
     else{
-        res.send("Boo! I have to work");
+        res.sendFile(__dirname+"/index.html");
     }
 //getDay = gives number values according to the day (Sun =0 Mon=1 Tue =2...)
 });
