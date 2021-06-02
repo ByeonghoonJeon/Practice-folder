@@ -7,52 +7,18 @@ app.set('view engine', 'ejs');
 
 app.get("/", function(req, res){
     var today = new Date();
-    var currentDay = today.getDay();
-    var day = "";
-    console.log(currentDay);
-
-    switch (currentDay) {
-        case 0:
-            day = "Sunday";
-            break;
     
-        default: console.log("Error: current day is equal to: " + currentDay)
-            break;
+    var options = {
+        weekday: "long",
+        day: "numeric",
+        month: "long"
+    };
 
-        case 1:
-            day = "Monday";
-            break;
-    
-        
-        case 2:
-            day = "Tuesday";
-            break;
-
-
-        case 3:
-            day = "Wednesday";
-            break;
-
-
-        case 4:
-            day = "Thursday";
-            break;
-
-
-        case 5:
-            day = "Friday";
-            break;
-        case 6:
-            day = "Saturday";
-            break;
-
-        
-    }
+    var day = today.toLocaleDateString("en-US", options);
     
     res.render("list", {
         kindOfDay: day
     });
-//getDay = gives number values according to the day (Sun =0 Mon=1 Tue =2...)
 });
 
 
