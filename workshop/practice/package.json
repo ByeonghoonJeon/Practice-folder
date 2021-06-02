@@ -1,7 +1,7 @@
 {
   "name": "workshop0605",
   "version": "1.0.0",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
     "lite": "lite-server",
     "start": "npm run lite",

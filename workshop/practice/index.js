@@ -1,12 +1,10 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+const path = require("path");
 
-app.get("/", function(req, res){
-    res.sendFile(__dirname+"/index.html");
-    
-})
+app.use(express.static('public'))
 
 app.listen(3000, function(){
     console.log("Server started on 3000 port.")
-})
+});
