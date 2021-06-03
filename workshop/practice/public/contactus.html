@@ -84,27 +84,36 @@
             </div>
             <div class="col-md-10 margintop40px">
                 <form>
-                    <label for="firstName">First Name</label>
-                    <input type="text" id="firstName" name="firstName" placeholder="First Name">
-                    
-                    <label for="lastName">Last Name</label>
-                    <input type="text" id="lastName" name="lastName" placeholder="Last Name">
-                    
-                    <label for="contactTel">Contact Tel.</label>
-                    <input type="tel" id="contactTel" name="areaCode" placeholder="Area code">
-                    <input type="tel" name="telNum" placeholder="Tel. number">
-                    
-                    <label for="email">Contact e-mail</label>
-                    <input type="email" id="email" name="email" placeholder="Email">
-                    
-                    <label for="yes">May I contact with you?</label>
-                    <input type="radio" id="yes" name="contactRadios" value="Yes"> Yes
-                    <input type="radio" name="contactRadios" value="No"> No
-                    
-                    <label for="feedback">Your Feedback</label>
-                    <textarea name="feedback" id="feedback" rows="8">
-                    </textarea>
-                    <button type="submit">Send Feedback</button>
+                    <div class="row">
+                        <label for="firstName">First Name</label>
+                        <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                    </div>
+                    <div class="row">
+                        <label for="lastName">Last Name</label>
+                        <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                    </div>
+                    <div class="row">
+                        <label for="contactTel">Contact Tel.</label>
+                        <input type="tel" id="contactTel" name="areaCode" placeholder="Area code">
+                        <input type="tel" name="telNum" placeholder="Tel. number">
+                    </div>
+                    <div class="row">
+                        <label for="email">Contact e-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="row">
+                        <label for="yes">May I contact with you?</label>
+                        <input type="radio" id="yes" name="contactRadios" value="Yes">
+                        <label for="yes">Yes</label>
+                        <input type="radio" id="no" name="contactRadios" value="No">
+                        <label for="no">No</label>
+                    </div>
+                    <div class="row">
+                        <label for="feedback">Your Feedback</label>
+                        <textarea name="feedback" id="feedback" rows="8">Type here
+                        </textarea>
+                        <button type="submit">Send Feedback</button>
+                    </div>
                 </form>
             </div>
         </div>
