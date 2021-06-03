@@ -23,7 +23,7 @@
         <div class="container">
             <div class="row">
                 <div class="col title">
-              
+
                     <h1>NuCamp</h1>
                     <h2 class="white">a better way to camp</h2>
                 </div>
@@ -83,7 +83,29 @@
                 <hr>
             </div>
             <div class="col-md-10 margintop40px">
-                Form goes here
+                <form>
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" placeholder="First Name">
+                    
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" placeholder="Last Name">
+                    
+                    <label for="contactTel">Contact Tel.</label>
+                    <input type="tel" id="contactTel" name="areaCode" placeholder="Area code">
+                    <input type="tel" name="telNum" placeholder="Tel. number">
+                    
+                    <label for="email">Contact e-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Email">
+                    
+                    <label for="yes">May I contact with you?</label>
+                    <input type="radio" id="yes" name="contactRadios" value="Yes"> Yes
+                    <input type="radio" name="contactRadios" value="No"> No
+                    
+                    <label for="feedback">Your Feedback</label>
+                    <textarea name="feedback" id="feedback" rows="8">
+                    </textarea>
+                    <button type="submit">Send Feedback</button>
+                </form>
             </div>
         </div>
 
@@ -101,16 +123,22 @@
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
-                <div class="col-6 col-sm-5 text-center">
+                <div class="col-6 col-sm-5">
                     <h5>Social</h5>
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fab fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-instagram" href="http://facebook.com/"><i class="fab fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fab fa-twitter"></i></a>
-                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i class="fab fa-youtube"></i></a>
+                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="btn btn-social-icon btn-instagram" href="http://facebook.com/"><i
+                            class="fab fa-facebook"></i></a>
+                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                            class="fab fa-twitter"></i></a>
+                    <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/"><i
+                            class="fab fa-youtube"></i></a>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <i class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234<br>
-                    <i class="fa fa-envelope-o fa-lg text-primary"></i> campsites@nucamp.co
+                    <a role="button" class="btn btn-link" href="tel: +821000111122"><i
+                            class="fa fa-phone fa-lg text-primary"></i> 1-206-555-1234</a><br />
+                    <a role="button" class="btn btn-link" href="mailto:abc@abc.com"><i
+                            class="fa fa-envelope fa-lg text-primary"></i> campsites@nucamp.co</a>
                 </div>
             </div>
         </div>
