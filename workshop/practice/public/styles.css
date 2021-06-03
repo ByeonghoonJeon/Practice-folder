@@ -1,11 +1,36 @@
+h1 {
+  color: white;
+  font-family: "Lobster", cursive;
+}
+h2 {
+  font-family: "Lobster", cursive;
+}
+h3 {
+  font-family: "Lobster", cursive;
+}
+.white {
+  color: whitesmoke;
+}
+.jumbotron {
+  border-radius: 0 !important;
+  margin: 0;
+  background-image: linear-gradient(to right, blue, purple);
+}
+.title {
+  margin-left: 30px;
+}
+.aboutus {
+  color: blue;
+}
+.margintop40px {
+  margin-top: 40px;
+}
 
-h1{color: white; font-family: 'Lobster', cursive;}
-h2{font-family: 'Lobster', cursive; }
-h3{font-family: 'Lobster', cursive;}
-.white{color: whitesmoke;}
-.jumbotron {border-radius: 0!important; margin: 0; background-image: linear-gradient(to right, blue, purple);}
-.title {margin-left: 30px;}
-.aboutus {color: blue;}
-.margintop40px {margin-top: 40px;}
-
-.navbar {background-color: #901CAD;}
+.navbar {
+  background-color: #901cad;
+}
+.site-footer {
+  background-image: linear-gradient(to right, #5637dd, #3046c5, #601068);
+  color: white;
+  
+}
