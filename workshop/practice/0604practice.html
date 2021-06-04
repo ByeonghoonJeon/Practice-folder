@@ -29,7 +29,7 @@
             <!-- Above this is the section for you to edit -->
             <div class="form-group row">
                 <div class="col">
-                    <button type="button" class="btn btn-primary" onclick="changeColor()">Go</button>
+                    <button type="button" class="btn btn-primary" onclick="goOnClickHandler()">Go</button>
                 </div>
             </div>
         </form>
@@ -86,13 +86,16 @@
     </ul>
 
     <script>
-        let bgcolor = document.getElementById("selection").value;
-        alert(bgcolor);
 
-    
-
-        function changeColor() {
-            document.body.style.backgroundColor = "bgcolor";
+        // var e = document.getElementById("ddlViewBy");
+        // var strUser = e.value;
+        
+        function goOnClickHandler() {
+            var e = document.getElementById("selection");
+            var bgvalue = e.value;
+            console.log(bgvalue);
+            document.body.style.backgroundColor =bgvalue;
+            
         }
     </script>
 
