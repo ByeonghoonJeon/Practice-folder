@@ -13,10 +13,12 @@
     -ms-transform: rotate(-10deg);
     -o-transform: rotate(-10deg);
     transform: rotate(-10deg);
+
+    
   }
-.bignathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF; font-size: 3vw;}
+.bignathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF; font-size: 3.5rem;}
 .textbox {background-color: #933335;}
-.skills-button {margin-top: 2px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important;}
+.skills-button {margin-top: 20px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important;}
 .skill-icon {color: white; font-size: 4rem; }
 /* font-family: 'Open Sans', sans-serif; */
 
