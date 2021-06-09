@@ -6,6 +6,8 @@
 .empty {height: 10vh}
 .section1 {background-color: #011F25;}
 .hello {color: #6281B5; font-family: 'Slackey', cursive, sans-serif;}
+.webdeveloper {color: #933335; font-family: 'Slackey', cursive, sans-serif;}
+.inline {display:inline;}
 #profile {height: 50vh;
     -webkit-transform:rotate(-10deg);
     -moz-transform: rotate(-10deg);
@@ -26,8 +28,12 @@
 
 .bignathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF; font-size: 3.5rem;}
 .textbox {background-color: #933335;}
-.skills-button {margin-top: 40px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important; color: #E1E4EB;}
-.skill-icon {color: white; font-size: 4rem; }
+.skills-button, .portfolio-button {margin-top: 40px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important; color: #E1E4EB;}
+.section2 {background-color: white;}
+.features {color: #011F25; font-family: 'Slackey', cursive, sans-serif;}
+.fa-pills, .fa-bacterium {color: #933335; font-size: 8rem; margin-top: 0;}
+.skill-icon {color: white; font-size: 4rem;}
+
 
 
 
