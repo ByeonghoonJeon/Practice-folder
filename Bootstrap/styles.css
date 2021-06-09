@@ -66,8 +66,10 @@ p {color: #011F25;}
 .fa-python, .fa-js-square, .fa-html5, .fa-css3-alt, .fa-bootstrap, .fa-node {color:#2B4557; font-size: 3.5rem; margin-top: 25px;}
 .c-lang {font-size: 1.2rem; margin-top: 15px; margin-bottom: 0;}
 
+.section4 {background-color: #933335;}
+.form-group {font-size: 1.5rem; font-family: 'Signika Negative', sans-serif; font-weight: bold; color: #E1E4EB;}
 
-
+#footer {background-color: #E1E4EB; margin-bottom: 0; padding-bottom: 0;}
 
 
 
