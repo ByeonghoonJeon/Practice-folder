@@ -41,10 +41,10 @@
     </nav>
   </div>
 
-  <div class="container-fluid empty section1">
-  </div>
-
+  
   <div class="container-fluid section1">
+    <div class="container-fluid empty section1">
+    </div>
     <div class="row justify-content-center left-align">
       <div class="col-lg-4  mb-5 mt-5 align-self-center">
         <h2 class="ml-2 hello">Hello, This is</h2>
@@ -118,9 +118,11 @@
     </div>
   </div>
 
-  <div class="container-fluid empty section3">
-  </div>
+  
+
   <div class="container-fluid section3">
+    <div class="container-fluid empty section3">
+    </div>
     <div class="row">
       <div class="col text-center">
         <h1 class="features">About me</h1>
@@ -169,7 +171,7 @@
             <h2 class="c-lang">CSS</h2>
           </div>
         </div>
-        <div class="row justify-content-cebter">
+        <div class="row justify-content-center">
           <div class="col text-center">
             <i class="fab fa-bootstrap"></i>
             <h2 class="c-lang">Bootstrap</h2>
@@ -179,7 +181,7 @@
     </div>
   </div>
 
-  <div class="container-fluid empty section4">
+  <div class="container-fluid empty section4 boxshadow">
   </div>
   <div class="container-fluid section4">
     <div class="row">
@@ -188,16 +190,38 @@
         <a name="contact-me"></a>
       </div>
     </div>
+    <div class="container-fluid empty section4">
+    </div>
     <form>
-      <div class="row"></div>
-      <label for="first_name" class="col-md-3 form-group">
-        First name
-      </label>
+      <div class="row justify-content-center">
+        <label for="titles" class="col-md-1 form-group text-md-right text-center">
+          Your title.
+        </label>
+        <select id="titles" name="titles" class="form-control col-md-3 text-left">
+          <option selected>Select...</option>
+          <option value="blue">Blue</option>
+      </div>
+      <!-- <div class="row justify-content-center">
+        <label for="first-name" class="col-md-3 form-group text-md-left text-center offset-md-1">
+          Last name
+        </label>
+        <input type="text" id="last-name" name="last-name" placeholder="last-name"
+          class="form-control col-md-3 inline mb-3"><br>
+      </div>
+      <div class="row justify-content-center">
+        <label for="first-name" class="col-md-3 form-group text-md-left text-center offset-md-1">
+          First name
+        </label>
+        <input type="text" id="first-name" name="first-name" placeholder="first-name"
+          class="form-control col-md-3 inline">
+      </div> -->
     </form>
+    <div class="container-fluid empty section4">
+    </div>
   </div>
-  
-  
-  
+
+
+
   <footer id="footer" class="text-center">
     <p>© Copyright 2021 Nathan Jeon (Byeonghoon Jeon)</p>
   </footer>
