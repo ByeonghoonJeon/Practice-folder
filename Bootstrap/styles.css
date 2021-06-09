@@ -1,6 +1,12 @@
 body {background-color: #011F25;}
-.container-fluid {background-image: linear-gradient(to right,#933335, #FB5856)}
-.nathan {font-weight: bolder;}
-.navbar-item {color: white;}
-.navbar-item:hover {font-size: 110%; font-weight: bolder; color: white; text-decoration: none;}
-.navbar-item:visited {color: white; text-decoration: none;}
+.topbar {background-image: linear-gradient(to right,#933335, #FB5856)}
+.nathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF!important;}
+.navbar-item {color: #E1E4EB;font-weight: bold;}
+.navbar-item:hover {font-size: 110%; font-weight: bolder; color: #E1E4EB; text-decoration: none;}
+.navbar-item:visited {color: #E1E4EB; text-decoration: none;}
+#profile {height: 60vh;}
+
+
+/* font-family: 'Open Sans', sans-serif; */
+
+/* font-family: 'Faster One', cursive , sans-serif; */
