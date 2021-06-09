@@ -1,12 +1,23 @@
-body {background-color: #011F25;}
+
 .topbar {background-image: linear-gradient(to right,#933335, #FB5856)}
 .nathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF!important;}
 .navbar-item {color: #E1E4EB;font-weight: bold;}
-.navbar-item:hover {font-size: 110%; font-weight: bolder; color: #E1E4EB; text-decoration: none;}
+.navbar-item:hover {font-size: 110%; font-weight: bolder; color: white!important; text-decoration: none;}
 .navbar-item:visited {color: #E1E4EB; text-decoration: none;}
-#profile {height: 60vh;}
-
-
+.empty {height: 10vh}
+.section1 {background-color: #011F25;}
+.hello {background-color: #FFF8AF; color: #011F25;}
+#profile {height: 50vh;
+    -webkit-transform:rotate(-10deg);
+    -moz-transform: rotate(-10deg);
+    -ms-transform: rotate(-10deg);
+    -o-transform: rotate(-10deg);
+    transform: rotate(-10deg);
+  }
+.bignathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF; font-size: 3vw;}
+.textbox {background-color: #933335;}
+.skills-button {margin-top: 2px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important;}
+.skill-icon {color: white; font-size: 4rem; }
 /* font-family: 'Open Sans', sans-serif; */
 
 /* font-family: 'Faster One', cursive , sans-serif; */
