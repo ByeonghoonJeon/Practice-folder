@@ -1,3 +1,6 @@
 body {background-color: #011F25;}
-.container {background-image: linear-gradient(to right,#933335, #FB5856)}
+.container-fluid {background-image: linear-gradient(to right,#933335, #FB5856)}
+.nathan {font-weight: bolder;}
 .navbar-item {color: white;}
+.navbar-item:hover {font-size: 110%; font-weight: bolder; color: white; text-decoration: none;}
+.navbar-item:visited {color: white; text-decoration: none;}
