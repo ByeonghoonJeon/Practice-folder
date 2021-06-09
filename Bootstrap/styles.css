@@ -188,7 +188,9 @@ p {
 }
 
 
-select:hover{border-color: white;;}
+select:hover{border-color: #011f25; border-width: 3px;}
+#last-name, #first-name:hover{border-color: #011f25; border-width: 3px;}
+
 
 #footer {
   background-color: #e1e4eb;
