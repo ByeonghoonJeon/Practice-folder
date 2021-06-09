@@ -19,6 +19,9 @@ p {color: #011F25;}
     ;
   }
 
+#profile:hover {position: static; transform:rotate(0)!important; margin: 0!important;}
+
+
   @media (max-width:990px){
 
     #profile {position: static; transform:rotate(0)!important; margin: 0!important;}
@@ -29,7 +32,24 @@ p {color: #011F25;}
 
 
 .bignathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF; font-size: 3.5rem;}
-.textbox {background-color: #933335; border-radius: 10px;}
+.textbox {background-color: #933335; border-radius: 10px;
+    animation-duration: 2s;
+    animation-name: slidein;
+  }
+@keyframes slidein {
+  from {
+    margin-left: -100%;
+    width: 100%;
+  }
+
+  to {
+    margin-right: 0%;
+    width: 100%;
+  }
+}
+
+
+
 .skills-button, .portfolio-button {margin-top: 40px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important; color: #E1E4EB;}
 .section2 {background-color: #E1E4EB;}
 .features {color: #011F25; font-family: 'Signika Negative', sans-serif; font-weight: bolder;}
@@ -41,7 +61,8 @@ p {color: #011F25;}
 .section3 {background-color: white;}
 #profile2 {border-radius: 100%; height: 20vh;}
 .self-intro {font-weight: bold;}
-.fa-github-square, .fa-linkedin{color:#828EB0; font-size: 2rem;}
+.fa-github-square, .fa-linkedin{color:#828EB0; font-size: 2rem; margin-left: 10px; margin-right: 10px;}
+.fa-github-square:hover, .fa-linkedin:hover{font-size: 2.5rem;}
 .fa-python, .fa-js-square, .fa-html5, .fa-css3-alt, .fa-bootstrap, .fa-node {color:#2B4557; font-size: 3.5rem; margin-top: 25px;}
 .c-lang {font-size: 1.2rem; margin-top: 15px; margin-bottom: 0;}
 
