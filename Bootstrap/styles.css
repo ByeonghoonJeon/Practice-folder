@@ -1,3 +1,4 @@
+p {color: #011F25;}
 .topbar {background-image: linear-gradient(to right,#933335, #FB5856)}
 .nathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF!important;}
 .navbar-item {color: #E1E4EB;font-weight: bold;}
@@ -9,11 +10,12 @@
 .webdeveloper {color: #933335; font-family: 'Slackey', cursive, sans-serif;}
 .inline {display:inline;}
 #profile {height: 50vh;
-    -webkit-transform:rotate(-10deg);
-    -moz-transform: rotate(-10deg);
-    -ms-transform: rotate(-10deg);
-    -o-transform: rotate(-10deg);
-    transform: rotate(-10deg);
+    -webkit-transform:rotate(-7deg);
+    -moz-transform: rotate(-7deg);
+    -ms-transform: rotate(-7deg);
+    -o-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+    border-radius: 10px
     ;
   }
 
@@ -27,18 +29,26 @@
 
 
 .bignathan {font-family: 'Slackey', cursive, sans-serif; color: #FFF8AF; font-size: 3.5rem;}
-.textbox {background-color: #933335;}
+.textbox {background-color: #933335; border-radius: 10px;}
 .skills-button, .portfolio-button {margin-top: 40px; font-family: 'Slackey', cursive, sans-serif; font-weight:lighter!important; color: #E1E4EB;}
-.section2 {background-color: white;}
-.features {color: #011F25; font-family: 'Slackey', cursive, sans-serif;}
-.fa-pills, .fa-bacterium {color: #933335; font-size: 8rem; margin-top: 0;}
+.section2 {background-color: #E1E4EB;}
+.features {color: #011F25; font-family: 'Signika Negative', sans-serif; font-weight: bolder;}
+.fa-pills, .fa-bacterium, .fa-bolt {color: #933335; font-size: 8rem; margin-top: 0;}
+.degree {font-family: 'Signika Negative', sans-serif; color: #6281B5; font-weight: bold;}
 .skill-icon {color: white; font-size: 4rem;}
+.explain {font-family: 'Signika Negative', sans-serif;}
+.fa-tablet-alt, .fa-mobile-alt, .fa-laptop {color: #933335; font-size: 4rem; margin-top: 0;}
+.section3 {background-color: white;}
+#profile2 {border-radius: 100%; height: 20vh;}
+.self-intro {font-weight: bold;}
+.fa-github-square, .fa-linkedin{color:#828EB0; font-size: 2rem;}
+.fa-python, .fa-js-square, .fa-html5, .fa-css3-alt, .fa-bootstrap, .fa-node {color:#2B4557; font-size: 3.5rem; margin-top: 25px;}
+.c-lang {font-size: 1.2rem; margin-top: 15px; margin-bottom: 0;}
 
 
 
 
 
 
-/* font-family: 'Open Sans', sans-serif; */
 
 /* font-family: 'Faster One', cursive , sans-serif; */
