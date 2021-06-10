@@ -26,6 +26,12 @@ p {
 .empty {
   height: 10vh;
 }
+
+.customshadow {box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
+
+
+
+
 .section1 {
   background-color: #011f25;
 }
@@ -98,12 +104,17 @@ p {
   color: #e1e4eb;
 }
 
-.boxshadow {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-.textshadow {text-shadow: 0px 5px grey;}
-.textshadow-weak {text-shadow: 0px 2px grey;}
+.boxshadow {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.textshadow {
+  text-shadow: 0px 5px grey;
+}
+.textshadow-weak {
+  text-shadow: 0px 2px grey;
+}
 .section2 {
   background-color: #e1e4eb;
-  
 }
 .features {
   color: #011f25;
@@ -136,9 +147,6 @@ p {
   font-size: 4rem;
   margin-top: 0;
 }
-
-
-
 
 .section3 {
   background-color: white;
@@ -187,10 +195,15 @@ p {
   color: #e1e4eb;
 }
 
-
-select:hover{border-color: #011f25; border-width: 3px;}
-#last-name, #first-name:hover{border-color: #011f25; border-width: 3px;}
-
+select:hover {
+  border-color: #011f25;
+  border-width: 3px;
+}
+#last-name,
+#first-name:hover {
+  border-color: #011f25;
+  border-width: 3px;
+}
 
 #footer {
   background-color: #e1e4eb;
