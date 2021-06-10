@@ -2,12 +2,13 @@ p {
   color: #011f25;
 }
 .topbar {
-  background-image: linear-gradient(to right, #933335, #fb5856);
+  background-image: linear-gradient(to right, #933335, #fb5856); position: absolute; z-index: 3; position: fixed;
 }
 .nathan {
   font-family: "Slackey", cursive, sans-serif;
   color: #fff8af !important;
 }
+
 .navbar-item {
   color: #e1e4eb;
   font-weight: bold;
@@ -224,5 +225,13 @@ select:hover {
   word-spacing: 8px;
 }
 
+.fa-github, .fa-linkedin-in {
+  color: #011f25;
+  font-size: 1.3rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.fa-github:hover, .fa-linkedin-in:hover{font-size: 1.6rem;}
 
 /* font-family: 'Faster One', cursive , sans-serif; */
