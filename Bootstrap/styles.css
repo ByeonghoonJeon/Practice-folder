@@ -47,6 +47,13 @@ p {
 .inline {
   display: inline;
 }
+
+
+@media (max-width: 992px) {
+  #hometitle {text-align: center!important;}
+}
+
+
 #profile {
   height: 50vh;
   -webkit-transform: rotate(-7deg);
@@ -63,11 +70,13 @@ p {
   margin: 0 !important;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 992px) {
   #profile {
     position: static;
     transform: rotate(0) !important;
     margin: 0 !important;
+    height: auto;
+    width: 50vw;
   }
   .left-align {
     justify-content: start !important;
