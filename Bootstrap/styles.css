@@ -78,6 +78,7 @@ p {
   color: #fff8af;
   font-size: 3.5rem;
 }
+
 .textbox {
   background-color: #933335;
   border-radius: 10px;
@@ -210,5 +211,18 @@ select:hover {
   margin-bottom: 0;
   padding-bottom: 0;
 }
+
+.cvTextbox {
+  background-color: #933335;
+  border-radius: 10px;
+}
+
+.cvTop {
+  font-family: "Slackey", cursive, sans-serif;
+  color: #fff8af;
+  font-size: 2rem;
+  word-spacing: 8px;
+}
+
 
 /* font-family: 'Faster One', cursive , sans-serif; */
