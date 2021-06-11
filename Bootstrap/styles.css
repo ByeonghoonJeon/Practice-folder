@@ -249,9 +249,15 @@ select:hover {
 .carddesign {border-color: white; border-width: 3px;}
 
 
+.btn-cv {font-family: "Signika Negative", sans-serif; font-weight: bold;}
+
 .card-header{border-width: 0;}
 
 .fa-user-tie, .fa-graduation-cap {color: #e1e4eb;
   font-size: 3.5rem;}
+
+@media (max-width: 992px) {
+  .card {width: 50vw; margin-left: auto; margin-right: auto;}
+}
 
 /* font-family: 'Faster One', cursive , sans-serif; */
