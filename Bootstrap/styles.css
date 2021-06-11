@@ -260,4 +260,6 @@ select:hover {
   .card {width: 50vw; margin-left: auto; margin-right: auto;}
 }
 
+.detailPage_hr {margin-left: auto; margin-right: auto; width: 20vw;}
+
 /* font-family: 'Faster One', cursive , sans-serif; */
