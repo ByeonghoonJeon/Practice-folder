@@ -267,7 +267,8 @@ select:hover {
 }
 
 .btn-thesis {font-family: "Signika Negative", sans-serif; font-weight: bold; background-color: #933335!important; border-color: #933335!important;}
-.btn-thesis:hover {background-color: white!important; color: #933335;}
+.btn-thesis:hover {background-color: white!important; color: #933335; border-width: 2px;}
+
 
 
 /* font-family: 'Faster One', cursive , sans-serif; */
