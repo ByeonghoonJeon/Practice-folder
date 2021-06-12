@@ -52,6 +52,9 @@ p {
 @media (max-width: 992px) {
   #hometitle {text-align: center!important;}
 }
+@media (max-width: 434px) {
+  #hometitle {text-align: left!important;}
+}
 
 
 #profile {
@@ -273,5 +276,9 @@ select:hover {
   font-weight: bolder; margin-bottom: 0;}
 
 .fa-tools {font-size: 10rem; color: #fff8af;}
-
+.btn-letstalk {font-family: "Signika Negative", sans-serif; font-weight: bold; background-color: #fff8af; border-color: #fff8af; color: #933335;}
 /* font-family: 'Faster One', cursive , sans-serif; */
+
+@media (max-width: 625px) {
+  #footer {font-size: x-small;}
+}
