@@ -14,8 +14,20 @@ h3 {
 .jumbotron {
   border-radius: 0 !important;
   margin: 0;
+  padding: 30px;
   background-image: linear-gradient(to right, blue, purple);
 }
+
+.row-content {
+  padding: 50px 0;
+  border-bottom: 1px ridge;
+  min-height: 200px;
+}
+
+.navbar-dark{
+  background-color: #901CAD;
+}
+
 .title {
   margin-left: 30px;
 }
@@ -36,3 +48,11 @@ h3 {
 }
 
 .tab-content {border: 1px solid #DDD; border-top: none; padding: 10px;}
+
+.carousel-caption{
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.carousel {
+  border: solid #5637DD;
+}
