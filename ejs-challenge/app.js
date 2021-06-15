@@ -36,6 +36,10 @@ app.post("/compose", function(req,res){
   console.log(req.body.postTitle)
 });
 
+app.post("/compose", function(req,res){
+  console.log(req.body.postContent)
+});
+
 
 
 
