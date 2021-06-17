@@ -47,7 +47,9 @@ app.post("/compose", function(req,res){
 
 });
 
-
+app.get("/posts/:postName", function(req, res){
+  console.log(req.params.postName);
+});
 
 
 

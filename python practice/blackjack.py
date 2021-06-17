@@ -55,8 +55,8 @@ while True:
     revealed_cards = {}
 
     # 8. Pick player's first card.
-    random_number = random.choice(number_list)
     random_symbol = random.choice(symbol_list)
+    random_number = random.choice(number_list)
     player_first_card = random_symbol, random_number
     revealed_cards[random_symbol] = random_number
     print(f"Player's card: {player_first_card}")
@@ -64,8 +64,8 @@ while True:
         sleep(0.7)
 
     # 9. Pick player's second card.
-    random_number = random.choice(number_list)
     random_symbol = random.choice(symbol_list)
+    random_number = random.choice(number_list)
     player_second_card = random_symbol, random_number
     # TestCode
     player_first_card = "♣", "A"
@@ -73,11 +73,10 @@ while True:
 
     # 10. If player's second card is already existed in the revealed card dictionary, differentiate it.
     while player_second_card in revealed_cards:
-        random_number = random.choice(number_list)
         random_symbol = random.choice(symbol_list)
+        random_number = random.choice(number_list)
         player_second_card = random_symbol, random_number
     revealed_cards[random_symbol] = random_number
-
     # 11. Exhibit player's card pair.
     player_card_pair = player_first_card, player_second_card
     print("Player's cards:", (player_card_pair))
