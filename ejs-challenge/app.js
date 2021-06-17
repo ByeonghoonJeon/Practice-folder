@@ -51,17 +51,18 @@ app.post("/compose", function (req, res) {
 });
 
 app.get("/posts/:postName", function (req, res) {
-  const requestedTitle = req.params.postName;
+  const requestedTitle = _.lowerCase(req.params.postName);
 
-  posts.forEach(function(post){
-    const storedTitle = post.title;
+  posts.forEach(function (post) {
+    const storedTitle = _.lowerCase(post.title);
 
-    if (storedTitle === requestedTitle){
-      console.log("Match found!");
-    }else{
-      console.log("Not a match");
+    if (storedTitle === requestedTitle) {
+      res.render("post", {
+        title: post.title,
+        content: post.content,
+      });
     }
-  })
+  });
 });
 
 app.listen(3000, function () {
