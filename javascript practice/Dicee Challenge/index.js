@@ -80,3 +80,11 @@ switch (randomNumber2) {
 };
 document.body.querySelector(".img1").setAttribute("src", imgSource1);
 document.body.querySelector(".img2").setAttribute("src", imgSource2);
+
+if (randomNumber1>randomNumber2){
+    document.body.querySelector("h1").innerHTML="Player 1 Win!"
+} else if (randomNumber1<randomNumber2){
+    document.body.querySelector("h1").innerHTML="Player 2 Win!"
+} else {
+    document.body.querySelector("h1").innerHTML="Draw!"
+};
