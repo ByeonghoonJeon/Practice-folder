@@ -5,7 +5,12 @@ for (var i = 0; i<numberOfDrumButtons; i++) {
     
 }
 
+let audio = new Audio ("sounds/tom-1.mp3");
+
+
+
 function handleClick(){
-    alert("I got clicked!");
+    audio.play();
+    this.style.color="white";
 }
 
