@@ -9,7 +9,9 @@
     "lite": "lite-server",
     "scss": "node-sass -o public/css/ public/css/",
     "start": "npm run lite",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin",
+    "clean": "rimraf dist"
   },
   "author": "Nathan Jeon",
   "license": "ISC",
@@ -27,6 +29,7 @@
     "lite-server": "^2.6.1",
     "onchange": "^7.1.0",
     "parallelshell": "3.0.2",
+    "rimraf": "^3.0.2",
     "usemin-cli": "^0.6.0"
   },
   "description": ""
