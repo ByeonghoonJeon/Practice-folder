@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "imagemin": "imagemin img/* -o dist/img",
     "lite": "lite-server",
     "scss": "node-sass -o public/css/ public/css/",
     "start": "npm run lite",
@@ -19,6 +21,8 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
+    "imagemin-cli": "^6.0.0",
     "lite-server": "^2.6.1",
     "onchange": "^7.1.0",
     "parallelshell": "3.0.2"
