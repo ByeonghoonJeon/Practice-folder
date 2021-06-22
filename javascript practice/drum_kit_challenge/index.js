@@ -1,5 +1,6 @@
 var numberOfDrumButtons = document.querySelectorAll(".drum").length;
 
+
 for (var i = 0; i < numberOfDrumButtons; i++) {
   document.querySelectorAll(".drum")[i].addEventListener("click", function () {
     var buttonInnerHTML = this.innerHTML;
@@ -45,7 +46,10 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
         break;
     }
 
-    this.style.color = "white";
+    if (this.style.color === "white"){
+        this.style.color="#DA0463"}else{
+            this.style.color="white"
+        }
   });
 }
 
@@ -97,6 +101,7 @@ document.addEventListener("keydown", function(event){
         default:
           break;
       }
+      
       
 });
 
