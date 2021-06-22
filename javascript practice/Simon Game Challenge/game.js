@@ -14,4 +14,13 @@ gamePattern.push(randomChosenColour);
 console.log(gamePattern);
 
 $(`#${randomChosenColour}`).fadeOut(100).fadeIn(100);
-$(`#${randomChosenColour}`).
+
+switch (randomChosenColour) {
+    case "yellow":
+        let yellowSound = new Audio("sounds/yellow.mp3");
+        yellowSound.play();
+        break;
+
+    default:
+        break;
+}
