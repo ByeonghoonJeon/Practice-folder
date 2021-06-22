@@ -48,3 +48,16 @@ for (var i = 0; i < numberOfDrumButtons; i++) {
     this.style.color = "white";
   });
 }
+
+
+function workerDatabase(name, gender, age, department){
+    this.name = name;
+    this.gender = gender;
+    this.age = age;
+    this.department = department;
+    this.clean = function (){
+        alert ("Cleaning");
+    }
+}
+
+let worker1 = new workerDatabase("Nathan", "M", 20, "DD");
