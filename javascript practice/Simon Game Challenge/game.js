@@ -22,5 +22,8 @@ switch (randomChosenColour) {
         break;
 
     default:
+        let randomSound = new Audio("sounds/yellow.mp3");
+        randomSound.play();
         break;
 }
+
