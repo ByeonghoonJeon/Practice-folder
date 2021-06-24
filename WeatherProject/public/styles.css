@@ -1,0 +1,8 @@
+html { font-size: 1vw; }
+h1 {font-size: 4em;}
+body{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat; height: 100vh;}
+.emptySpace {height: 20%;}
+.container {justify-content: center;}
+.yellowBox {border: solid; border-width: 10px; border-color: yellow; border-radius: 15px;}
+.header {color: white; font-family: 'Staatliches', cursive; margin: 0;}
+.explain {color: gold;}
