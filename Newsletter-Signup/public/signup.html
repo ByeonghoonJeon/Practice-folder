@@ -20,13 +20,13 @@
   </head>
 
   <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" action="/" method="POST">
       <img class="mb-4" src="images/JFT.png" alt="" width="132" height="104">
       <h1 class="h5 mb-3 font-weight-normal">SignUp to my newsletter!</h1>
 
-      <input type="text" id="inputFirstName" class="form-control top" placeholder="Your First Name" required>
-      <input type="text" id="inputLastName" class="form-control middle" placeholder="Your Last Name" required>
-      <input type="email" id="inputEmail" class="form-control bottom" placeholder="Email address" required autofocus>
+      <input name="firstName" type="text" id="inputFirstName" class="form-control top" placeholder="Your First Name" required>
+      <input name="lastName" type="text" id="inputLastName" class="form-control middle" placeholder="Your Last Name" required>
+      <input name="email" type="email" id="inputEmail" class="form-control bottom" placeholder="Email address" required autofocus>
     
       <div class="checkbox mb-3">
         <label>
