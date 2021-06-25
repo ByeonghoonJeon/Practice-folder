@@ -20,7 +20,8 @@ app.post("/", function(req,res){
         
         response.on("data", function(data){
             const weatherData = JSON.parse(data);
-            const temp = weatherData.main.temp
+            const fullTemp = weatherData.main.temp
+            const temp = fullTemp.toFixed(1);
             const weatherDescription = weatherData.weather[0].description
             res.write("<p>Current weather of "+query+" is "+weatherDescription+".</p>");
             res.write("<h1>Today's temperature is: "+temp+" degree</h1>");

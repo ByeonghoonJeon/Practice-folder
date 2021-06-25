@@ -1,7 +1,7 @@
 html { font-size: 1vw; }
 h1 {font-size: 4em;}
-body{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat; height: 100vh;}
-.emptySpace {height: 15%;}
+body{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat; width: 100vw;}
+.emptySpace {height: 15vh;}
 .container {justify-content: center;}
 .yellowBox {border: solid; border-width: 10px; border-color: #F7FD04; border-radius: 15px;}
 .header {color: #F7FD04; font-family: 'Staatliches', cursive; margin: 0;}
@@ -26,3 +26,13 @@ body{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); backgroun
     h1{font-size: 8em;}
     .explain{font-size: 4em;}
 }
+
+
+.goButton {border: solid; border-width: 5px; border-color: #F7FD04; background-color: transparent; color: #F7FD04; height: inherit;}
+
+.goButton:hover {background-color: #F7FD04; color: orangered; cursor: pointer; border-width: 5px;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;}
+
+

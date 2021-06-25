@@ -28,7 +28,7 @@
     <div class="container container-fluid">
         <div class="yellowBox mb-5">
             <div class="row justify-content-center">
-                <div class="col col-sm-9 text-center yelloBox mx-5">
+                <div class="col col-sm-9 text-center mx-5">
                     <h1 class="mb-0" style="color: white;">-</h1>
                     <h1 class="header">World Weather Window</h1>
                     <h5 class="explain  mb-0">Access to the weather of 200,000 cities!</h5>
@@ -36,14 +36,18 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center mt-5">
-            <div class="col col-sm-9 text-center yelloBox mx-5">
-                <form action="/" method="POST">
-                    <input id="cityInput" type="text" name="cityName" placeholder="City">
-                    <button type="submit" class="btn btn-primary btn-sm">Go</button>
-                </form>
+        <form action="/" method="POST">
+            <div class="row justify-content-center mt-5">
+                <div class="col col-sm-6 text-center mx-5">
+                    <input id="cityInput" type="text" name="cityName" placeholder="Type name of city here!" class="form-control cityNamePlaceHolder text-center">
+                </div>
             </div>
-        </div>
+            <div class="row justify-content-center mt-3">
+                <div class="col col-sm-6 text-center mx-5">
+                    <button type="submit" class="btn form-control goButton"><strong>Go</strong></button>
+                </div>
+            </div>
+        </form>
     </div>
 
     <!-- Optional JavaScript -->
