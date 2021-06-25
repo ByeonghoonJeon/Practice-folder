@@ -1,8 +1,28 @@
 html { font-size: 1vw; }
 h1 {font-size: 4em;}
 body{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat; height: 100vh;}
-.emptySpace {height: 20%;}
+.emptySpace {height: 15%;}
 .container {justify-content: center;}
-.yellowBox {border: solid; border-width: 10px; border-color: yellow; border-radius: 15px;}
-.header {color: white; font-family: 'Staatliches', cursive; margin: 0;}
-.explain {color: gold;}
+.yellowBox {border: solid; border-width: 10px; border-color: #F7FD04; border-radius: 15px;}
+.header {color: #F7FD04; font-family: 'Staatliches', cursive; margin: 0;}
+.explain {color: white;}
+
+@media screen and (max-width: 1024px){
+    h1{font-size: 7.5em;}
+    .explain{font-size: 3.6em;}
+}
+
+@media screen and (max-width: 768px){
+    h1{font-size: 7em;}
+    .explain{font-size: 3.3em;}
+}
+
+
+@media screen and (max-width: 415px){
+    h1{font-size: 9em;}
+    .explain{font-size: 4em;}
+}
+@media screen and (max-width: 320px){
+    h1{font-size: 8em;}
+    .explain{font-size: 4em;}
+}
