@@ -26,7 +26,6 @@ app.post("/", function(req,res){
             res.write("<p>Current weather of "+query+" is "+weatherDescription+".</p>");
             res.write("<h1>Today's temperature is: "+temp+" degree</h1>");
             res.send();
-            
         });
     });
 })
