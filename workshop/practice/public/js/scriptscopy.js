@@ -17,7 +17,9 @@ $(function() {
     $("#modalClose").click(function(){
         $("#reserveModal").modal("hide");
     });
-    
+    $("#loginButton").click(function(){
+        $("#loginModal").modal("show");
+    });
 });
 
 
