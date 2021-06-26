@@ -32,7 +32,7 @@ app.post("/", function(req,res){
     const url = "https://us6.api.mailchimp.com/3.0/lists/ea756b17bc";
     const options = {
         method: "POST",
-        auth: s// "Name:API key
+        auth: "Nathan:b27f02810ee29a6ac7d2d03ec32076c5-us6"
     }
     
 
@@ -56,7 +56,7 @@ app.post("/", function(req,res){
 app.listen(3000, function(){
     console.log("Server is running.");
 });
-
+// APIkey = "b27f02810ee29a6ac7d2d03ec32076c5-us6"
 //ea756b17bc
 
 
