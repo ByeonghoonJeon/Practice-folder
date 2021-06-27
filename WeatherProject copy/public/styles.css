@@ -1,42 +1,167 @@
-html { font-size: 1vw; }
-h1 {font-size: 4em;}
-.section1{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; padding-left: 0; background-position: right 80% bottom 50%;;}
-.emptySpace-lg {height: 150px;}
-.emptySpace-sm {height: 75px;}
-.yellowBox {border: solid; border-width: 10px; border-color: #F7FD04; border-radius: 15px; margin-left: 100px; margin-right: 100px; }
-.header {color: #F7FD04; font-family: 'Staatliches', cursive; margin: 0;}
-.explain {color: white;}
-
-@media screen and (max-width: 580px){
-    .section1{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat fixed ; width: 100vw;}
+html {
+  font-size: 1vw;
+}
+h1 {
+  font-size: 4em;
+}
+h5 {
+  font-size: 2em;
 }
 
-@media screen and (max-width: 1024px){
-    h1{font-size: 7.5em;}
-    .explain{font-size: 3.6em;}
+.section1 {
+  background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg);
+  background-size: cover;
+  padding-left: 0;
+  background-position: right 80% bottom 50%;
+}
+.emptySpace-lg {
+  height: 150px;
+}
+.emptySpace-sm {
+  height: 75px;
+}
+.yellowBox {
+  border: solid;
+  border-width: 10px;
+  border-color: #f7fd04;
+  border-radius: 15px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+.header {
+  color: #f7fd04;
+  font-family: "Staatliches", cursive;
+  margin: 0;
+}
+.explain {
+  color: white;
+}
+#cityInput {
+  font-size: 1.5em;
+  box-sizing: content-box;
+  height: 5vh;
+  border-width: 5px;
 }
 
-@media screen and (max-width: 768px){
-    h1{font-size: 7em;}
-    .explain{font-size: 3.3em;}
+.goButton {
+  border: solid;
+  border-width: 5px;
+  border-color: #f7fd04;
+  background-color: transparent;
+  color: #f7fd04;
+  height: inherit;
+  font-size: 1.5em;
+  height: 5vh;
+  display: inline-flex;
+  align-items: center;
+  box-sizing: content-box;
+  justify-content: center;
 }
 
-
-@media screen and (max-width: 415px){
-    h1{font-size: 9em;}
-    .explain{font-size: 4em;}
+.goButton:hover {
+  background-color: #f7fd04;
+  color: orangered;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  font-size: 1.6em;
 }
-@media screen and (max-width: 320px){
-    h1{font-size: 8em;}
-    .explain{font-size: 4em;}
-}
 
+@media screen and (max-width: 1024px) {
+  h1 {
+    font-size: 5.5em;
+  }
 
-.goButton {border: solid; border-width: 5px; border-color: #F7FD04; background-color: transparent; color: #F7FD04; height: inherit;}
-
-.goButton:hover {background-color: #F7FD04; color: orangered; cursor: pointer; border-width: 5px;
+  .explain {
+    font-size: 2.7em;
+  }
+  #cityInput {
+    font-size: 2em;
+    height: 3vh;
+    vertical-align: middle;
+  }
+  .goButton {
+    font-size: 2em;
+    height: 3vh;
+    margin-top: 2vh;
+    display: inline-flex;
+    align-items: center;
+  }
+  .goButton:hover {
+    background-color: #f7fd04;
+    color: orangered;
+    cursor: pointer;
     display: inline-block;
     position: relative;
-    transition: 0.5s;}
+    transition: 0.5s;
+    font-size: 2.1em;
+  }
+}
 
-.section2 {background-color: black; height: 200px; opacity: 0.5;}
+@media screen and (max-width: 730px) {
+  h1 {
+    font-size: 4.5em;
+  }
+
+  .explain {
+    font-size: 2em;
+  }
+  #cityInput {
+    font-size: 1.5em;
+    height: 4vh;
+    vertical-align: middle;
+  }
+  .goButton {
+    font-size: 1.5em;
+    height: 4vh;
+    margin-top: 2vh;
+    display: inline-flex;
+    align-items: center;
+  }
+  .goButton:hover {
+    background-color: #f7fd04;
+    color: orangered;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-size: 1.7em;
+  }
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 7em;
+  }
+
+  .explain {
+    font-size: 4em;
+  }
+  #cityInput {
+    font-size: 3em;
+    height: 4vh;
+    vertical-align: middle;
+  }
+  .goButton {
+    font-size: 3em;
+    height: 4vh;
+    margin-top: 2vh;
+    display: inline-flex;
+    align-items: center;
+  }
+  .goButton:hover {
+    background-color: #f7fd04;
+    color: orangered;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    font-size: 3.1em;
+  }
+}
+
+.section2 {
+  background-color: black;
+  height: 200px;
+  opacity: 0.5;
+}
