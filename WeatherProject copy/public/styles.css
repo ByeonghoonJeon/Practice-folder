@@ -7,6 +7,12 @@ h1 {
 h5 {
   font-size: 2em;
 }
+h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: orangered;
+    background-color:#f7fd04;
+}
 
 .section1 {
   background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg);
@@ -77,17 +83,21 @@ h5 {
     font-size: 5.5em;
   }
 
+  h3 {
+      font-size: 3em;
+  }
+
   .explain {
     font-size: 2.7em;
   }
   #cityInput {
     font-size: 2em;
-    height: 3vh;
+    height: 3vh!important;
     vertical-align: middle;
   }
   .goButton {
     font-size: 2em;
-    height: 3vh;
+    height: 3vh!important;
     margin-top: 2vh;
     display: inline-flex;
     align-items: center;
@@ -107,6 +117,10 @@ h5 {
   h1 {
     font-size: 4.5em;
   }
+
+  h3 {
+    font-size: 3em;
+}
 
   .explain {
     font-size: 2em;
@@ -145,18 +159,21 @@ h5 {
   h1 {
     font-size: 7em;
   }
+  h3 {
+    font-size: 4em;
+}
 
   .explain {
     font-size: 4em;
   }
   #cityInput {
     font-size: 3em;
-    height: 4vh;
+    height: 4vh!important;
     vertical-align: middle;
   }
   .goButton {
     font-size: 3em;
-    height: 4vh;
+    height: 4vh!important;
     margin-top: 2vh;
     display: inline-flex;
     align-items: center;
@@ -170,6 +187,51 @@ h5 {
     transition: 0.5s;
     font-size: 3.1em;
   }
+}
+
+@media screen and (max-width: 450px) {
+    h1 {
+      font-size: 7em;
+    }
+    h3 {
+      font-size: 4em;
+  }
+  
+    .explain {
+      font-size: 4em;
+    }
+    #cityInput {
+      font-size: 3em;
+      height: 3vh!important;
+      vertical-align: middle;
+    }
+    .goButton {
+      font-size: 3em;
+      height: 3vh!important;
+      margin-top: 5vh!important;
+      display: inline-flex;
+      align-items: center;
+    }
+    .goButton:hover {
+      background-color: #f7fd04;
+      color: orangered;
+      cursor: pointer;
+      display: inline-block;
+      position: relative;
+      transition: 0.5s;
+      font-size: 3.1em;
+    }
+  }
+
+#result-data{
+    font-family: "Staatliches", cursive;
+    margin-top: 5vh!important;
+    
+}
+
+.fab {
+    color: white;
+    font-size: 2rem;
 }
 
 .section2 {
