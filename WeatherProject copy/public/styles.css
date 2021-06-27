@@ -1,11 +1,15 @@
 html { font-size: 1vw; }
 h1 {font-size: 4em;}
-.section1{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat ; width: 100vw; margin-left: 0;}
+.section1{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; padding-left: 0; background-position: right 80% bottom 50%;;}
 .emptySpace-lg {height: 150px;}
 .emptySpace-sm {height: 75px;}
-.yellowBox {border: solid; border-width: 10px; border-color: #F7FD04; border-radius: 15px;}
+.yellowBox {border: solid; border-width: 10px; border-color: #F7FD04; border-radius: 15px; margin-left: 100px; margin-right: 100px; }
 .header {color: #F7FD04; font-family: 'Staatliches', cursive; margin: 0;}
 .explain {color: white;}
+
+@media screen and (max-width: 580px){
+    .section1{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat fixed ; width: 100vw;}
+}
 
 @media screen and (max-width: 1024px){
     h1{font-size: 7.5em;}
