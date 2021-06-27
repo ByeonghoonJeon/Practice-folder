@@ -1,7 +1,8 @@
 html { font-size: 1vw; }
 h1 {font-size: 4em;}
 .section1{background-image: url(img/adrien-siami-iB3rDL7FNcI-unsplash.jpg); background-size: cover; background-repeat: no-repeat ; width: 100vw; margin-left: 0;}
-.emptySpace {height: 150px;}
+.emptySpace-lg {height: 150px;}
+.emptySpace-sm {height: 75px;}
 .yellowBox {border: solid; border-width: 10px; border-color: #F7FD04; border-radius: 15px;}
 .header {color: #F7FD04; font-family: 'Staatliches', cursive; margin: 0;}
 .explain {color: white;}

@@ -23,10 +23,27 @@
 
 <body>
     <div class="section1 container-fluid">
-        <div class="emptySpace">
-    
-        </div>
-        <div class="yellowBox mb-5">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="row justify-content-center" style="width: 100%;">
+                <div class="col align-self-center text-right">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <a class="navbar-item ml-5" href="#">Home</a><br>
+                        <a href="https://github.com/ByeonghoonJeon"><i class="fab fa-github ml-5"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-jeon-4765a4207/"><i
+                                class="fab fa-linkedin-in ml-2"></i></a><br>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="emptySpace-lg"></div>
+
+        <div class="yellowBox">
             <div class="row justify-content-center">
                 <div class="col col-sm-9 text-center mx-5">
                     <h1 class="mb-0" style="color: white;">-</h1>
@@ -36,17 +53,20 @@
                 </div>
             </div>
         </div>
-        <div class="emptySpace">
-    
-        </div>
+
+        <div class="emptySpace-lg"></div>
+
         <form onsubmit="event.preventDefault();formOnSubmit(event)">
-            <div class="row justify-content-center mt-5">
+            <div class="row justify-content-center">
                 <div class="col col-sm-6 text-center mx-5">
                     <input id="cityInput" type="text" name="cityName" placeholder="Type name of city here!"
                         class="form-control cityNamePlaceHolder text-center">
                 </div>
             </div>
-            <div class="row justify-content-center mt-3">
+
+            <div class="emptySpace-sm"></div>
+
+            <div class="row justify-content-center">
                 <div class="col col-sm-6 text-center mx-5">
                     <button type="submit" class="btn form-control goButton"><strong>Go</strong></button>
                 </div>
@@ -54,8 +74,10 @@
         </form>
 
         <div class="yellowBox mb-5 mt-3 collapse" id="result-data"></div>
+        <div class="emptySpace-sm"></div>
     </div>
     <div class=" container-fluid section2">
+
 
 
     </div>
