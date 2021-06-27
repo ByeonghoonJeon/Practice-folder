@@ -111,6 +111,23 @@ h3 {
     transition: 0.5s;
     font-size: 2.1em;
   }
+  .fas {
+    font-size: 7rem!important;
+    color:orangered;
+    margin-bottom: 2rem;
+  }
+
+.bottomText1 {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 1.5rem;
+  }
+
+.bottomText2 {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 2rem;
+  }
 }
 
 @media screen and (max-width: 730px) {
@@ -154,6 +171,24 @@ h3 {
     margin-left: 50px;
     margin-right: 50px;
   }
+  .fas {
+    font-size: 9rem!important;
+    color:orangered;
+    margin-bottom: 2rem;
+  }
+
+.bottomText1 {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 1.5rem;
+  }
+
+.bottomText2 {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 1.8rem;
+  }
+
 }
 @media screen and (max-width: 600px) {
   h1 {
@@ -186,6 +221,24 @@ h3 {
     position: relative;
     transition: 0.5s;
     font-size: 3.1em;
+  }
+  .fas {
+    font-size: 9rem!important;
+    color:orangered;
+    margin-bottom: 2rem;
+  }
+
+.bottomText1 {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+.bottomText2 {
+    color: white;
+    font-family: "Staatliches", cursive;
+    font-size: 3rem;
   }
 }
 
@@ -221,6 +274,25 @@ h3 {
       transition: 0.5s;
       font-size: 3.1em;
     }
+    .fas {
+        font-size: 14rem!important;
+        color:orangered;
+        margin-top: 10rem;
+      }
+    
+    .bottomText1 {
+        color: white;
+        font-family: "Staatliches", cursive;
+        font-size: 3rem;
+        margin-bottom: 4rem!important;
+        margin-top: 4rem!important;
+      }
+    
+    .bottomText2 {
+        color: white;
+        font-family: "Staatliches", cursive;
+        font-size: 4rem;
+      }
   }
 
 #result-data{
@@ -246,10 +318,12 @@ h3 {
     margin-bottom: 2rem;
 }
 
-.bottomText {
+.bottomText1, .bottomText2 {
     color: white;
     font-family: "Staatliches", cursive;
 
 }
 
 .customshadow {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+.bottomEnd {background-color: grey; box-sizing: content-box;}
