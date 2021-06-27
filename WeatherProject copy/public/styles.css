@@ -35,12 +35,16 @@ h5 {
 }
 .explain {
   color: white;
+  font-family: "Staatliches", cursive;
 }
 #cityInput {
   font-size: 1.5em;
   box-sizing: content-box;
   height: 5vh;
-  border-width: 5px;
+  border-width: 2px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .goButton {
@@ -109,12 +113,12 @@ h5 {
   }
   #cityInput {
     font-size: 1.5em;
-    height: 4vh;
+    height: 3vh!important;
     vertical-align: middle;
   }
   .goButton {
     font-size: 1.5em;
-    height: 4vh;
+    height: 3vh!important;
     margin-top: 2vh;
     display: inline-flex;
     align-items: center;
@@ -127,6 +131,14 @@ h5 {
     position: relative;
     transition: 0.5s;
     font-size: 1.7em;
+  }
+  .yellowBox {
+    border: solid;
+    border-width: 10px;
+    border-color: #f7fd04;
+    border-radius: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
 }
 @media screen and (max-width: 600px) {
