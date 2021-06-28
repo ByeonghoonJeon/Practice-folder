@@ -26,6 +26,11 @@ h3 {
 .emptySpace-sm {
   height: 75px;
 }
+
+.emptySpace-bt {
+    height: 75px;
+  }
+
 .yellowBox {
   border: solid;
   border-width: 10px;
@@ -78,6 +83,36 @@ h3 {
   font-size: 1.6em;
 }
 
+.fab {
+    color: white;
+    font-size: 2rem;
+}
+
+.section2 {
+  background-color: #293B5F;
+
+
+}
+
+.fas {
+    font-size: 5rem;
+    color:orangered;
+    margin-bottom: 2rem;
+}
+
+.bottomText1, .bottomText2 {
+    color: white;
+    font-family: "Staatliches", cursive;
+
+}
+
+.customshadow {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
+
+.bottomEnd {background-color: grey; box-sizing: content-box;}
+
+.fab {
+    font-size: 2rem;
+}
 @media screen and (max-width: 1024px) {
   h1 {
     font-size: 5.5em;
@@ -112,22 +147,31 @@ h3 {
     font-size: 2.1em;
   }
   .fas {
-    font-size: 7rem!important;
+    font-size: 8rem!important;
     color:orangered;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem!important;
+    
+  }
+
+  .emptySpace-bt {
+      height: 30px!important;
   }
 
 .bottomText1 {
     color: white;
     font-family: "Staatliches", cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 
 .bottomText2 {
     color: white;
     font-family: "Staatliches", cursive;
-    font-size: 2rem;
+    font-size: 2.8rem;
   }
+  .fab {
+    font-size: 3rem;
+}
 }
 
 @media screen and (max-width: 730px) {
@@ -180,13 +224,14 @@ h3 {
 .bottomText1 {
     color: white;
     font-family: "Staatliches", cursive;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 
 .bottomText2 {
     color: white;
     font-family: "Staatliches", cursive;
-    font-size: 1.8rem;
+    font-size: 3rem;
   }
 
 }
@@ -209,7 +254,7 @@ h3 {
   .goButton {
     font-size: 3em;
     height: 4vh!important;
-    margin-top: 2vh;
+    margin-top: 5vh!important;
     display: inline-flex;
     align-items: center;
   }
@@ -226,12 +271,13 @@ h3 {
     font-size: 9rem!important;
     color:orangered;
     margin-bottom: 2rem;
+    margin-top: 4rem;
   }
 
 .bottomText1 {
     color: white;
     font-family: "Staatliches", cursive;
-    font-size: 2rem;
+    font-size: 2.3rem;
     margin-bottom: 20px;
   }
 
@@ -240,6 +286,10 @@ h3 {
     font-family: "Staatliches", cursive;
     font-size: 3rem;
   }
+  .fab {
+      font-size: 4rem;
+  }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -261,7 +311,7 @@ h3 {
     .goButton {
       font-size: 3em;
       height: 3vh!important;
-      margin-top: 5vh!important;
+      margin-top: 3vh!important;
       display: inline-flex;
       align-items: center;
     }
@@ -277,22 +327,27 @@ h3 {
     .fas {
         font-size: 14rem!important;
         color:orangered;
-        margin-top: 10rem;
+        margin-top: 5rem;
       }
     
     .bottomText1 {
         color: white;
         font-family: "Staatliches", cursive;
         font-size: 3rem;
-        margin-bottom: 4rem!important;
-        margin-top: 4rem!important;
+        margin-bottom: 2rem!important;
+        margin-top:2rem!important;
       }
     
     .bottomText2 {
         color: white;
         font-family: "Staatliches", cursive;
         font-size: 4rem;
+        margin-bottom: 40px;
       }
+
+    .fab {
+        font-size: 4rem;
+    }
   }
 
 #result-data{
@@ -301,29 +356,3 @@ h3 {
     
 }
 
-.fab {
-    color: white;
-    font-size: 2rem;
-}
-
-.section2 {
-  background-color: #293B5F;
-
-
-}
-
-.fas {
-    font-size: 5rem;
-    color:orangered;
-    margin-bottom: 2rem;
-}
-
-.bottomText1, .bottomText2 {
-    color: white;
-    font-family: "Staatliches", cursive;
-
-}
-
-.customshadow {box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);}
-
-.bottomEnd {background-color: grey; box-sizing: content-box;}
