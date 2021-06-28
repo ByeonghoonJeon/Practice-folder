@@ -22,13 +22,26 @@
 </head>
 
 <body>
-    <div class="emptySpace">
 
-    </div>
-    <div class="container container-fluid">
-        <div class="yellowBox mb-5">
+    <div class="section1 container-fluid pr-0">
+        <div class="emptySpace-sm"></div>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="row justify-content-center" style="width: 100%;">
+                <div class="col align-self-center text-right">
+                    <div class="justify-content-center" id="navbarTogglerDemo03" ;">
+                        <a href="https://github.com/ByeonghoonJeon"><i class="fab fa-github ml-5"></i></a>
+                        <a href="https://www.linkedin.com/in/nathan-jeon-4765a4207/"><i
+                                class="fab fa-linkedin-in ml-5"></i></a><br>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="emptySpace-sm"></div>
+
+        <div class="yellowBox">
             <div class="row justify-content-center">
-                <div class="col col-sm-9 text-center mx-5">
+                <div class="col-12 text-center">
                     <h1 class="mb-0" style="color: white;">-</h1>
                     <h1 class="header">World Weather Window</h1>
                     <h5 class="explain  mb-0">Access to the weather of 200,000 cities!</h5>
@@ -36,18 +49,48 @@
                 </div>
             </div>
         </div>
-        <form action="/" method="POST">
-            <div class="row justify-content-center mt-5">
-                <div class="col col-sm-6 text-center mx-5">
-                    <input id="cityInput" type="text" name="cityName" placeholder="Type name of city here!" class="form-control cityNamePlaceHolder text-center">
+
+        <div class="emptySpace-sm"></div>
+
+        <div class="container-fluid container">
+            <div class="row justify-content-center">
+                <form onsubmit="event.preventDefault();formOnSubmit(event)">
+                    <div class="col-5 text-center  px-0" style="margin-left: auto; margin-right: auto;">
+                        <input id="cityInput" type="text" name="cityName" placeholder="Type name of city here!"
+                            class="form-control text-center">
+                        <button type="submit" class="btn goButton mt-3"><strong>Let's Check</strong></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="yellowBox mb-5 mt-5 collapse text-center" style="color: white;" id="result-data"></div>
+        <div class="emptySpace-sm"></div>
+    </div>
+    <div class="customshadow m-1">
+        <div class="container-fluid section2">
+
+            <div class="row justify-content-between">
+                <div class="col-sm-6 text-center my-5">
+                    <div class="emptySpace-bt d-none d-sm-block"></div>
+                    <i class="fas fa-cloud-sun-rain"></i>
+                    <h4 class="bottomText1">How's the weather there?</h3>
+                        <h5 class="bottomText2 mb-5">It is very easy, type the city and click >>Let's Check<< </h5>
+                </div>
+
+                <div class="col-sm-6 text-center my-5">
+                    <div class="emptySpace-bt d-none d-sm-block"></div>
+                    <i class="fas fa-temperature-low"></i>
+                    <h4 class="bottomText1">How's the temperature there?</h3>
+                        <h5 class="bottomText2">Temperature information is also available!</h5>
                 </div>
             </div>
-            <div class="row justify-content-center mt-3">
-                <div class="col col-sm-6 text-center mx-5">
-                    <button type="submit" class="btn form-control goButton"><strong>Go</strong></button>
-                </div>
-            </div>
-        </form>
+            <div class="emptySpace-bt d-none d-sm-block"></div>
+        </div>
+        <div class="bottomEnd text-center">
+         
+            <p class="mb-0" style="color: white;">© Copyright 2021 Nathan Jeon (Byeonghoon Jeon)</p>
+        </div>
     </div>
 
     <!-- Optional JavaScript -->
@@ -55,7 +98,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
-    <script src="app.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -71,6 +114,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
