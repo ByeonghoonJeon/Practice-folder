@@ -7,7 +7,6 @@
   </div>
 
   <div class="box">
-
     <% for (var i=0; i<newListItems.length; i++){ %>
       <div class="item">
         <input type="checkbox">
@@ -15,9 +14,7 @@
           <%=newListItems[i]%>
         </p>
       </div>
-
       <%}%>
-
         <form action="/" method="POST">
           <input type="text" name="newItem" placeholder="Add List" autocomplete="off">
           <button type="submit" name="list" value="<%= listTitle %>">+</button>
