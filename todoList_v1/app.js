@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const date = require(__dirname+"/date.js");
+const date = require(__dirname + "/views/date.js");
 
 var items = ["Buy Food", "Study"];
 var workItems = [];
@@ -11,7 +11,7 @@ app.use(express.json());
 app.use(express.urlencoded());
 
 app.get("/", function (req, res) {
-  
+  let day = date();
   res.render("list", { listTitle: day, newListItems: items });
 });
 
