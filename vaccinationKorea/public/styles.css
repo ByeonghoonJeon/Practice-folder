@@ -1,7 +1,7 @@
 body {
   background-image: url(img/backgroundImg.jpg);
   background-size: cover;
-  font-family: 'Vollkorn', serif;
+  font-family: "Vollkorn", serif;
 }
 
 .section1 {
@@ -51,31 +51,50 @@ body {
 }
 
 .date {
-    color: wheat;
-    text-align: center;
+  color: wheat;
+  text-align: center;
 }
 
-.dateForm{
-    margin-left: 100px;
-    margin-top: 20px;
+.dateForm {
+  margin-left: 100px;
+  margin-top: 20px;
 }
 
 .dateInput {
-    text-align: center;
+  text-align: center;
 }
 
+#submitButton {
+  border: solid;
+}
+
+
 .results {
-    color: white;
-    margin-right: 100px;
+  color: white;
+  margin-right: 100px;
 }
 
 .result_1 {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .numberFont1 {
-    font-family: 'Trochut', cursive;
-    color: wheat;
+  font-family: "Trochut", cursive;
+  color: wheat;
 }
 
-.bottomEnd {background-color: grey; box-sizing: content-box;}
+.information {
+  color: rgb(177, 170, 170);
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.bottomEnd {
+  background-color: grey;
+  box-sizing: content-box;
+}
+
+#submitButton {
+    border-radius: 20px;
+}

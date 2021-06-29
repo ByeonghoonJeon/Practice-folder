@@ -41,3 +41,4 @@ async function formOnSubmit(event) {
 // remove the collapse class (show the div)
 resultDataDiv.classList.remove("collapse")
 }
+
