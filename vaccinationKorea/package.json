@@ -1,0 +1,23 @@
+{
+  "name": "vaccinationkorea",
+  "version": "1.0.0",
+  "description": "Currnt Vaccination Summary",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "COVID",
+    "COVID-19",
+    "Vaccin",
+    "Vaccination",
+    "Corona",
+    "CORONA",
+    "Korea"
+  ],
+  "author": "Byeonghoon Jeon",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

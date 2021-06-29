@@ -1,0 +1,21 @@
+.section1 {
+  background-image: url(img/backgroundImg.jpg);
+  background-size: cover;
+}
+.navbar {
+  background-color: gold;
+  background: rgb(
+    204,
+    204,
+    204
+  ); /* Fallback for older browsers without RGBA-support */
+  background: rgba(204, 204, 204, 0.5);
+}
+
+.fab {
+  color: black;
+  font-size: 2rem;
+  margin-right: 10px;
+  margin-left: 10px;
+  background: transparent;
+}
