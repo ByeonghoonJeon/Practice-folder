@@ -1,21 +1,50 @@
-.section1 {
+body {
   background-image: url(img/backgroundImg.jpg);
   background-size: cover;
 }
+
+.section1 {
+  background-color: rgba(31, 8, 8, 0.5);
+  background-size: cover;
+  height: 100vh;
+}
 .navbar {
-  background-color: gold;
   background: rgb(
-    204,
-    204,
-    204
+    61,
+    58,
+    58
   ); /* Fallback for older browsers without RGBA-support */
-  background: rgba(204, 204, 204, 0.5);
+  background: rgba(243, 239, 239, 0.5);
 }
 
 .fab {
-  color: black;
+  color: rgb(22, 33, 62);
   font-size: 2rem;
   margin-right: 10px;
   margin-left: 10px;
   background: transparent;
+}
+
+.empty-sm {
+  height: 5rem;
+}
+
+.window {
+  border-radius: 5px;
+  margin-top: 5vh;
+  margin-right: 5vw;
+  background: rgba(22, 33, 62, 0.9);
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
+}
+.resultShow {
+  color: black;
+}
+
+.header {
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
 }
