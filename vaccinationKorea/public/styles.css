@@ -1,6 +1,7 @@
 body {
   background-image: url(img/backgroundImg.jpg);
   background-size: cover;
+  font-family: 'Vollkorn', serif;
 }
 
 .section1 {
@@ -46,4 +47,31 @@ body {
 .header {
   color: white;
   text-align: center;
+}
+
+.date {
+    color: wheat;
+    text-align: center;
+}
+
+.dateForm{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+.dateInput {
+    text-align: center;
+}
+
+.results {
+    color: white;
+    margin-right: 100px;
+}
+
+.result_1 {
+    margin-top: 20px;
+}
+
+.numberFont {
+    font-family: 'Trochut', cursive;
 }
