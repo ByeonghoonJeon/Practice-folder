@@ -30,7 +30,13 @@ body {
   height: 5rem;
 }
 
-.window {
+.immunizedNumber{
+    font-size: 10rem;
+    text-align: center;
+}
+
+
+.window{
   border-radius: 5px;
   margin-top: 5vh;
   margin-right: 5vw;
@@ -42,8 +48,18 @@ body {
     -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
 }
 .resultShow {
-  color: black;
+  color: white;
+  border-radius: 5px;
+  margin-top: 5vh;
+  margin-right: 5vw;
+  margin-bottom: 10vh;
+  background: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
+    -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
 }
+
 
 .header {
   color: white;
