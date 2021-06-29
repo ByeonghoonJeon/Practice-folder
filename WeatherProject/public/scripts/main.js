@@ -34,8 +34,8 @@ async function formOnSubmit(event) {
   //   set inner html of result-data div to weather data
   const resultDataDiv = document.querySelector("#result-data");
   resultDataDiv.innerHTML = `
-<h3>-----</h3><h3>${query}</h3><h3><strong>${weatherDescription}</strong></h3><h3>-----</h3>
-<h3>Temperature</h3><h3><strong>${temp} °C</strong></h3><h3>-----</h3>
+<h3>-----</h3><h3>${query}</h3><h3 style="color: #293B5F;"><strong>${weatherDescription}</strong></h3><h3>-----</h3>
+<h3>Temperature</h3><h3 style="color: #293B5F;"><strong>${temp} °C</strong></h3><h3>-----</h3>
 `;
 
 // remove the collapse class (show the div)
