@@ -1,5 +1,4 @@
 async function formOnSubmit(event) {
-  
   // get city name from form input value
   console.log(event);
   // get form data
@@ -15,23 +14,41 @@ async function formOnSubmit(event) {
 
   const queryDate = document.querySelector("#queryDate").value;
   console.log(queryDate);
-  const apiKey = "zo8PEy0GntMaMlKdsCm8yXkWsw47axquHRdVAaLr0b8t3KI8j6IEUeQpAyHmtAHbaT8%2FsuZ5Yo%2FNKycge5d5LQ%3D%3D";
+  const apiKey =
+    "zo8PEy0GntMaMlKdsCm8yXkWsw47axquHRdVAaLr0b8t3KI8j6IEUeQpAyHmtAHbaT8%2FsuZ5Yo%2FNKycge5d5LQ%3D%3D";
   const url =
-    "https://api.odcloud.kr/api/15077756/v1/vaccine-stat" + "?cond%5BbaseDate%3A%3AGT%5D=" + queryDate + "&serviceKey=" + apiKey;
+    "https://api.odcloud.kr/api/15077756/v1/vaccine-stat" +
+    "?cond%5BbaseDate%3A%3AGT%5D=" +
+    queryDate +
+    "&serviceKey=" +
+    apiKey;
 
   const infoRequest = await axios.get(url);
-  
+
   const vaccinationInfo = infoRequest.data;
   console.log(vaccinationInfo);
-  // const fullTemp = weatherData.main.temp;
-  // const temp = fullTemp.toFixed(1);
-  // const weatherDescription = weatherData.weather[0].description;
-  // console.log(weatherDescription);
+
+  const queryDayTotal = (vaccinationInfo.data[0].firstCnt + vaccinationInfo.data[0].secondCnt).toLocaleString()
+  document.querySelector(".todayTotal").textContent = queryDayTotal;
+  console.log(queryDayTotal);
+
+  document.querySelector(".newlyVaccinated").textContent = queryDate + " Performance"
+
+  const queryDayFirst = vaccinationInfo.data[0].firstCnt.toLocaleString();
+  document.querySelector(".todayFirst").textContent = queryDayFirst;
+  console.log(queryDayFirst);
+
+  const queryDaySecond = vaccinationInfo.data[0].secondCnt.toLocaleString();
+  document.querySelector(".todaySecond").textContent = queryDaySecond;
+  console.log(queryDaySecond);
+
+
 
 
 
 
 }
+
 function getDate() {
   const today = new Date();
   const options = { weekday: "long", day: "numeric", month: "long" };
@@ -40,8 +57,13 @@ function getDate() {
 
 let date = new Date();
 let day = date.getDate();
+let yesterday = date.getDate() - 1;
 let month = date.getMonth() + 1;
 let year = date.getFullYear();
+
+if (yesterday < 10) {
+  yesterday = "0" + day;
+}
 
 if (day < 10) {
   day = "0" + day;
@@ -52,10 +74,57 @@ if (month < 10) {
 }
 
 let fullDate = `${year}-${month}-${day}`;
-
 console.log(fullDate);
+
+let fullYesterday1 = `${month}-${yesterday}-${year}`;
+console.log(fullYesterday1);
+
+let fullYesterday = `${year}-${month}-${yesterday}`;
 
 document.querySelector(".headerDate").textContent = getDate();
 document.querySelector("#queryDate").setAttribute("value", fullDate);
 // apiKey1 zo8PEy0GntMaMlKdsCm8yXkWsw47axquHRdVAaLr0b8t3KI8j6IEUeQpAyHmtAHbaT8%2FsuZ5Yo%2FNKycge5d5LQ%3D%3D
 // apiKey2 zo8PEy0GntMaMlKdsCm8yXkWsw47axquHRdVAaLr0b8t3KI8j6IEUeQpAyHmtAHbaT8/suZ5Yo/NKycge5d5LQ==
+
+async function start() {
+  const defaultApiKey =
+    "zo8PEy0GntMaMlKdsCm8yXkWsw47axquHRdVAaLr0b8t3KI8j6IEUeQpAyHmtAHbaT8%2FsuZ5Yo%2FNKycge5d5LQ%3D%3D";
+  const defaultUrl =
+    "https://api.odcloud.kr/api/15077756/v1/vaccine-stat" +
+    "?cond%5BbaseDate%3A%3AGT%5D=" +
+    fullYesterday +
+    "&serviceKey=" +
+    defaultApiKey;
+
+  const defaultInfoRequest = await axios.get(defaultUrl);
+
+  const defaultVaccinationInfo = defaultInfoRequest.data;
+  console.log(defaultVaccinationInfo);
+
+  const defaultTodayTotal = (defaultVaccinationInfo.data[0].firstCnt + defaultVaccinationInfo.data[0].secondCnt).toLocaleString();
+  document.querySelector(".todayTotal").textContent = defaultTodayTotal;
+  console.log(defaultTodayTotal);
+  
+  const defaultTodayFirst = defaultVaccinationInfo.data[0].firstCnt.toLocaleString();
+  document.querySelector(".todayFirst").textContent = defaultTodayFirst;
+
+  const defaultTodaySecond = defaultVaccinationInfo.data[0].secondCnt.toLocaleString();
+  document.querySelector(".todaySecond").textContent = defaultTodaySecond;
+  
+
+  document.querySelector(".newlyVaccinated").textContent = "Current Performance";
+  document.querySelector(".currentDate").textContent = fullYesterday1;
+  
+
+  const defaultAccumulatedSecond = defaultVaccinationInfo.data[0].accumulatedSecondCnt.toLocaleString();
+  document.querySelector(".accumulatedSecondShot").textContent = defaultAccumulatedSecond;
+  console.log(defaultAccumulatedSecond);
+
+  const defaultAccumulatedFirst = defaultVaccinationInfo.data[0].accumulatedFirstCnt.toLocaleString();
+  document.querySelector(".accumulatedFirstShot").textContent = defaultAccumulatedFirst;
+  console.log(defaultAccumulatedFirst);
+
+  document.querySelector(".accumulateDate").textContent = fullYesterday1;
+
+}
+start();
