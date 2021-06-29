@@ -7,7 +7,7 @@ body {
 .section1 {
   background-color: rgba(31, 8, 8, 0.5);
   background-size: cover;
-  height: 100vh;
+  height: max-content;
 }
 .navbar {
   background: rgb(
@@ -34,6 +34,7 @@ body {
   border-radius: 5px;
   margin-top: 5vh;
   margin-right: 5vw;
+  margin-bottom: 10vh;
   background: rgba(22, 33, 62, 0.9);
   -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
     -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
@@ -72,6 +73,9 @@ body {
     margin-top: 20px;
 }
 
-.numberFont {
+.numberFont1 {
     font-family: 'Trochut', cursive;
+    color: wheat;
 }
+
+.bottomEnd {background-color: grey; box-sizing: content-box;}
