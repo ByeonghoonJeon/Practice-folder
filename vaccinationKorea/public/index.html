@@ -42,20 +42,24 @@
             <div class="col-6 align-self-center">
                 <div class="window pt-5">
                     <h2 class="header">Current Vaccination Rate in Republic of Korea</h2>
-                    <h4 class="date mb-5">text</h4>
+                    <h4 class="headerDate mb-5">text</h4>
                     <div class="row justify-content-center">
                         <div class="col">
-                            <form class="text-start dateForm">
+                            <form class="text-start dateForm" onsubmit="event.preventDefault();formOnSubmit(event)">
                                 <input class="dateInput" id="queryDate" name=queryDate type="date" value="">
-                                <button class="btn btn-outline-light ml-2" id="submitButton" type="submit">Query</button>
-                                
+                                <button class="btn btn-outline-light ml-2" id="submitButton"
+                                    type="submit">Query</button>
+
                             </form>
                         </div>
                         <div class="results col align-self-center text-right">
                             <h3 class="result_1">Newly vaccinated today</h3>
-                            <h3 class="numberFont1" style="display: inline-block">1017723</h3><h3 class="result_1 ml-4" style="display: inline-block">Total</h3><br>
-                            <h5 class="numberFont1" style="display: inline-block">920312</h5><h5 class="result_1 ml-4" style="display: inline-block">First dose</h5><br>
-                            <h5 class="numberFont1" style="display: inline-block">920312</h5><h5 class="result_1 ml-4" style="display: inline-block">Fully vaccinated</h5>
+                            <h3 class="numberFont1" style="display: inline-block">1017723</h3>
+                            <h3 class="result_1 ml-4" style="display: inline-block">Total</h3><br>
+                            <h5 class="numberFont1" style="display: inline-block">920312</h5>
+                            <h5 class="result_1 ml-4" style="display: inline-block">First dose</h5><br>
+                            <h5 class="numberFont1" style="display: inline-block">920312</h5>
+                            <h5 class="result_1 ml-4" style="display: inline-block">Fully vaccinated</h5>
                             <h3 class="result_1 mt-5">At least one dose, Total</h3>
                             <h3 class="numberFont1">1017723</h3>
                             <h3 class="mt-5">Fully Vaccinated, Total</h3>
@@ -79,6 +83,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>
@@ -94,7 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
         integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
         crossorigin="anonymous"></script>
-    <script src="scripts/main.js"></script>
+    <script src="scripts\main.js"></script>
 </body>
 
 </html>
