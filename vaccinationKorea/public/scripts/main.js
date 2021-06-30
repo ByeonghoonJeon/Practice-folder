@@ -52,12 +52,15 @@ async function formOnSubmit(event) {
   console.log(queryDateAccumulatedFirst);
   
   document.querySelector(".accumulateDate").textContent = queryDate;
+  document.querySelector(".currentDate").textContent = queryDate;
   
   
   document.querySelector(".resultShow").classList.remove("collapse");
   const population = 51710000;
   const immunizedRatio = Math.floor(vaccinationInfo.data[0].totalSecondCnt/population*100);
-  document.querySelector(".immunizedNumber").textContent = "By the selected date, total " +immunizedRatio+" % of population has been immunized.";
+  document.querySelector(".atThisPoint").textContent = "By the selected date, total";
+  document.querySelector(".immunizedNumber").textContent= immunizedRatio + " %";
+  document.querySelector(".ofPopulation").textContent = "of population has been fully immunized.";
   
 }
 
