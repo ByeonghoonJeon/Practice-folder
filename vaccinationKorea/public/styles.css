@@ -48,8 +48,7 @@ body {
 
 .window {
   border-radius: 5px;
-  margin-top: 5vh;
-  margin-right: 5vw;
+
   margin-bottom: 10vh;
   background: rgba(22, 33, 62, 0.9);
   -webkit-box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
@@ -60,7 +59,6 @@ body {
 .resultShow {
   color: white;
   border-radius: 5px;
-  margin-top: 5vh;
   margin-right: 5vw;
   margin-bottom: 10vh;
   background: rgba(0, 0, 0, 0.7);
@@ -68,6 +66,11 @@ body {
     -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
   box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000,
     -5px 11px 17px -16px rgba(0, 0, 0, 0.32);
+}
+
+.currentDate,
+.accumulateDate {
+  margin-bottom: 2rem;
 }
 
 .header {
@@ -110,7 +113,7 @@ body {
 .information {
   color: rgb(177, 170, 170);
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 5rem;
   margin-bottom: 2rem;
 }
 
@@ -195,4 +198,70 @@ body {
   color: white;
 }
 
-.marginBottm {margin-bottom: 5rem;}
+.headerTitle {
+  margin-bottom: 4rem;
+}
+
+.marginBottm {
+  margin-bottom: 5rem;
+}
+
+@media screen and (max-width: 1591px)
+{
+    .header,
+    .headerDate {
+      margin-left: 4rem;
+      margin-right: 4rem;
+      text-align: start;
+    }
+}
+@media screen and (max-width: 1446px) {
+  .header,
+  .headerDate {
+    margin-left: 2rem;
+    margin-right: 4rem;
+    text-align: start;
+  }
+  .headerTitle {
+    font-size: 4rem;
+  }
+
+  .information {
+    margin-top: 0;
+  }
+
+  .results {
+    margin-bottom: 0;
+    margin-right: 2rem;
+  }
+
+  #result_1 {
+    margin-top: 0 !important;
+  }
+
+  .window {
+    margin-right: 0 !important;
+  }
+  .currentDate,
+  .accumulateDate {
+    margin-bottom: 0;
+  }
+
+  h3#fullyVaccinated {
+    margin-top: 0;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .accumulatedSecondShot {
+    margin-bottom: 0;
+    margin-top: 2rem;
+  }
+  .accumulatedFirstShot {
+    margin-bottom: 0;
+  }
+  .result_1{
+      margin-left: 5px!important;
+  }
+
+}
