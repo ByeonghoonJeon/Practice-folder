@@ -28,11 +28,13 @@ async function formOnSubmit(event) {
   const vaccinationInfo = infoRequest.data;
   console.log(vaccinationInfo);
 
-  const queryDayTotal = (vaccinationInfo.data[0].firstCnt + vaccinationInfo.data[0].secondCnt).toLocaleString()
+  const queryDayTotal = (
+    vaccinationInfo.data[0].firstCnt + vaccinationInfo.data[0].secondCnt
+  ).toLocaleString();
   document.querySelector(".todayTotal").textContent = queryDayTotal;
   console.log(queryDayTotal);
 
-  document.querySelector(".newlyVaccinated").textContent ="Performance at"
+  document.querySelector(".newlyVaccinated").textContent = "Performance at";
 
   const queryDayFirst = vaccinationInfo.data[0].firstCnt.toLocaleString();
   document.querySelector(".todayFirst").textContent = queryDayFirst;
@@ -41,27 +43,47 @@ async function formOnSubmit(event) {
   const queryDaySecond = vaccinationInfo.data[0].secondCnt.toLocaleString();
   document.querySelector(".todaySecond").textContent = queryDaySecond;
   console.log(queryDaySecond);
-  
-  
-  const queryDateAccumulatedSecond = vaccinationInfo.data[0].totalSecondCnt.toLocaleString();
-  document.querySelector(".accumulatedSecondShot").textContent = queryDateAccumulatedSecond;
+
+  const queryDateAccumulatedSecond =
+    vaccinationInfo.data[0].totalSecondCnt.toLocaleString();
+  document.querySelector(".accumulatedSecondShot").textContent =
+    queryDateAccumulatedSecond;
   console.log(queryDateAccumulatedSecond);
-  
-  const queryDateAccumulatedFirst = vaccinationInfo.data[0].totalFirstCnt.toLocaleString();
-  document.querySelector(".accumulatedFirstShot").textContent = queryDateAccumulatedFirst;
+
+  const queryDateAccumulatedFirst =
+    vaccinationInfo.data[0].totalFirstCnt.toLocaleString();
+  document.querySelector(".accumulatedFirstShot").textContent =
+    queryDateAccumulatedFirst;
   console.log(queryDateAccumulatedFirst);
-  
+
   document.querySelector(".accumulateDate").textContent = queryDate;
   document.querySelector(".currentDate").textContent = queryDate;
-  
-  
+
   document.querySelector(".resultShow").classList.remove("collapse");
   const population = 51710000;
-  const immunizedRatio = Math.floor(vaccinationInfo.data[0].totalSecondCnt/population*100);
-  document.querySelector(".atThisPoint").textContent = "By the selected date, total";
-  document.querySelector(".immunizedNumber").textContent= immunizedRatio + " %";
-  document.querySelector(".ofPopulation").textContent = "of population has been fully immunized.";
+  const immunizedRatio = Math.floor(
+    (vaccinationInfo.data[0].totalSecondCnt / population) * 100
+  );
+  document.querySelector(".atThisPoint").textContent =
+    "By the selected date, total";
+  document.querySelector(".immunizedNumber").textContent =
+    immunizedRatio + " %";
+  document.querySelector(".ofPopulation").textContent =
+    "of population has been fully immunized.";
+
+  progressPercent = immunizedRatio + "%";
+  document.querySelector(".percentageBar").style.width = progressPercent;
+
+  let herdImmunityNumber = Math.floor(immunizedRatio/70*100);
+  document.querySelector(".herdImmunityNumber").textContent=herdImmunityNumber+" %";
   
+  let progressHerdImmunity = herdImmunityNumber + "%";
+  document.querySelector(".herdImmunityPercentageBar").style.width = progressHerdImmunity;
+
+  document.querySelector(".atThisPoint2").textContent =
+  "By the selected date, we were";
+
+
 }
 
 function getDate() {
@@ -116,34 +138,53 @@ async function start() {
   const defaultVaccinationInfo = defaultInfoRequest.data;
   console.log(defaultVaccinationInfo);
 
-  const defaultTodayTotal = (defaultVaccinationInfo.data[0].firstCnt + defaultVaccinationInfo.data[0].secondCnt).toLocaleString();
+  const defaultTodayTotal = (
+    defaultVaccinationInfo.data[0].firstCnt +
+    defaultVaccinationInfo.data[0].secondCnt
+  ).toLocaleString();
   document.querySelector(".todayTotal").textContent = defaultTodayTotal;
   console.log(defaultTodayTotal);
-  
-  const defaultTodayFirst = defaultVaccinationInfo.data[0].firstCnt.toLocaleString();
+
+  const defaultTodayFirst =
+    defaultVaccinationInfo.data[0].firstCnt.toLocaleString();
   document.querySelector(".todayFirst").textContent = defaultTodayFirst;
 
-  const defaultTodaySecond = defaultVaccinationInfo.data[0].secondCnt.toLocaleString();
+  const defaultTodaySecond =
+    defaultVaccinationInfo.data[0].secondCnt.toLocaleString();
   document.querySelector(".todaySecond").textContent = defaultTodaySecond;
-  
 
-  document.querySelector(".newlyVaccinated").textContent = "Current Performance";
+  document.querySelector(".newlyVaccinated").textContent =
+    "Current Performance";
   document.querySelector(".currentDate").textContent = fullYesterday1;
-  
 
-  const defaultAccumulatedSecond = defaultVaccinationInfo.data[0].totalSecondCnt.toLocaleString();
-  document.querySelector(".accumulatedSecondShot").textContent = defaultAccumulatedSecond;
+  const defaultAccumulatedSecond =
+    defaultVaccinationInfo.data[0].totalSecondCnt.toLocaleString();
+  document.querySelector(".accumulatedSecondShot").textContent =
+    defaultAccumulatedSecond;
   console.log(defaultAccumulatedSecond);
 
-  const defaultAccumulatedFirst = defaultVaccinationInfo.data[0].totalFirstCnt.toLocaleString();
-  document.querySelector(".accumulatedFirstShot").textContent = defaultAccumulatedFirst;
+  const defaultAccumulatedFirst =
+    defaultVaccinationInfo.data[0].totalFirstCnt.toLocaleString();
+  document.querySelector(".accumulatedFirstShot").textContent =
+    defaultAccumulatedFirst;
   console.log(defaultAccumulatedFirst);
 
   document.querySelector(".accumulateDate").textContent = fullYesterday1;
 
   const population = 51710000;
-  const immunizedRatio = Math.floor(defaultVaccinationInfo.data[0].totalSecondCnt/population*100);
-  document.querySelector(".immunizedNumber").textContent = +immunizedRatio+" % ";
+  const immunizedRatio = Math.floor(
+    (defaultVaccinationInfo.data[0].totalSecondCnt / population) * 100
+  );
+  document.querySelector(".immunizedNumber").textContent =
+    +immunizedRatio + " % ";
 
+  progressPercent = immunizedRatio + "%";
+  document.querySelector(".percentageBar").style.width = progressPercent;
+
+  let herdImmunityNumber = Math.floor(immunizedRatio/70*100);
+  document.querySelector(".herdImmunityNumber").textContent=herdImmunityNumber+" %";
+  
+  let progressHerdImmunity = herdImmunityNumber + "%";
+  document.querySelector(".herdImmunityPercentageBar").style.width = progressHerdImmunity;
 }
 start();
