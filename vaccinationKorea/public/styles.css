@@ -206,14 +206,13 @@ body {
   margin-bottom: 5rem;
 }
 
-@media screen and (max-width: 1591px)
-{
-    .header,
-    .headerDate {
-      margin-left: 4rem;
-      margin-right: 4rem;
-      text-align: start;
-    }
+@media screen and (max-width: 1591px) {
+  .header,
+  .headerDate {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    text-align: start;
+  }
 }
 @media screen and (max-width: 1446px) {
   .header,
@@ -223,7 +222,7 @@ body {
     text-align: start;
   }
   .headerTitle {
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
   .information {
@@ -260,8 +259,65 @@ body {
   .accumulatedFirstShot {
     margin-bottom: 0;
   }
-  .result_1{
-      margin-left: 5px!important;
+  .result_1 {
+    margin-left: 5px !important;
+  }
+  .ofPopulation,
+  .ofHerdImmunity {
+    text-align: center !important;
+    margin-right: 0 !important;
+  }
+  .atThisPoint,
+  .atThisPoint2 {
+    text-align: center !important;
+    margin-left: 0 !important;
+  }
+  .immunizedNumber,
+  .herdImmunityNumber {
+    font-size: 8rem;
   }
 
+  .dateForm {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (max-width: 1103px) {
+  .headerTitle {
+    font-size: 3rem;
+  }
+  .firstDose {
+    margin-left: 5rem !important;
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  .todayFirst{
+      margin-top: 1rem;
+  }
+  .todayFirst, .todaySecond {
+      margin-bottom: 0;
+  }
+  .result-sm{
+      margin-left: 0;
+      margin-top: 0;
+      margin-bottom: 1rem!important;
+  }
+  .header, .totalImmunization, .herdImmunity, .newlyVaccinated, .accumulatedPerformance, #fullyVaccinated, #result_1{
+      font-size: 1.5rem;
+  }
+  .headerDate{
+      font-size: 1.2rem;
+      margin-bottom: 1rem!important;
+  }
+
+  .immunizedNumber, .herdImmunityNumber{
+      font-size: 5rem;
+  }
+
+  .accumulatedPerformance{
+      margin-top: 1rem!important;
+  }
+  #fullyVaccinated, #result_1{
+      margin-bottom: 1.6rem!important;
+  }
 }
