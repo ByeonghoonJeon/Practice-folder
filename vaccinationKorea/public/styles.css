@@ -1,6 +1,6 @@
 body {
   background-image: url(img/backgroundImg.jpg);
-  background-size: contain;
+  background-size: cover;
   font-family: "Vollkorn", serif;
 }
 
@@ -96,6 +96,7 @@ body {
 
 .window {
   color: white;
+  margin-top: 5vh;
   border-radius: 5px; 
   margin-bottom: 1vh;
   background: rgba(22, 33, 62, 0.9);
@@ -138,7 +139,7 @@ body {
   font-size: 2rem;
   color: wheat;
   margin-bottom: 0;
-  margin-right: 60px !important;
+  margin-right: 20px !important;
 }
 
 .newlyVaccinated {
@@ -249,7 +250,7 @@ body {
 @media screen and (max-width: 1500px) {
   body {
     background-image: url(img/backgroundImg.jpg);
-    background-size: contain;
+    background-size: cover;
     font-family: "Vollkorn", serif;
   }
 
@@ -500,7 +501,7 @@ body {
 @media screen and (max-width: 767px) {
   body {
     background-image: url(img/backgroundImg.jpg);
-    background-size: contain;
+    background-size: cover;
     font-family: "Vollkorn", serif;
   }
 
