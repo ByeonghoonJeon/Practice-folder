@@ -29,6 +29,15 @@ app.get("/contact", function(req, res){
   res.render("contact",{contactContent:contactContent});
 });
 
+app.get("/compose", function(req, res){
+  res.render("compose");
+});
+
+app.post("/compose", function (req, res) {
+  let publish = req.body.postRequest;
+  console.log(publish);
+  res.redirect("/");
+});
 
 
 
