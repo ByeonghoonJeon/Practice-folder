@@ -14,9 +14,9 @@ MongoClient.connect(url, { useUnifiedTopology: true }, async function (err, clie
   await db.collection("fruits")
     .insertMany([
     {
-      name: "Apple",
-      score: 8,
-      revies: "Great fruit"
+        name: "Apple",
+        score: 8,
+        revies: "Great fruit"
     },
     {
         name: "Orange",
