@@ -11,8 +11,15 @@ mongoose.connect('mongodb://localhost:27017/fruitsDB', {useNewUrlParser: true, u
 
 //mongoose needs schema which is a blue print of data structure.
 const fruitSchema = new mongoose.Schema ({
-    name: String,
-    score: Number,
+    name: {
+        type: String,
+        required:[true]
+    },
+    score: {
+        type: Number,
+        min: 1,
+        max: 10
+    },
     review: String
 });
 
@@ -36,16 +43,26 @@ const fruits = [ // this should be a list of fruits not a fruit object (new Frui
         name: 'Apple',
         score: 4,
         review: "Not really.."
+    },
+    {   
+        name: "Nashi pear",
+        score: 3,
+        review: "hmm"
     }
 ];
+
 
 Fruit.insertMany(fruits, function(err){ // fruits here instead of [fruit] because we already have an array with fruits
     if (err) {
         console.log(err);
     } else {
-        console.log("Successfully saved all the fruits data.")
-    }
-});
+        fruits.forEach(function(fruit){
+            console.log(fruit.name);
+        });
+        }
+    });
+
+
 
 /////////////////////////////////////////////////////
 
@@ -71,12 +88,11 @@ Person.insertMany(person, function(err){ // fruits here instead of [fruit] becau
     if (err) {
         console.log(err);
     } else {
-        console.log("Successfully saved all the people data.")
+        person.forEach(function(person){
+            console.log(person.name);
+        });
     }
 });
-
-
-console.log("Working!")
 
 // NOTES:
 // have a look here for reference: https://www.geeksforgeeks.org/mongoose-insertmany-function/
