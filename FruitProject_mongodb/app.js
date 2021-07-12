@@ -1,37 +1,39 @@
 //jshint esversion:6
 
-const MongoClient = require("mongodb").MongoClient;
-const assert = require("assert");
+// calling mongoose.
+const { ObjectID } = require('mongodb');
+const mongoose = require('mongoose');
 
-// Connection URL
-const url = "mongodb://localhost:27017";
+// connecting mongoose.
+mongoose.connect('mongodb://localhost:27017/fruitsDB', {useNewUrlParser: true, useUnifiedTopology: true});
 
-// Use connect method to connect to the Server
-MongoClient.connect(url, { useUnifiedTopology: true }, async function (err, client) {
-  assert.equal(null, err);
-  const db = client.db("fruits");
 
-  await db.collection("fruits")
-    .insertMany([
-    {
-        name: "Apple",
-        score: 8,
-        revies: "Great fruit"
-    },
-    {
-        name: "Orange",
-        score: 6,
-        review: "Kinda sour"
-    },
-    {
-        name: "Banana",
-        score: 9,
-        review: "Great stuff!"
-
-    }
-
-    ])
-
-  console.log("Working");
-  client.close();
+//mongoose needs schema which is a blue print of data structure.
+const fruitSchema = new mongoose.Schema ({
+    _id: new ObjectID(),
+    name: String,
+    score: Number,
+    review: String
 });
+
+
+//collection creation, insert with singular form and it will be converted to plural form.
+const Fruit = mongoose.model('Fruit', fruitSchema);
+
+//Creating a document from the model.
+const fruit = new Fruit({ 
+    name:"Peach",
+    score: 10,
+    review: "It's a perfect fruits!"
+},
+{
+    name: 'Banana',
+    score: 8,
+    review: "Awesome fruit!"
+},
+{   name: 'Apple',
+    score: 4,
+    review: "Not really.."
+});
+
+fruit.save();
