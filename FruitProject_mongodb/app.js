@@ -11,7 +11,6 @@ mongoose.connect('mongodb://localhost:27017/fruitsDB', {useNewUrlParser: true, u
 
 //mongoose needs schema which is a blue print of data structure.
 const fruitSchema = new mongoose.Schema ({
-    _id: String,
     name: String,
     score: Number,
     review: String
@@ -22,32 +21,29 @@ const fruitSchema = new mongoose.Schema ({
 const Fruit = mongoose.model('Fruit', fruitSchema);
 
 //Creating a document from the model.
-const fruit = new Fruit(
+const fruits = [ // this should be a list of fruits not a fruit object (new Fruit) which is just 1 single fruit
     {
-        _id: ObjectID(), 
         name:"Peach",
         score: 10,
         review: "It's a perfect fruits!"
     },
     {
-        _id: ObjectID(), 
         name: 'Banana',
         score: 8,
         review: "Awesome fruit!"
     },
     {   
-        _id: ObjectID(), 
         name: 'Apple',
         score: 4,
         review: "Not really.."
     }
-);
+];
 
-Fruit.insertMany([fruit], function(err){
+Fruit.insertMany(fruits, function(err){ // fruits here instead of [fruit] because we already have an array with fruits
     if (err) {
         console.log(err);
     } else {
-        console.log("Successfully saved all the data.")
+        console.log("Successfully saved all the fruits data.")
     }
 });
 
@@ -55,24 +51,40 @@ Fruit.insertMany([fruit], function(err){
 
 
 const personSchema = new mongoose.Schema({
-    _id: String,
     name: String,
     age: Number
 });
 
 const Person = mongoose.model("Person", personSchema);
-const person = new Person(
+const person = [// should be called people and be a list (array) of people -- see above ^
     {
-        _id: ObjectID(),
         name: "Nathan",
         age: 19
     },
     {
-        _id: ObjectID(),
         name: "Edwin",
         age: 18
     }
-);
-person.save();
+];
+
+Person.insertMany(person, function(err){ // fruits here instead of [fruit] because we already have an array with fruits
+    if (err) {
+        console.log(err);
+    } else {
+        console.log("Successfully saved all the people data.")
+    }
+});
+
 
 console.log("Working!")
+
+// NOTES:
+// have a look here for reference: https://www.geeksforgeeks.org/mongoose-insertmany-function/
+// also here is the mongoose documentation which may assist you: https://mongoosejs.com/docs/documents.html
+
+// Important takeaways:
+// _id is an automatically generated field used by the database to assign a unique id to each document
+// new Fruit() and new Person() are creating a single document from the {} json object within the parenthesis
+// insertMany inserts an array of documents or an array of {} json objects which match the schema for the collection
+// .save() saves a modified document to the database
+// document = new Person()  json object = {}
