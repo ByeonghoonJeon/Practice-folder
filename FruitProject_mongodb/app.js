@@ -81,6 +81,15 @@ const pineapple = new Fruit({
 
 pineapple.save();
 
+const mango = new Fruit({
+    name: "Mango",
+    score: 7,
+    review: "Nice"
+})
+
+mango.save();
+
+
 
 const Person = mongoose.model("Person", personSchema);
 const person = [// should be called people and be a list (array) of people -- see above ^
@@ -92,7 +101,7 @@ const person = [// should be called people and be a list (array) of people -- se
     {
         name: "Edwin",
         age: 18,
-        favouriteFruit: fruits.name=="apple"
+        favouriteFruit: mango
     }
 ];
 
