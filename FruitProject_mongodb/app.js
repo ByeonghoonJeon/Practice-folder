@@ -69,20 +69,33 @@ Fruit.insertMany(fruits, function(err){ // fruits here instead of [fruit] becaus
 
 const personSchema = new mongoose.Schema({
     name: String,
-    age: Number
+    age: Number,
+    favouriteFruit: fruitSchema
 });
+
+const pineapple = new Fruit({
+    name: "Pineapple",
+    score: 9,
+    review: "Great fruit."
+});
+
+pineapple.save();
+
 
 const Person = mongoose.model("Person", personSchema);
 const person = [// should be called people and be a list (array) of people -- see above ^
     {
         name: "Nathan",
-        age: 19
+        age: 19,
+        favouriteFruit: pineapple
     },
     {
         name: "Edwin",
-        age: 18
+        age: 18,
+        favouriteFruit: fruits.name=="apple"
     }
 ];
+
 
 Person.insertMany(person, function(err){ // fruits here instead of [fruit] because we already have an array with fruits
     if (err) {
