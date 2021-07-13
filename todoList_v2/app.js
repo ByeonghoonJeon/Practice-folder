@@ -99,17 +99,46 @@ app.post("/", function (req, res) {
   }
 });
 
-app.post("/delete", function (req, res) {
-  const checkedItemId = req.body.checkbox;
+// app.post("/delete", function (req, res){
+//   const checkedItemID = req.body.checkbox;
+//   const listName = req.body.listName;
+//   if(listName==="Today"){
+//     Item.findByIdAndRemove(checkedItemID, function(err){
+//       if (!err){
+//         console.log("Successfully deleted.");
+//         res.redirect("/");
+//       }
+//     });
+//       }else{
+//         List.findOneAndUpdate({name: listName}, {$pull: {items: {_id: checkedItemID}}}, function(err, foundList)
+//         if (!err){
+//           res.redirect("/"+listname);
+//         }
+//   });
+// }
+// });
 
-  Item.findByIdAndRemove(checkedItemId, function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Succesfully deleted.");
-      res.redirect("/");
-    }
-  });
+app.post("/delete", function (req, res) {
+  const checkedItemID = req.body.checkbox;
+  const listName = req.body.listName;
+  if (listName === "Today") {
+    Item.findByIdAndRemove(checkedItemID, function (err) {
+      if (!err) {
+        console.log("Successfully deleted.");
+        res.redirect("/");
+      }
+    });
+  } else {
+    List.findOneAndUpdate(
+      { name: listName },
+      { $pull: { items: { _id: checkedItemID } } },
+      function (err, foundList) {
+        if (!err) {
+          res.redirect("/" + listName);
+        }
+      }
+    );
+  }
 });
 
 app.get("/about", function (req, res) {
