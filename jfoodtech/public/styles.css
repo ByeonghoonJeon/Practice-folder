@@ -1,12 +1,17 @@
 body {
   font-family: "Noto Serif", serif;
 }
-.logo2 {
+
+.section1 {background-color: black;}
+
+.logo1 {
   width: 15vw;
 }
 .posterImage{
 width: 100vw;
 }
 
-.section1{background-color: purple;
+.navbar{background-color: #E1701A!important;
   }
+
+  .titleContainer{color: white;}
