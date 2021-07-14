@@ -2,16 +2,31 @@ body {
   font-family: "Noto Serif", serif;
 }
 
-.section1 {background-color: black;}
+.section1 {
+  background-color: black;
+}
 
 .logo1 {
-  width: 15vw;
-}
-.posterImage{
-width: 100vw;
+  width: 25vw;
+  position: absolute;
+  z-index: 1;
+  top: 10px;
 }
 
-.navbar{background-color: #E1701A!important;
+.navbar {
+  background-color: #e1701a !important;
+}
+
+.titleContainer {
+  color: white;
+}
+
+.carousel-item{
+    height: 30vh;
+}
+
+.bannerImg{
+    max-height:25vh;
+    width: auto;
+    height: auto;
   }
-
-  .titleContainer{color: white;}
