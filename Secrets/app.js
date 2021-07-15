@@ -1,10 +1,12 @@
 //jshint esversion:6
-
+require('dotenv').config();
 const ejs = require("ejs");
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const encrypt = require("mongoose-encryption");
+
+console.log(process.env.API_KEY);
 
 app.use(express.json()); //Used to parse JSON bodies
 app.use(express.urlencoded()); //Parse URL-encoded bodies
@@ -19,8 +21,7 @@ const userSchema = new mongoose.Schema({
   password: String,
 });
 
-const secret = "Thisismysecret.";
-userSchema.plugin(encrypt, {secret:secret, encryptedFields: ['password']});
+userSchema.plugin(encrypt, {secret:process.env.SECRET, encryptedFields: ['password']});
 
 const User = new mongoose.model("User", userSchema);
 
