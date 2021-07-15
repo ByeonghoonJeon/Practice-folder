@@ -6,7 +6,7 @@ const app = express();
 const mongoose = require("mongoose");
 const md5 = require("md5")
 
-console.log(md5("11qq22ww!@"));
+console.log(md5("a"));
 
 console.log(process.env.API_KEY);
 
