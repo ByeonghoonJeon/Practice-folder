@@ -1,4 +1,6 @@
 const React = require("react");
 const ReactDom = require("react-dom")
 
-ReactDom.render(WHAT TO SHOW, WHERE TO SHOW IT);
+
+ReactDom.render(<h1>Hello World!</h1>, document.getElementById("root"));
+
