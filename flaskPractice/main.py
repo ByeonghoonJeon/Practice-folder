@@ -1,5 +1,5 @@
 # import the flask library for usage
-from flask import Flask
+from flask import Flask, request
 # creat an instance of the flask server
 # as the root directory within 'main.py'
 app=Flask(__name__)
@@ -24,7 +24,7 @@ def displayGivenDate(month, day, year):
 
 # creating a <form>
 formData = f""" 
-    <form action="/result" method="GET">
+    <form action="/results" method="POST">
         What's your favorite pizza flavor?
         <input type="text" name="pizza_flavor">
         <br>
@@ -38,9 +38,11 @@ formData = f"""
 def firstForm():
     return formData
 
-@app.route("/result")
+@app.route("/results", methods=['POST'])
 def resultPage():
-    return "<p>Hey</p>"
+    pizza_flavor = request.form.get("pizza_flavor")
+    crust = request.form.get("crust")
+    return f"<h3>A {crust} crust {pizza_flavor} pizza has been ordered!</h3>" 
 
 # turn the server on for serving
 if __name__ == "__main__":
