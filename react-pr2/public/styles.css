@@ -50,9 +50,9 @@ body {
 }
 
 .circle-img {
-  border-radius: 50%;
+  border-radius: 25px;
   border: 7px solid #fff;
-  width: 120px;
+  width: 250px;
   height: 120px;
 }
 

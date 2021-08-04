@@ -1,20 +1,17 @@
 import React from "react";
-
-function App() {
+import Contacts from "contacts";
+function App(props) {
   return (
     <div>
       <h1 className="heading">My Contacts</h1>
       <div className="card">
         <div className="top">
-          <h2>Beyonce</h2>
-          <img
-            src="https://blackhistorywall.files.wordpress.com/2010/02/picture-device-independent-bitmap-119.jpg"
-            alt="avatar_img"
-          />
+          <h2 className="name">{Contacts.name}</h2>
+          <img className="circle-img" src={Contacts.imgURL} alt="avatar_img" />
         </div>
         <div className="bottom">
-          <p>+123 456 789</p>
-          <p>b@beyonce.com</p>
+          <p className="info">{Contacts.phone}</p>
+          <p className="info">{Contacts.email}</p>
         </div>
       </div>
     </div>
