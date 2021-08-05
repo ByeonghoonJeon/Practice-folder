@@ -22,4 +22,4 @@ const contacts = [
   },
 ];
 
-export default Contacts;
+export default contacts;
